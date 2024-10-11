@@ -1,0 +1,16 @@
+{
+  "name": "mockups-aurora",
+  "version": "1.0.0",
+  "description": "Maquetación de los elementos de la skin Aurora en código",
+  "main": "index.js",
+  "scripts": {
+    "less-variables": "lessc resources/styles/less/variables.less resources/styles/css/variables.css",
+    "less-typography": "lessc resources/styles/less/typography.less resources/styles/css/typography.css",
+    "less-breakpoints": "lessc resources/styles/less/breakpoints.less resources/styles/css/breakpoints.css",
+    "less-button": "lessc resources/styles/less/components/button.less resources/styles/css/button.css",
+    "compile-all": "npm run less-variables && npm run less-typography && npm run less-breakpoints && npm run less-button"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
