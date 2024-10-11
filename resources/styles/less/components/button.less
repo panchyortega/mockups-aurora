@@ -1,0 +1,152 @@
+// Estilos base para todos los botones
+.button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: @gap-md;               // Espacio entre íconos y texto
+    padding: @padding-md @padding-lg;
+    border-radius: @corner-radius-xs;
+    font-family: @font-body;
+    font-size: @size-text-body-md;
+    font-weight: 600;           // Semibold por defecto
+    line-height: @size-text-body-md * 1.6;
+    border-width: 2px;          // Grosor del stroke
+    border-style: solid;        // Borde sólido por defecto
+    cursor: pointer;
+    transition: background-color 0.2s ease, border-color 0.2s ease;
+  
+    // Iconos
+    .icon {
+      width: 16px;
+      height: 16px;
+    }
+  
+    // Estado disabled (general para todos los botones)
+    &.disabled {
+      cursor: not-allowed;
+      opacity: 0.6; // Reducimos la opacidad
+    }
+  }
+  
+  // Botón primario
+  .button.primary {
+    background-color: @col-prim-400;
+    color: @col-surf-50;        // Color de texto e íconos
+    border-color: transparent;  // Sin stroke por defecto
+  
+    // Hover
+    &:hover {
+      background-color: @col-prim-600;
+    }
+  
+    // Clicked y Focused
+    &:active, &:focus {
+      background-color: @col-prim-400;
+      border-color: @col-prim-600; // Stroke al hacer clic o en foco
+    }
+  
+    // Disabled
+    &.disabled {
+      background-color: @col-surf-200;
+      color: @col-surf-500;
+      border-color: transparent;
+    }
+  }
+  
+  // Botón secundario
+  .button.secondary {
+    background-color: transparent;
+    color: @col-surf-700;
+    border-color: @col-surf-700;
+  
+    // Hover
+    &:hover {
+      background-color: @col-surf-200;
+    }
+  
+    // Clicked y Focused
+    &:active, &:focus {
+      color: @col-surf-900;
+      border-color: @col-surf-900;
+    }
+  
+    // Disabled
+    &.disabled {
+      background-color: @col-surf-200;
+      color: @col-surf-500;
+      border-color: transparent;
+    }
+  }
+  
+  // Botón de advertencia (warning)
+  .button.warning {
+    background-color: @col-warning-200;
+    color: @col-surf-50;
+    border-color: transparent;
+  
+    // Hover
+    &:hover {
+      background-color: @col-warning-300;
+    }
+  
+    // Clicked y Focused
+    &:active, &:focus {
+      border-color: @col-warning-400;
+    }
+  
+    // Disabled
+    &.disabled {
+      background-color: @col-surf-200;
+      color: @col-surf-500;
+      border-color: transparent;
+    }
+  }
+  
+  // Botón de éxito (success)
+  .button.success {
+    background-color: @col-succes-200;
+    color: @col-surf-50;
+    border-color: transparent;
+  
+    // Hover
+    &:hover {
+      background-color: @col-succes-300;
+    }
+  
+    // Clicked y Focused
+    &:active, &:focus {
+      border-color: @col-succes-400;
+    }
+  
+    // Disabled
+    &.disabled {
+      background-color: @col-surf-200;
+      color: @col-surf-500;
+      border-color: transparent;
+    }
+  }
+  
+  // Botón de peligro (danger)
+  .button.danger {
+    background-color: @col-danger-200;
+    color: @col-surf-50;
+    border-color: transparent;
+  
+    // Hover
+    &:hover {
+      background-color: @col-danger-300;
+    }
+  
+    // Clicked y Focused
+    &:active, &:focus {
+      border-color: @col-danger-400;
+    }
+  
+    // Disabled
+    &.disabled {
+      background-color: @col-surf-200;
+      color: @col-surf-500;
+      border-color: transparent;
+    }
+  }
+  

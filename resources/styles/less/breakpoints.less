@@ -1,0 +1,30 @@
+// Breakpoints
+@breakpoint-mobile: ~"(max-width: 719px)";
+@breakpoint-tablet: ~"(max-width: 1279px)";
+@breakpoint-desktop: ~"(min-width: 1280px)";
+
+// Desktop (por defecto)
+@size-text-h1: @size-text-h1-desktop;
+@size-text-h2: @size-text-h2-desktop;
+@size-text-h3: @size-text-h3-desktop;
+@size-text-h4: @size-text-h4-desktop;
+@size-text-h5: @size-text-h5-desktop;
+@size-text-body-lg: @size-text-body-lg-desktop;
+@size-text-body-md: @size-text-body-md-desktop;
+@size-text-body-sm: @size-text-body-sm-desktop;
+@size-text-caption: @size-text-caption-desktop;
+@size-text-code: @size-text-code-desktop;
+
+// Mobile adjustments
+@media @breakpoint-mobile {
+  @size-text-h1: @size-text-h1-mobile;
+  @size-text-h2: @size-text-h2-mobile;
+  @size-text-h3: @size-text-h3-mobile;
+  @size-text-h4: @size-text-h4-mobile;
+  @size-text-h5: @size-text-h5-mobile;
+  @size-text-body-lg: @size-text-body-lg-mobile;
+  @size-text-body-md: @size-text-body-md-mobile;
+  @size-text-body-sm: @size-text-body-sm-mobile;
+  @size-text-caption: @size-text-caption-mobile;
+  @size-text-code: @size-text-code-mobile;
+}
