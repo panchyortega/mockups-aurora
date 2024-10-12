@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{pageTitle}}</title>
+    <link rel="stylesheet" href="resources/styles/css/breakpoints.css">
+    <link rel="stylesheet" href="resources/styles/css/components.css">
+    <link rel="stylesheet" href="resources/styles/css/typography.css">
+    <link rel="stylesheet" href="resources/styles/css/variables.css">
+</head>
+<body>
+    {{> components/header }}
+
+    <main>
+        {{> content }}  <!-- Aquí se incluirá el contenido específico de cada página -->
+    </main>
+
+    {{> components/footer }}
+</body>
+</html>

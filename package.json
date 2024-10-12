@@ -7,19 +7,13 @@
     "less-variables": "lessc resources/styles/less/variables.less resources/styles/css/variables.css",
     "less-typography": "lessc resources/styles/less/typography.less resources/styles/css/typography.css",
     "less-breakpoints": "lessc resources/styles/less/breakpoints.less resources/styles/css/breakpoints.css",
-    "less-components": "lessc resources/styles/less/components.less resources/styles/css/components.css", 
-
+    "less-components": "lessc resources/styles/less/components.less resources/styles/css/components.css",
     "compile-all": "npm run less-variables && npm run less-typography && npm run less-breakpoints && npm run less-components"
   },
-
-"_comment": {
-    "general": "less-variables, less-typography, less-breakpoints y less-components compilan individualmente cada uno de esos archivos a css.",
-    "compile-command": "Para compilar uno de estos en el terminal, usa por ejemplo npm run less-components para compilar components.less.",
-    "compile-all": "compile-all compilará todos los anteriores de una sola vez, usa npm run compile-all para compilar todo.",
-    "reminder": "Recordatorio personal: para dirigirme al repo local, usa cd C:\\Users\\franc\\Documents\\GitHub\\mockups-aurora."
-  },
-
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "mustache": "^4.2.0"
+  }
 }
