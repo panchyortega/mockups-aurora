@@ -1,0 +1,55 @@
+{{! ¿Qué es esto?
+}}
+{{! los nav-tabs son grupos de tabs, básicamente cuando se encuentran en un menú.
+}}
+
+
+{{! Enlaces a estilos para que se rendericen bien las plantillas:
+}}
+
+<link rel="stylesheet" href="resources/styles/css/breakpoints.css">
+<link rel="stylesheet" href="resources/styles/css/components.css">
+<link rel="stylesheet" href="resources/styles/css/icons.css">
+<link rel="stylesheet" href="resources/styles/css/typography.css">
+<link rel="stylesheet" href="resources/styles/css/variables.css">
+
+
+{{! Plantillas:
+}}
+
+
+{{#isFloating}}
+<div class="nav-tabs floating">
+  {{#tabs}}
+    <button class="tab {{state}}">
+      {{#leftIcon}}
+        {{> components/icon iconName=leftIcon }}
+      {{/leftIcon}}
+
+      <span class="tab-text">{{label}}</span>
+
+      {{#rightIcon}}
+        {{> components/icon iconName=rightIcon }}
+      {{/rightIcon}}
+    </button>
+  {{/tabs}}
+</div>
+{{/isFloating}}
+
+{{#isFixed}}
+<div class="nav-tabs fixed">
+  {{#tabs}}
+    <button class="tab {{state}}">
+      {{#leftIcon}}
+        {{> components/icon iconName=leftIcon }}
+      {{/leftIcon}}
+
+      <span class="tab-text">{{label}}</span>
+
+      {{#rightIcon}}
+        {{> components/icon iconName=rightIcon }}
+      {{/rightIcon}}
+    </button>
+  {{/tabs}}
+</div>
+{{/isFixed}}

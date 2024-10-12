@@ -1,0 +1,122 @@
+// Importar estilos necesarios
+
+@import "../variables.less";     // Importar variables generales
+@import "../typography.less";    // Importar tipografía para tamaños de texto
+@import "../breakpoints.less";   // Importar breakpoints
+@import "../icons.less";         // Importar íconos
+
+// Estilos del componente
+
+.nav-tabs {
+    display: inline-flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+  
+    // Estilos para nav-tabs floating
+    &.floating {
+      padding: @padding-sm;
+      gap: @gap-md;
+      border-radius: @corner-radius-md;
+      background-color: @col-surf-50;
+    }
+  
+    // Estilos para nav-tabs fixed
+    &.fixed {
+      padding: 0;
+      gap: 0;
+      background-color: transparent;
+    }
+  
+    .tab {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: @gap-sm;
+      padding: @padding-sm @padding-lg;
+      font-family: @font-body;
+      font-size: @size-text-body-md;
+      font-weight: 600;
+      border: none;
+      cursor: pointer;
+      transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+  
+      // Variantes de color para los tabs
+      &.default {
+        background-color: @col-surf-50;
+        color: @col-surf-700;
+  
+        &:hover {
+          background-color: @col-surf-100;
+          color: @col-surf-700;
+        }
+  
+        &:active {
+          background-color: @col-surf-200;
+          color: @col-surf-700;
+        }
+      }
+  
+      &.selected {
+        background-color: @col-prim-50;
+        color: @col-prim-400;
+  
+        &:hover {
+          background-color: @col-prim-100;
+          color: @col-prim-400;
+        }
+  
+        &:active {
+          background-color: @col-prim-200;
+          color: @col-prim-400;
+        }
+      }
+  
+      &.disabled {
+        background-color: @col-surf-100;
+        color: @col-surf-400;
+        cursor: not-allowed;
+      }
+  
+      // Estilos de hover y clicked específicos para tabs fixed
+      &.fixed {
+        border-bottom: 1px solid transparent; // Solo en selected tiene borde visible
+  
+        &.selected {
+          border-bottom-color: @col-prim-400;
+  
+          &:hover {
+            background-color: @col-prim-100;
+            border-bottom-color: @col-prim-400;
+          }
+  
+          &:active {
+            background-color: @col-prim-200;
+            border-bottom-color: @col-prim-400;
+          }
+        }
+  
+        &.default, &.hover {
+          border-bottom-color: transparent;
+        }
+  
+        &.disabled {
+          border-bottom-color: transparent;
+        }
+      }
+  
+      .icon-left {
+        margin-right: @gap-sm;
+      }
+  
+      .icon-right {
+        margin-left: @gap-sm;
+      }
+  
+      .tab-text {
+        font-size: @size-text-body-md;
+        color: inherit;  // Hereda el color según el estado del tab
+      }
+    }
+  }
+  

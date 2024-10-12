@@ -17,12 +17,13 @@
 {{! Plantillas:
 }}
 
+
 <button class="button {{type}}">
   {{#iconLeft}}
-    <span class="icon-left">{{iconLeft}}</span>
+    {{> components/icon iconName=iconLeft }}
   {{/iconLeft}}
-  {{text}}
+  <span class="button-text">{{text}}</span>
   {{#iconRight}}
-    <span class="icon-right">{{iconRight}}</span>
+    {{> components/icon iconName=iconRight }}
   {{/iconRight}}
 </button>

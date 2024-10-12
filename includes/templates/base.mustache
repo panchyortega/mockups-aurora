@@ -3,19 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{pageTitle}}</title>
-    <link rel="stylesheet" href="resources/styles/css/breakpoints.css">
-    <link rel="stylesheet" href="resources/styles/css/components.css">
-    <link rel="stylesheet" href="resources/styles/css/typography.css">
-    <link rel="stylesheet" href="resources/styles/css/variables.css">
+    <title>{{title}}</title>
+    
+    <!-- Enlaces a los estilos -->
+    <link rel="stylesheet" href="../resources/styles/css/breakpoints.css">
+    <link rel="stylesheet" href="../resources/styles/css/components.css">
+    <link rel="stylesheet" href="../resources/styles/css/icons.css">
+    <link rel="stylesheet" href="../resources/styles/css/typography.css">
+    <link rel="stylesheet" href="../resources/styles/css/variables.css">
 </head>
 <body>
-    {{> components/header }}
 
-    <main>
-        {{> content }}  <!-- Aquí se incluirá el contenido específico de cada página -->
-    </main>
+    {{{content}}}
 
-    {{> components/footer }}
+    <!-- Incluir el archivo JavaScript justo antes de cerrar el body -->
+    <script src="../resources/scripts/nav-tabs.js"></script>
 </body>
 </html>
+
+

@@ -17,6 +17,7 @@
     font-weight: 600;
     cursor: pointer;
     transition: background-color 0.2s ease, border-color 0.2s ease;
+    border: none;  // Asegurarse de que no haya ningún borde alrededor por defecto
   
     // Estilos comunes para padding y border-radius
     padding: @padding-sm @padding-lg;
@@ -41,31 +42,31 @@
     &.default {
       background-color: @col-surf-50;
       color: @col-surf-700;
-    }
   
-    &.hover {
-      background-color: @col-surf-100;
-      color: @col-surf-700;
-    }
+      &:hover {
+        background-color: @col-surf-100;
+        color: @col-surf-700;
+      }
   
-    &.clicked {
-      background-color: @col-surf-200;
-      color: @col-surf-700;
+      &:active {
+        background-color: @col-surf-200;
+        color: @col-surf-700;
+      }
     }
   
     &.selected {
       background-color: @col-prim-50;
       color: @col-prim-400;
-    }
   
-    &.selected-hover {
-      background-color: @col-prim-100;
-      color: @col-prim-400;
-    }
+      &:hover {
+        background-color: @col-prim-100;
+        color: @col-prim-400;
+      }
   
-    &.selected-clicked {
-      background-color: @col-prim-200;
-      color: @col-prim-400;
+      &:active {
+        background-color: @col-prim-200;
+        color: @col-prim-400;
+      }
     }
   
     &.disabled {
@@ -85,12 +86,34 @@
   
     // Ajuste del borde inferior para tabs fixed
     &.fixed {
-      &.selected, &.selected-hover, &.selected-clicked {
+      &.selected {
         border-bottom-color: @col-prim-400;  // Borde visible solo en estados seleccionados
+  
+        &:hover {
+          background-color: @col-prim-100;
+          border-bottom-color: @col-prim-400;
+        }
+  
+        &:active {
+          background-color: @col-prim-200;
+          border-bottom-color: @col-prim-400;
+        }
       }
   
-      &.default, &.hover, &.clicked, &.disabled {
-        border-bottom-color: transparent;  // Sin borde en estos estados
+      &.default {
+        border-bottom-color: transparent;
+  
+        &:hover {
+          background-color: @col-surf-100;
+        }
+  
+        &:active {
+          background-color: @col-surf-200;
+        }
+      }
+  
+      &.disabled {
+        border-bottom-color: transparent;
       }
     }
   

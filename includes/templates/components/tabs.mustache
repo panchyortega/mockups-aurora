@@ -18,3 +18,15 @@
 
 {{! Plantillas:
 }}
+
+<button class="tab {{type}} {{state}}">
+  {{#left-icon}}
+    {{> components/icon iconName=left-icon }}
+  {{/left-icon}}
+  
+  <span class="tab-text">{{label}}</span>
+  
+  {{#right-icon}}
+    {{> components/icon iconName=right-icon }}
+  {{/right-icon}}
+</button>
