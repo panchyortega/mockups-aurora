@@ -1,5 +1,10 @@
+// Importar estilos necesarios
 @import "../variables.less";     // Importar variables generales
 @import "../typography.less";    // Importar tipografía para tamaños de texto
+@import "../breakpoints.less";   // Importar breakpoints
+@import "../icons.less";         // Importar íconos
+
+// Estilos del componente
 
 .button {
   display: inline-flex;
@@ -16,6 +21,20 @@
   border-style: solid;
   cursor: pointer;
   transition: background-color 0.2s ease, border-color 0.2s ease;
+
+  .icon {
+    width: 16px;
+    height: 16px;
+    fill: currentColor;  // Hereda el color actual del botón
+  }
+
+  .icon-left {
+    margin-right: @gap-md;  // Espacio entre el ícono izquierdo y el texto
+  }
+
+  .icon-right {
+    margin-left: @gap-md;  // Espacio entre el texto y el ícono derecho
+  }
 
   &.disabled {
     cursor: not-allowed;

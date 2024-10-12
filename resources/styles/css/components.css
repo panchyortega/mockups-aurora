@@ -73,6 +73,11 @@ code {
     font-family: 'Work Sans', sans-serif;
   }
 }
+.icon {
+  width: 16px;
+  height: 16px;
+  fill: currentColor;
+}
 .button {
   display: inline-flex;
   align-items: center;
@@ -88,6 +93,17 @@ code {
   border-style: solid;
   cursor: pointer;
   transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+.button .icon {
+  width: 16px;
+  height: 16px;
+  fill: currentColor;
+}
+.button .icon-left {
+  margin-right: 12px;
+}
+.button .icon-right {
+  margin-left: 12px;
 }
 .button.disabled {
   cursor: not-allowed;

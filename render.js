@@ -1,16 +1,20 @@
 const Mustache = require("mustache");
 const fs = require("fs");
 
-// Leer la plantilla Mustache del botón
+
+
+// Leer la plantilla Mustache del componente
 const template = fs.readFileSync("includes/templates/components/button.mustache", "utf-8");
 
-// Datos para renderizar el botón
+
+// Datos para renderizar el componente
 const data = {
   type: "primary",  // Puedes cambiar entre 'primary', 'secondary', etc.
   text: "Mi Botón Primario",
   iconLeft: "⬅",  // Puedes usar un icono o texto
   iconRight: "➡"  // Icono a la derecha
 };
+
 
 // Renderizar la plantilla Mustache con los datos
 const output = Mustache.render(template, data);

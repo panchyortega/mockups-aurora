@@ -1,7 +1,6 @@
 {{! ¿Qué es esto?
 }}
-{{! Aquí hay plantillas de list-items (cada item de lista de un menu) y menu (menu deplegable, grupo de list-items).
-    Esto se utiliza, por ejemplo, en los menus desplegables de la barra de navegación.
+{{! Esta es una plantilla de los íconos, para colocar cualquier ícono en otros componentes
 }}
 
 
@@ -15,5 +14,9 @@
 <link rel="stylesheet" href="resources/styles/css/variables.css">
 
 
-{{! Plantillas:
+{{! Plantilla:
 }}
+
+<svg class="icon">
+  <use xlink:href="resources/icons/{{iconName}}.svg#icon"></use>
+</svg>
