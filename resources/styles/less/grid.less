@@ -1,0 +1,69 @@
+@import "variables.less"; 
+@import "breakpoints.less"; 
+
+// Establecer el color de fondo general de la página
+body {
+  background-color: @col-surf-50;   // Fondo de toda la página
+  padding: 0;
+  margin: 0;
+}
+
+// Grilla principal
+.page-grid {
+  display: grid;
+  grid-template-rows: auto 1fr auto; // Fila 1: barra de navegación, Fila 2: contenido, Fila 3: footer
+  grid-template-columns: 240px 1fr 680px 1fr 240px; // Columnas: tabla de contenidos, contenido, ficha
+  gap: auto; // Distribuir automáticamente el espacio entre las columnas
+
+  @media (max-width: @breakpoint-tablet) {
+    grid-template-columns: 1fr 680px 1fr; // Ajustar columnas en tablet
+  }
+
+  @media (max-width: @breakpoint-mobile) {
+    grid-template-columns: 20px 1fr 20px; // Ajustar columnas en móvil con márgenes laterales
+  }
+}
+
+// Barra de navegación
+.navbar {
+  grid-column: 1 / -1;   // Ocupa el ancho completo
+  padding: @padding-xs @padding-xl;
+}
+
+// Contenido
+.content-area {
+  grid-column: 3; // Centrado en desktop
+
+  @media (max-width: @breakpoint-tablet) {
+    grid-column: 2;  // Centrar contenido en tablet
+  }
+
+  @media (max-width: @breakpoint-mobile) {
+    grid-column: 2;  // Centrar contenido en móvil
+    max-width: 100%;  // En móvil, ocupa el ancho completo
+  }
+}
+
+// Tabla de contenidos (TOC)
+.toc {
+  grid-column: 1; // Alineado a la izquierda
+
+  @media (max-width: @breakpoint-tablet) {
+    display: none; // Ocultar en tablet y móvil
+  }
+}
+
+// Ficha de la página (Info Box)
+.info-box {
+  grid-column: 5; // Alineado a la derecha
+
+  @media (max-width: @breakpoint-tablet) {
+    display: none; // Ocultar en tablet y móvil
+  }
+}
+
+// Footer
+.footer {
+  grid-column: 1 / -1; // Ocupa el ancho completo
+  padding: @padding-xs @padding-xl;
+}

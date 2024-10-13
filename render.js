@@ -1,18 +1,20 @@
-const navTemplate = fs.readFileSync("templates/nav.mustache", "utf8");
+const Mustache = require("mustache");
+const fs = require("fs");
 
-// Datos para renderizar
-const navData = {
-  userName: "Usuario",
-  isFloating: true,
-  tabs: [
-    { label: "CASIOPEA", state: "default" },
-    { label: "Escuela", state: "default", rightIcon: "cas-navabajo.svg" },
-    { label: "Wiki", state: "default", rightIcon: "cas-navabajo.svg" },
-    { label: "Crear", state: "default", leftIcon: "cas-crear.svg" }
-  ]
+// Cargar las plantillas
+const baseTemplate = fs.readFileSync("includes/templates/base.mustache", "utf8");
+const cursoTemplate = fs.readFileSync("includes/templates/pages/curso-page.mustache", "utf8");
+
+// Definir los datos
+const data = {
+  title: "Página de Curso",
+  content: Mustache.render(cursoTemplate)  // Renderizar el contenido dentro de la página base
 };
 
-const renderedNav = Mustache.render(navTemplate, navData);
+// Renderizar la plantilla
+const output = Mustache.render(baseTemplate, data);
 
-// Guardar el archivo
-fs.writeFileSync(path.join(outputDir, 'navbar-example.html'), renderedNav, "utf8");
+// Guardar el archivo renderizado
+fs.writeFileSync("output/curso-page.html", output);
+
+console.log("Página de curso renderizada correctamente.");

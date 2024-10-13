@@ -219,8 +219,8 @@ code {
 .input.full {
   width: 100%;
 }
-@media 719px {
-  .input {
+@media (max-width: 719px) {
+  .input.fixed {
     width: 100%;
   }
   .input .input-tooltip {

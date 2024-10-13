@@ -22,13 +22,18 @@
     width: 100%;
   }
 
-  /* Estilos según breakpoints */
-  @media @breakpoint-mobile {
-    width: 100%;                  // En mobile, siempre ocupa el 100% del ancho
-    .input-tooltip {
-      display: none;              // No mostrar el tooltip en mobile
-    }
-  }
+
+    /* Estilos según breakpoints */
+    @media (max-width: @breakpoint-mobile) {
+        &.fixed {
+          width: 100%;  // Para móviles, los inputs fixed también ocupan el 100% del ancho disponible
+        }
+    
+        .input-tooltip {
+          display: none;  // No mostrar el tooltip en mobile
+        }
+      }
+    
 
   /* Primera fila (input-header): label, requirement y tooltip */
   .input-header {
