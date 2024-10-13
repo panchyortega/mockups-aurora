@@ -5,7 +5,6 @@
 @import "../icons.less";         // Importar íconos
 
 // Estilos del componente
-
 .button {
   display: inline-flex;
   align-items: center;
@@ -20,25 +19,10 @@
   border-width: 2px;
   border-style: solid;
   cursor: pointer;
-  transition: background-color 0.2s ease, border-color 0.2s ease;
 
-  .icon {
-    width: 16px;
-    height: 16px;
-    fill: currentColor;  // Hereda el color actual del botón
-  }
-
-  .icon-left {
-    margin-right: @gap-md;  // Espacio entre el ícono izquierdo y el texto
-  }
-
-  .icon-right {
-    margin-left: @gap-md;  // Espacio entre el texto y el ícono derecho
-  }
-
-  &.disabled {
-    cursor: not-allowed;
-    opacity: 0.6;
+  // Solo animación en el hover
+  &:hover {
+    transition: background-color 0.2s ease, border-color 0.2s ease;
   }
 
   // Variantes de color
@@ -52,13 +36,9 @@
     }
 
     &:active {
-      background-color: @col-prim-400;
+      background-color: @col-prim-400;  // Mantiene el color de fondo original
       border-color: @col-prim-600;
-    }
-
-    &:focus {
-      background-color: @col-prim-400;
-      border-color: @col-prim-600;
+      transition: none;  // Sin animación al hacer clic
     }
 
     &.disabled {
@@ -71,22 +51,17 @@
   &.secondary {
     background-color: transparent;
     color: @col-surf-700;
-    border-color: @col-surf-700;
+    border-color: @col-surf-600;
 
     &:hover {
       background-color: @col-surf-200;
     }
 
     &:active {
-      background-color: transparent;
+      background-color: transparent;  // Mantiene el fondo original
       color: @col-surf-900;
       border-color: @col-surf-900;
-    }
-
-    &:focus {
-      background-color: transparent;
-      color: @col-surf-900;
-      border-color: @col-surf-900;
+      transition: none;  // Sin animación al hacer clic
     }
 
     &.disabled {
@@ -106,13 +81,9 @@
     }
 
     &:active {
-      background-color: @col-danger-200;
+      background-color: @col-danger-200;  // Mantiene el color de fondo original
       border-color: @col-danger-400;
-    }
-
-    &:focus {
-      background-color: @col-danger-200;
-      border-color: @col-danger-400;
+      transition: none;  // Sin animación al hacer clic
     }
 
     &.disabled {
@@ -132,13 +103,9 @@
     }
 
     &:active {
-      background-color: @col-succes-200;
+      background-color: @col-succes-200;  // Mantiene el color de fondo original
       border-color: @col-succes-400;
-    }
-
-    &:focus {
-      background-color: @col-succes-200;
-      border-color: @col-succes-400;
+      transition: none;  // Sin animación al hacer clic
     }
 
     &.disabled {
@@ -158,13 +125,9 @@
     }
 
     &:active {
-      background-color: @col-warning-200;
+      background-color: @col-warning-200;  // Mantiene el color de fondo original
       border-color: @col-warning-400;
-    }
-
-    &:focus {
-      background-color: @col-warning-200;
-      border-color: @col-warning-400;
+      transition: none;  // Sin animación al hacer clic
     }
 
     &.disabled {

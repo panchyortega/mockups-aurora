@@ -1,7 +1,7 @@
 p {
   font-family: 'Work Sans', sans-serif;
   font-size: 1rem;
-  color: #170101;
+  color: #2D2B29;
   line-height: 1.6rem;
 }
 p.lg {
@@ -15,18 +15,28 @@ p.xs {
 }
 h1 {
   font-size: 2.027rem;
+  font-family: 'Work Sans', sans-serif;
+  color: #170101;
 }
 h2 {
   font-size: 1.802rem;
+  font-family: 'Work Sans', sans-serif;
+  color: #54190C;
 }
 h3 {
   font-size: 1.602rem;
+  font-family: 'Work Sans', sans-serif;
+  color: #54190C;
 }
 h4 {
   font-size: 1.424rem;
+  font-family: 'Work Sans', sans-serif;
+  color: #2D2B29;
 }
 h5 {
   font-size: 1.266rem;
+  font-family: 'Work Sans', sans-serif;
+  color: #53504C;
 }
 .caption {
   font-family: 'Work Sans', sans-serif;
@@ -55,21 +65,26 @@ code {
   h1 {
     font-size: 1.8rem;
     font-family: 'Work Sans', sans-serif;
+    color: #170101;
   }
   h2 {
     font-size: 1.6rem;
     font-family: 'Work Sans', sans-serif;
+    color: #54190C;
   }
   h3 {
     font-size: 1.4rem;
     font-family: 'Work Sans', sans-serif;
+    color: #7E2611;
   }
   h4 {
     font-size: 1.2rem;
     font-family: 'Work Sans', sans-serif;
+    color: #2D2B29;
   }
   h5 {
     font-size: 1.1rem;
     font-family: 'Work Sans', sans-serif;
+    color: #53504C;
   }
 }

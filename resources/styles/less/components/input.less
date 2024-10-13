@@ -1,0 +1,116 @@
+// Importar estilos necesarios
+
+@import "../variables.less";     // Importar variables generales
+@import "../typography.less";    // Importar tipografía para tamaños de texto
+@import "../breakpoints.less";   // Importar breakpoints
+@import "../icons.less";         // Importar íconos
+
+// Estilos del componente
+
+.input {
+  display: flex;
+  flex-direction: column;
+  gap: @gap-xs;                   // Separación entre filas
+  width: 100%;                    // Por defecto, el componente ocupa el 100% del ancho disponible
+  max-width: 419px;               // Ancho fijo por defecto en desktop y tablet
+
+  &.fixed {
+    width: 419px;
+  }
+
+  &.full {
+    width: 100%;
+  }
+
+  /* Estilos según breakpoints */
+  @media @breakpoint-mobile {
+    width: 100%;                  // En mobile, siempre ocupa el 100% del ancho
+    .input-tooltip {
+      display: none;              // No mostrar el tooltip en mobile
+    }
+  }
+
+  /* Primera fila (input-header): label, requirement y tooltip */
+  .input-header {
+    display: flex;
+    align-items: center;
+    gap: @gap-xs;
+    max-width: 100%;
+    color: @col-surf-700;          // Color del label
+
+    .input-label {
+      font-size: @size-text-body-sm;
+    }
+
+    .input-requirement {
+      font-size: @size-text-body-xs;
+      color: @col-surf-700;
+
+      /* Cambiar color en estado de error */
+      .error & {
+        color: @col-danger-200;
+      }
+    }
+
+    .input-tooltip {
+      color: @col-surf-700;
+    }
+  }
+
+  /* Segunda fila (input-body): íconos y caja de texto */
+  .input-body {
+    display: flex;
+    align-items: center;
+    gap: @gap-sm;
+    padding: @padding-md @padding-lg;
+    background-color: @col-surf-50;
+    border-radius: @corner-radius-sm;
+    border: 1px solid @col-surf-100;
+
+    /* Cambiar el stroke según el estado y tipo */
+    &.hover {
+      border-color: @col-surf-100;
+    }
+    &.focus, &.writing {
+      border-color: @col-prim-200;
+    }
+    &.write-down {
+      border-color: @col-surf-300;
+    }
+    &.disabled {
+      background-color: @col-surf-300;
+      border-color: @col-surf-300;
+    }
+
+    /* En estado de error */
+    &.error {
+      border-color: @col-danger-200;
+    }
+
+    .text-input {
+      flex-grow: 1;
+      color: @col-surf-500;
+      font-size: @size-text-body-md;
+    }
+
+    .icon-left, .icon-right {
+      color: @col-surf-700;
+    }
+  }
+
+  /* Tercera fila (input-helptext): texto de ayuda */
+  .input-helptext {
+    font-size: @size-text-body-xs;
+    color: @col-surf-700;
+
+    /* Cambiar color en estado de error */
+    .error & {
+      color: @col-danger-200;
+    }
+
+    /* En caso de estado error y disabled */
+    &.error.disabled {
+      color: @col-surf-700;
+    }
+  }
+}

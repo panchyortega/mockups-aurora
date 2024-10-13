@@ -11,7 +11,44 @@
 <link rel="stylesheet" href="resources/styles/css/components.css">
 <link rel="stylesheet" href="resources/styles/css/typography.css">
 <link rel="stylesheet" href="resources/styles/css/variables.css">
+<link rel="stylesheet" href="resources/styles/css/icons.css">
 
 
 {{! Plantillas:
 }}
+
+<nav class="navbar">
+  <!-- Primer nav-tabs floating (CASIOPEA, Escuela, Wiki, Crear) -->
+  <div class="nav-tabs-container">
+    {{> includes/templates/components/nav-tabs 
+        isFloating=true 
+        tabs=[
+          { label: "CASIOPEA", state: "default" },
+          { label: "Escuela", state: "default", rightIcon: "cas-navabajo.svg" },
+          { label: "Wiki", state: "default", rightIcon: "cas-navabajo.svg" },
+          { label: "Crear", state: "default", leftIcon: "cas-crear.svg" }
+        ]
+    }}
+  </div>
+
+  <!-- Input de búsqueda (Buscar en Casiopea) -->
+  <div class="nav-search">
+    {{> includes/templates/components/input 
+        type="default" 
+        state="default" 
+        text-input="Buscar en Casiopea" 
+        rightIcon="cas-lupa.svg" 
+        width="fixed"
+    }}
+  </div>
+
+  <!-- Segundo nav-tabs floating (Hola, nombre de usuario) -->
+  <div class="nav-user">
+    {{> includes/templates/components/nav-tabs 
+        isFloating=true 
+        tabs=[
+          { label: "Hola, {{userName}}", state: "default", leftIcon: "cas-usuario.svg" }
+        ]
+    }}
+  </div>
+</nav>

@@ -1,7 +1,7 @@
 p {
   font-family: 'Work Sans', sans-serif;
   font-size: 1rem;
-  color: #170101;
+  color: #2D2B29;
   line-height: 1.6rem;
 }
 p.lg {
@@ -15,18 +15,28 @@ p.xs {
 }
 h1 {
   font-size: 2.027rem;
+  font-family: 'Work Sans', sans-serif;
+  color: #170101;
 }
 h2 {
   font-size: 1.802rem;
+  font-family: 'Work Sans', sans-serif;
+  color: #54190C;
 }
 h3 {
   font-size: 1.602rem;
+  font-family: 'Work Sans', sans-serif;
+  color: #54190C;
 }
 h4 {
   font-size: 1.424rem;
+  font-family: 'Work Sans', sans-serif;
+  color: #2D2B29;
 }
 h5 {
   font-size: 1.266rem;
+  font-family: 'Work Sans', sans-serif;
+  color: #53504C;
 }
 .caption {
   font-family: 'Work Sans', sans-serif;
@@ -55,22 +65,27 @@ code {
   h1 {
     font-size: 1.8rem;
     font-family: 'Work Sans', sans-serif;
+    color: #170101;
   }
   h2 {
     font-size: 1.6rem;
     font-family: 'Work Sans', sans-serif;
+    color: #54190C;
   }
   h3 {
     font-size: 1.4rem;
     font-family: 'Work Sans', sans-serif;
+    color: #7E2611;
   }
   h4 {
     font-size: 1.2rem;
     font-family: 'Work Sans', sans-serif;
+    color: #2D2B29;
   }
   h5 {
     font-size: 1.1rem;
     font-family: 'Work Sans', sans-serif;
+    color: #53504C;
   }
 }
 .icon {
@@ -92,22 +107,9 @@ code {
   border-width: 2px;
   border-style: solid;
   cursor: pointer;
+}
+.button:hover {
   transition: background-color 0.2s ease, border-color 0.2s ease;
-}
-.button .icon {
-  width: 16px;
-  height: 16px;
-  fill: currentColor;
-}
-.button .icon-left {
-  margin-right: 12px;
-}
-.button .icon-right {
-  margin-left: 12px;
-}
-.button.disabled {
-  cursor: not-allowed;
-  opacity: 0.6;
 }
 .button.primary {
   background-color: #A83217;
@@ -120,10 +122,7 @@ code {
 .button.primary:active {
   background-color: #A83217;
   border-color: #7E2611;
-}
-.button.primary:focus {
-  background-color: #A83217;
-  border-color: #7E2611;
+  transition: none;
 }
 .button.primary.disabled {
   background-color: #DCD9D6;
@@ -133,7 +132,7 @@ code {
 .button.secondary {
   background-color: transparent;
   color: #53504C;
-  border-color: #53504C;
+  border-color: #7C7872;
 }
 .button.secondary:hover {
   background-color: #DCD9D6;
@@ -142,11 +141,7 @@ code {
   background-color: transparent;
   color: #2D2B29;
   border-color: #2D2B29;
-}
-.button.secondary:focus {
-  background-color: transparent;
-  color: #2D2B29;
-  border-color: #2D2B29;
+  transition: none;
 }
 .button.secondary.disabled {
   background-color: #DCD9D6;
@@ -164,10 +159,7 @@ code {
 .button.danger:active {
   background-color: #C92929;
   border-color: #6E1717;
-}
-.button.danger:focus {
-  background-color: #C92929;
-  border-color: #6E1717;
+  transition: none;
 }
 .button.danger.disabled {
   background-color: #DCD9D6;
@@ -185,10 +177,7 @@ code {
 .button.success:active {
   background-color: #12825F;
   border-color: #0A4834;
-}
-.button.success:focus {
-  background-color: #12825F;
-  border-color: #0A4834;
+  transition: none;
 }
 .button.success.disabled {
   background-color: #DCD9D6;
@@ -206,15 +195,107 @@ code {
 .button.warning:active {
   background-color: #F2AB53;
   border-color: #A6620D;
-}
-.button.warning:focus {
-  background-color: #F2AB53;
-  border-color: #A6620D;
+  transition: none;
 }
 .button.warning.disabled {
   background-color: #DCD9D6;
   color: #959089;
   border-color: transparent;
+}
+.input {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  width: 100%;
+  max-width: 419px;
+  /* Estilos según breakpoints */
+  /* Primera fila (input-header): label, requirement y tooltip */
+  /* Segunda fila (input-body): íconos y caja de texto */
+  /* Tercera fila (input-helptext): texto de ayuda */
+}
+.input.fixed {
+  width: 419px;
+}
+.input.full {
+  width: 100%;
+}
+@media 719px {
+  .input {
+    width: 100%;
+  }
+  .input .input-tooltip {
+    display: none;
+  }
+}
+.input .input-header {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  max-width: 100%;
+  color: #53504C;
+}
+.input .input-header .input-label {
+  font-size: 0.889rem;
+}
+.input .input-header .input-requirement {
+  font-size: 0.79rem;
+  color: #53504C;
+  /* Cambiar color en estado de error */
+}
+.error .input .input-header .input-requirement {
+  color: #C92929;
+}
+.input .input-header .input-tooltip {
+  color: #53504C;
+}
+.input .input-body {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 16px;
+  background-color: #F6F5F5;
+  border-radius: 4px;
+  border: 1px solid #EDECEA;
+  /* Cambiar el stroke según el estado y tipo */
+  /* En estado de error */
+}
+.input .input-body.hover {
+  border-color: #EDECEA;
+}
+.input .input-body.focus,
+.input .input-body.writing {
+  border-color: #D4998B;
+}
+.input .input-body.write-down {
+  border-color: #C5BEB7;
+}
+.input .input-body.disabled {
+  background-color: #C5BEB7;
+  border-color: #C5BEB7;
+}
+.input .input-body.error {
+  border-color: #C92929;
+}
+.input .input-body .text-input {
+  flex-grow: 1;
+  color: #959089;
+  font-size: 1rem;
+}
+.input .input-body .icon-left,
+.input .input-body .icon-right {
+  color: #53504C;
+}
+.input .input-helptext {
+  font-size: 0.79rem;
+  color: #53504C;
+  /* Cambiar color en estado de error */
+  /* En caso de estado error y disabled */
+}
+.error .input .input-helptext {
+  color: #C92929;
+}
+.input .input-helptext.error.disabled {
+  color: #53504C;
 }
 .nav-tabs {
   display: inline-flex;
@@ -305,6 +386,22 @@ code {
 .nav-tabs .tab .tab-text {
   font-size: 1rem;
   color: inherit;
+}
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 4px 20px;
+}
+.navbar .nav-tabs-container {
+  flex-grow: 1;
+}
+.navbar .nav-search {
+  margin-left: auto;
+  margin-right: 12px;
+}
+.navbar .nav-user {
+  margin-left: 12px;
 }
 .tab {
   display: inline-flex;
