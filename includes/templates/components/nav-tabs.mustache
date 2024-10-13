@@ -14,22 +14,20 @@
 <link rel="stylesheet" href="resources/styles/css/variables.css">
 
 
-{{! Plantillas:
-}}
-
+{{! Plantilla de nav-tabs }}
 
 {{#isFloating}}
 <div class="nav-tabs floating">
   {{#tabs}}
     <button class="tab {{state}}">
       {{#leftIcon}}
-        {{> components/icon iconName=leftIcon }}
+        {{> components/icon }} <!-- Referencia correcta al componente de ícono -->
       {{/leftIcon}}
 
       <span class="tab-text">{{label}}</span>
 
       {{#rightIcon}}
-        {{> components/icon iconName=rightIcon }}
+        {{> components/icon }} <!-- Referencia correcta al componente de ícono -->
       {{/rightIcon}}
     </button>
   {{/tabs}}
@@ -41,13 +39,13 @@
   {{#tabs}}
     <button class="tab {{state}}">
       {{#leftIcon}}
-        {{> components/icon iconName=leftIcon }}
+        {{> components/icon }} <!-- Referencia correcta al componente de ícono -->
       {{/leftIcon}}
 
       <span class="tab-text">{{label}}</span>
 
       {{#rightIcon}}
-        {{> components/icon iconName=rightIcon }}
+        {{> components/icon }} <!-- Referencia correcta al componente de ícono -->
       {{/rightIcon}}
     </button>
   {{/tabs}}

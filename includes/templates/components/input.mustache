@@ -14,8 +14,7 @@
 <link rel="stylesheet" href="resources/styles/css/variables.css">
 
 
-{{! Plantillas:
-}}
+{{! Plantilla de input }}
 
 <div class="input {{type}} {{state}} {{width}}">
   <!-- Primera fila: label, requirement y tooltip -->
@@ -31,7 +30,7 @@
 
     {{#tooltip}}
       <span class="input-tooltip">
-        {{> components/icon iconName="tooltip.svg"}}
+        {{> components/icon iconName="tooltip.svg" }}
       </span>
     {{/tooltip}}
   </div>
@@ -39,13 +38,13 @@
   <!-- Segunda fila: left-icon, text-input y right-icon -->
   <div class="input-body">
     {{#leftIcon}}
-      <span class="icon-left">{{> components/icon iconName=leftIcon }}</span>
+      <span class="icon-left">{{> components/icon }}</span>
     {{/leftIcon}}
 
     <input type="text" value="{{text-input}}" class="text-input"/>
 
     {{#rightIcon}}
-      <span class="icon-right">{{> components/icon iconName=rightIcon }}</span>
+      <span class="icon-right">{{> components/icon }}</span>
     {{/rightIcon}}
   </div>
 

@@ -1,26 +1,7 @@
-{{! ¿Qué es esto?
-}}
-{{! plantilla de la barra de navegación
-}}
-
-
-{{! Enlaces a estilos para que se rendericen bien las plantillas:
-}}
-
-<link rel="stylesheet" href="resources/styles/css/breakpoints.css">
-<link rel="stylesheet" href="resources/styles/css/components.css">
-<link rel="stylesheet" href="resources/styles/css/typography.css">
-<link rel="stylesheet" href="resources/styles/css/variables.css">
-<link rel="stylesheet" href="resources/styles/css/icons.css">
-
-
-{{! Plantillas:
-}}
-
 <nav class="navbar">
   <!-- Primer nav-tabs floating (CASIOPEA, Escuela, Wiki, Crear) -->
   <div class="nav-tabs-container">
-    {{> includes/templates/components/nav-tabs 
+    {{> components/nav-tabs 
         isFloating=true 
         tabs=[
           { label: "CASIOPEA", state: "default" },
@@ -33,7 +14,7 @@
 
   <!-- Input de búsqueda (Buscar en Casiopea) -->
   <div class="nav-search">
-    {{> includes/templates/components/input 
+    {{> components/input 
         type="default" 
         state="default" 
         text-input="Buscar en Casiopea" 
@@ -44,10 +25,10 @@
 
   <!-- Segundo nav-tabs floating (Hola, nombre de usuario) -->
   <div class="nav-user">
-    {{> includes/templates/components/nav-tabs 
+    {{> components/nav-tabs 
         isFloating=true 
         tabs=[
-          { label: "Hola, {{userName}}", state: "default", leftIcon: "cas-usuario.svg" }
+          { label: "Hola, Usuario", state: "default", leftIcon: "cas-usuario.svg" }
         ]
     }}
   </div>
