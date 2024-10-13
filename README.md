@@ -21,3 +21,6 @@ Estructura:
 - Renderización: el archivo render.js se encarga de renderizar estas plantillas en páginas HTML para poder visualizarlas.
 
 *Al momento de escribir esto, aún hay muchos archivos que no están creados, o no tienen nada escrito. El documento render.js aún no funciona como debería, por lo que en el futuro se deberá crear al menos una plantilla de página dentro de includes/templates/pages, y luego modificar el código en render.js para asegurarse de que todo el ecosistema del repositorio funcione de la manera esperada.*
+
+Carpeta Outputs:
+- En render.js tiro comandos que me permiten renderizar los archivos mustache a archivos html... en Outputs hay algunas pruebas que he hecho hasta ahora de distintas cosas, que me han permitido visualizar si voy bien o no.
