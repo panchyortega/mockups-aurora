@@ -1,35 +1,325 @@
+
+
+
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mockups Aurora</title>
-    <!-- Enlaza el archivo CSS compilado -->
+    <title>Página de Presentación</title>
     <link rel="stylesheet" href="resources/styles/css/components.css">
     <link rel="stylesheet" href="resources/styles/css/typography.css">
     <link rel="stylesheet" href="resources/styles/css/variables.css">
-    <link rel="stylesheet" href="resources/styles/css/icons.css">
-    <link rel="stylesheet" href="resources/styles/css/breakpoints.css">
-
+    <link rel="stylesheet" href="resources/styles/css/grid.css">
+    <link rel="stylesheet" href="estilos.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@100..700&family=Work+Sans:wght@100..900&display=swap" rel="stylesheet">
 </head>
 <body>
-    <h1>Bienvenido a la visualización de Aurora</h1>
-    <p>Probar achicar la pantalla</p>
+    <!-- Barra de navegación -->
+    <header class="navbar">
+        <nav class="nav-links-left">
+          <a href="#inicio">Inicio</a>
+          <a href="../index.html">Skin Interactiva</a>
+          <a href="#componentes">Componentes</a>
+        </nav>
+        <nav class="nav-links-right">
+          <a href="https://github.com/panchyortega/mockups-aurora" target="_blank">GitHub</a>
+          <a href="#" target="_blank">Figma</a>
+          <a href="https://wiki.ead.pucv.cl/Aura:_Skin_wiki_Casiopea" target="_blank">Casiopea</a>
+        </nav>
+      </header>
+      
 
-    <!-- Botón de ejemplo -->
-    <button class="button primary">
-        Botón Primario
-    </button>
+    <!-- Sección principal -->
+    <section id="inicio" class="main-section">
+    
+            <div>
+                <img src="https://via.placeholder.com/400x300" alt="Imagen de introducción">
+            </div>
+            <div>
+                <h1>¿Qué es esto?</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris cursus sem massa, eget placerat purus vehicula vel. Phasellus arcu elit, hendrerit ac nisl eu, 
+                    fermentum rutrum purus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Morbi pharetra accumsan rutrum. Orci varius 
+                    natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+                <div class="buttons-row">
+                    <button class="button secondary"><a href="https://wiki.ead.pucv.cl/Aura:_Skin_wiki_Casiopea">Más sobre el proyecto</a></button>
+                    <button class="button primary"><a href="../index.html">Interactuar con la skin</a></button>
+                </div>
+            </div>
+        
+    </section>
 
-    <!-- Puedes agregar más botones con diferentes clases -->
-    <button class="button secondary">
-        Botón Secundario
-    </button>
+    <section id="componentes">
+        <h1>Componentes</h1>
+    
+        <!-- Fundación -->
+        <h2>Fundación</h2>
+        <p>Componentes fundamentales para la construcción de la nueva skin. Con ellos comienza todo.</p>
+        <div class="card-group">
+            <div class="card">
+                <div class="firstRow">
+                    <img src="https://via.placeholder.com/400x200" alt="Grillas" class="card-image">
+                </div>
+                <div class="secondRow">
+                    <h4>Grillas</h4>
+                    <p>Cómo se ordena todo en distintas pantallas.</p>
+                </div>
+                <a href="#" class="card-link"></a>
+            </div>
+            <div class="card">
+                <div class="firstRow">
+                    <img src="https://via.placeholder.com/400x200" alt="Tamaños" class="card-image">
+                </div>
+                <div class="secondRow">
+                    <h4>Tamaños</h4>
+                    <p>Gaps, corner radius, paddings, etc.</p>
+                </div>
+                <a href="#" class="card-link"></a>
+            </div>
+            <div class="card">
+                <div class="firstRow">
+                    <img src="https://via.placeholder.com/400x200" alt="Colores" class="card-image">
+                </div>
+                <div class="secondRow">
+                    <h4>Colores</h4>
+                    <p>Paleta de colores, sus usos y contrastes.</p>
+                </div>
+                <a href="#" class="card-link"></a>
+            </div>
+            <div class="card">
+                <div class="firstRow">
+                    <img src="https://via.placeholder.com/400x200" alt="Tipografía" class="card-image">
+                </div>
+                <div class="secondRow">
+                    <h4>Tipografía</h4>
+                    <p>Todos los estilos de texto, en distintas pantallas.</p>
+                </div>
+                <a href="#" class="card-link"></a>
+            </div>
+            <div class="card">
+                <div class="firstRow">
+                    <img src="https://via.placeholder.com/400x200" alt="Íconos" class="card-image">
+                </div>
+                <div class="secondRow">
+                    <h4>Íconos</h4>
+                    <p>Biblioteca de íconos.</p>
+                </div>
+                <a href="#" class="card-link"></a>
+            </div>
+            <div class="card">
+                <div class="firstRow">
+                    <img src="https://via.placeholder.com/400x200" alt="Logo" class="card-image">
+                </div>
+                <div class="secondRow">
+                    <h4>Logo</h4>
+                    <p>Variaciones del logo de Casiopea.</p>
+                </div>
+                <a href="#" class="card-link"></a>
+            </div>
+        </div>
+    
+        <!-- Acciones -->
+        <h2>Acciones</h2>
+        <p>Componentes que el usuario usa para interactuar con la wiki Casiopea y su contenido.</p>
+        <div class="card-group">
+            <div class="card">
+                <div class="firstRow">
+                    <img src="https://via.placeholder.com/400x200" alt="Botones" class="card-image">
+                </div>
+                <div class="secondRow">
+                    <h4>Botones</h4>
+                    <p>Todos los tipos de botones.</p>
+                </div>
+                <a href="#" class="card-link"></a>
+            </div>
+            <div class="card">
+                <div class="firstRow">
+                    <img src="https://via.placeholder.com/400x200" alt="Radio-button" class="card-image">
+                </div>
+                <div class="secondRow">
+                    <h4>Radio-button</h4>
+                    <p>Para selecciones únicas en formularios.</p>
+                </div>
+                <a href="#" class="card-link"></a>
+            </div>
+            <div class="card">
+                <div class="firstRow">
+                    <img src="https://via.placeholder.com/400x200" alt="Checkbox" class="card-image">
+                </div>
+                <div class="secondRow">
+                    <h4>Checkbox</h4>
+                    <p>Para selecciones múltiples en formularios.</p>
+                </div>
+                <a href="#" class="card-link"></a>
+            </div>
+            <div class="card">
+                <div class="firstRow">
+                    <img src="https://via.placeholder.com/400x200" alt="Tabs" class="card-image">
+                </div>
+                <div class="secondRow">
+                    <h4>Tabs</h4>
+                    <p>Tabs y Nav-tabs, ¿En dónde se usan?</p>
+                </div>
+                <a href="#" class="card-link"></a>
+            </div>
+            <div class="card">
+                <div class="firstRow">
+                    <img src="https://via.placeholder.com/400x200" alt="Menús" class="card-image">
+                </div>
+                <div class="secondRow">
+                    <h4>Menús</h4>
+                    <p>Menús desplegables y menu-items.</p>
+                </div>
+                <a href="#" class="card-link"></a>
+            </div>
+            <div class="card">
+                <div class="firstRow">
+                    <img src="https://via.placeholder.com/400x200" alt="Inputs" class="card-image">
+                </div>
+                <div class="secondRow">
+                    <h4>Inputs</h4>
+                    <p>Todas las formas de usar un input.</p>
+                </div>
+                <a href="#" class="card-link"></a>
+            </div>
+            <div class="card">
+                <div class="firstRow">
+                    <img src="https://via.placeholder.com/400x200" alt="Text areas" class="card-image">
+                </div>
+                <div class="secondRow">
+                    <h4>Text areas</h4>
+                    <p>Todas las formas de usar un text area.</p>
+                </div>
+                <a href="#" class="card-link"></a>
+            </div>
+        </div>
+    
+        <!-- Navegación -->
+        <h2>Navegación</h2>
+        <p>Componentes que permiten al usuario navegar a través de la wiki Casiopea.</p>
+        <div class="card-group">
+            <div class="card">
+                <div class="firstRow">
+                    <img src="https://via.placeholder.com/400x200" alt="Nav-bar" class="card-image">
+                </div>
+                <div class="secondRow">
+                    <h4>Nav-bar</h4>
+                    <p>Barra de navegación, sus distintos estados y adaptabilidad en pantallas.</p>
+                </div>
+                <a href="#" class="card-link"></a>
+            </div>
+            <div class="card">
+                <div class="firstRow">
+                    <img src="https://via.placeholder.com/400x200" alt="Footer" class="card-image">
+                </div>
+                <div class="secondRow">
+                    <h4>Footer</h4>
+                    <p>¿Cómo se construye el footer?</p>
+                </div>
+                <a href="#" class="card-link"></a>
+            </div>
+            <div class="card">
+                <div class="firstRow">
+                    <img src="https://via.placeholder.com/400x200" alt="Opciones de página" class="card-image">
+                </div>
+                <div class="secondRow">
+                    <h4>Opciones de página</h4>
+                    <p>Herramientas de las distintas páginas.</p>
+                </div>
+                <a href="#" class="card-link"></a>
+            </div>
+            <div class="card">
+                <div class="firstRow">
+                    <img src="https://via.placeholder.com/400x200" alt="Ficha" class="card-image">
+                </div>
+                <div class="secondRow">
+                    <h4>Ficha</h4>
+                    <p>Cómo funciona la nueva ficha.</p>
+                </div>
+                <a href="#" class="card-link"></a>
+            </div>
+            <div class="card">
+                <div class="firstRow">
+                    <img src="https://via.placeholder.com/400x200" alt="Tabla de Contenidos" class="card-image">
+                </div>
+                <div class="secondRow">
+                    <h4>Tabla de Contenidos</h4>
+                    <p>Para una mejor navegación contextual.</p>
+                </div>
+                <a href="#" class="card-link"></a>
+            </div>
+            <div class="card">
+                <div class="firstRow">
+                    <img src="https://via.placeholder.com/400x200" alt="Tipo de página" class="card-image">
+                </div>
+                <div class="secondRow">
+                    <h4>Tipo de página</h4>
+                    <p>Otorgando un sentido de orientación.</p>
+                </div>
+                <a href="#" class="card-link"></a>
+            </div>
+        </div>
+    
+        <!-- Plantillas y otros elementos Wiki -->
+        <h2>Plantillas y otros elementos Wiki</h2>
+        <p>Elementos propios de Casiopea como plantillas o widgets.</p>
+        <div class="card-group">
+            <div class="card">
+                <div class="firstRow">
+                    <img src="https://via.placeholder.com/400x200" alt="Imágenes" class="card-image">
+                </div>
+                <div class="secondRow">
+                    <h4>Imágenes</h4>
+                    <p>Las distintas formas de imágenes.</p>
+                </div>
+                <a href="#" class="card-link"></a>
+            </div>
+            <div class="card">
+                <div class="firstRow">
+                    <img src="https://via.placeholder.com/400x200" alt="Tarjetas" class="card-image">
+                </div>
+                <div class="secondRow">
+                    <h4>Tarjetas</h4>
+                    <p>¿Qué es esto? ¿Cómo se usa?</p>
+                </div>
+                <a href="#" class="card-link"></a>
+            </div>
+            <div class="card">
+                <div class="firstRow">
+                    <img src="https://via.placeholder.com/400x200" alt="Videos" class="card-image">
+                </div>
+                <div class="secondRow">
+                    <h4>Videos</h4>
+                    <p>Widgets de Youtube y Vimeo.</p>
+                </div>
+                <a href="#" class="card-link"></a>
+            </div>
+            <div class="card">
+                <div class="firstRow">
+                    <img src="https://via.placeholder.com/400x200" alt="Tablas" class="card-image">
+                </div>
+                <div class="secondRow">
+                    <h4>Tablas</h4>
+                    <p>Estilos y sugerencias.</p>
+                </div>
+                <a href="#" class="card-link"></a>
+            </div>
+        </div>
+    </section>
+    
 
+        <!-- Más cards para las otras categorías (Acciones, Navegación, etc.) se seguirían el mismo formato -->
+    </section>
 
-
+    <!-- Footer -->
+    <footer class="footer">
+        <a href="#" target="_blank">Documento de Figma</a>
+        <a href="https://wiki.ead.pucv.cl/Aura:_Skin_wiki_Casiopea" target="_blank">Wiki Casiopea</a>
+        <a href="https://github.com/panchyortega/mockups-aurora" target="_blank">Repositorio de Github</a>
+      </footer>
+      
 </body>
 </html>
