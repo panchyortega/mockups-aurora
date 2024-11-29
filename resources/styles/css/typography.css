@@ -20,6 +20,7 @@ a {
 }
 a:visited {
   color: #54190C;
+  text-decoration: none;
 }
 a:hover {
   color: #7E2611;
@@ -38,9 +39,33 @@ a a:not([href]) {
   cursor: default;
   text-decoration: none;
 }
+a a:not([href]):hover {
+  color: #7C7872;
+  text-decoration: underline;
+}
+a a:not([href]):focus {
+  color: #53504C;
+  text-decoration: underline;
+}
+a a:not([href]):active {
+  color: #53504C;
+  text-decoration: none;
+}
 a a[href=""] {
   color: #B2ACA4;
   cursor: default;
+  text-decoration: none;
+}
+a a[href=""]:hover {
+  color: #7C7872;
+  text-decoration: underline;
+}
+a a[href=""]:focus {
+  color: #53504C;
+  text-decoration: underline;
+}
+a a[href=""]:active {
+  color: #53504C;
   text-decoration: none;
 }
 .navbar a {

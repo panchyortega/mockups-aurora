@@ -45,6 +45,7 @@ a {
 
   &:visited {
     color: @col-prim-700; // Cambiar color al ser visitado
+    text-decoration: none;
   }
 
   &:hover {
@@ -66,12 +67,42 @@ a {
     color: @col-surf-400;
     cursor: default; // Cambia el cursor para indicar que no es un enlace funcional
     text-decoration: none;
+   
+    &:hover {
+      color: @col-surf-600; // Cambiar color al pasar el cursor
+      text-decoration: underline; // Subrayar el texto al hover (opcional)
+    }
+  
+    &:focus {
+      color: @col-surf-700; // Cambiar color cuando el enlace está enfocado
+      text-decoration: underline;
+    }
+  
+    &:active {
+      color: @col-surf-700; // Cambiar color cuando el enlace está activo
+      text-decoration: none; // Opcional, eliminar subrayado en este estado
+    }
   }
   
   a[href=""] {
     color: @col-surf-400; // Similar al anterior, pero para enlaces con `href` vacío
     cursor: default;
     text-decoration: none;
+   
+    &:hover {
+      color: @col-surf-600; // Cambiar color al pasar el cursor
+      text-decoration: underline; // Subrayar el texto al hover (opcional)
+    }
+  
+    &:focus {
+      color: @col-surf-700; // Cambiar color cuando el enlace está enfocado
+      text-decoration: underline;
+    }
+  
+    &:active {
+      color: @col-surf-700; // Cambiar color cuando el enlace está activo
+      text-decoration: none; // Opcional, eliminar subrayado en este estado
+    }
   }
 
 }
