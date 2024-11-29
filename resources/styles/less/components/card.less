@@ -1,0 +1,58 @@
+// Importar estilos necesarios
+
+@import "../variables.less";     // Importar variables generales
+@import "../typography.less";    // Importar tipografía para tamaños de texto
+@import "../breakpoints.less";   // Importar breakpoints
+@import "../icons.less";         // Importar íconos
+
+// Estilos del componente
+
+
+.card {
+    position: relative; /* Para el enlace absoluto */
+    display: flex;
+    flex-direction: column;
+    gap: @gap-lg; /* Espacio entre las filas */
+    max-width: 400px; /* Ancho máximo por defecto */
+    background-color: transparent;
+    overflow: hidden;
+  
+    @media (max-width: @breakpoint-mobile) {
+      max-width: 260px; /* Ajuste en pantallas pequeñas */
+    }
+  
+    /* Primera fila: Imagen */
+    .firstRow {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      img {
+        width: 100%;
+        height: auto; /* Mantiene proporciones */
+      }
+    }
+  
+    /* Segunda fila: Encabezado y descripción */
+    .secondRow {
+      display: flex;
+      flex-direction: column;
+      gap: @gap-0; /* Espaciado entre título y descripción */
+      text-align: left; /* Alineación del texto */
+      width: 100%;
+    }
+  
+  
+
+    /* Enlace invisible que cubre toda la tarjeta */
+    .card-link {
+      position: relative;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1; /* Asegura que el enlace sea clickeable */
+      text-decoration: none; /* Sin subrayado */
+    }
+  }
+  

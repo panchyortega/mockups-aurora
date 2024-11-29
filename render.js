@@ -1,20 +1,36 @@
-const Mustache = require("mustache");
-const fs = require("fs");
+const fs = require('fs');
+const mustache = require('mustache');
 
-// Cargar las plantillas
-const baseTemplate = fs.readFileSync("includes/templates/base.mustache", "utf8");
-const cursoTemplate = fs.readFileSync("includes/templates/pages/curso-page.mustache", "utf8");
+// Cargar plantilla de la card
+const cardTemplate = fs.readFileSync('includes/templates/components/card.mustache', 'utf8');
 
-// Definir los datos
+// Datos directamente en render.js
 const data = {
-  title: "Página de Curso",
-  content: Mustache.render(cursoTemplate)  // Renderizar el contenido dentro de la página base
+    cardImage: "https://via.placeholder.com/400x200",
+    cardHeading: "Título de la Tarjeta",
+    cardDescription: "Esta es una descripción breve de la tarjeta. Puedes usarla para mostrar más información relevante.",
+    cardLink: "https://www.ejemplo.com"
 };
 
-// Renderizar la plantilla
-const output = Mustache.render(baseTemplate, data);
+// Renderizar la tarjeta
+const renderedCard = mustache.render(cardTemplate, data);
 
-// Guardar el archivo renderizado
-fs.writeFileSync("output/curso-page.html", output);
+// Crear archivo HTML directamente
+const htmlContent = `
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card Example</title>
+    <link rel="stylesheet" href="../resources/styles/css/components.css">
+</head>
+<body>
+    ${renderedCard}
+</body>
+</html>
+`;
 
-console.log("Página de curso renderizada correctamente.");
+// Guardar el archivo HTML generado
+fs.writeFileSync('output/card-example.html', htmlContent, 'utf8');
+console.log('Archivo card-example.html generado correctamente.');

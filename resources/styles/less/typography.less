@@ -38,6 +38,57 @@ p.xs {
   font-size: @size-text-body-xs;
 }
 
+a {
+  font-family: @font-body;
+  color: @col-surf-400;
+  text-decoration: none;
+
+  &:visited {
+    color: @col-prim-700; // Cambiar color al ser visitado
+  }
+
+  &:hover {
+    color: @col-prim-600; // Cambiar color al pasar el cursor
+    text-decoration: underline; // Subrayar el texto al hover (opcional)
+  }
+
+  &:focus {
+    color: @col-prim-700; // Cambiar color cuando el enlace está enfocado
+    text-decoration: underline;
+  }
+
+  &:active {
+    color: @col-prim-700; // Cambiar color cuando el enlace está activo
+    text-decoration: none; // Opcional, eliminar subrayado en este estado
+  }
+
+  a:not([href]) {
+    color: @col-surf-400;
+    cursor: default; // Cambia el cursor para indicar que no es un enlace funcional
+    text-decoration: none;
+  }
+  
+  a[href=""] {
+    color: @col-surf-400; // Similar al anterior, pero para enlaces con `href` vacío
+    cursor: default;
+    text-decoration: none;
+  }
+
+}
+
+.navbar a {
+  text-transform: lowercase small-caps; /* Estilo small caps */
+  color: @col-surf-900; /* Color surface 900 */
+  text-decoration: none; /* Sin subrayado */
+  font-size: @size-text-body-sm; /* Tamaño acorde a la tipografía secundaria */
+}
+
+.navbar a:hover,
+.navbar a:focus {
+  text-decoration: none; /* Subrayado en hover y focus */
+  color: @col-prim-400; /* Cambio de color en interacción */
+}
+
 // Estilos de encabezados
 h1 {
   font-size: @size-text-h1;
@@ -58,6 +109,7 @@ h4 {
   font-size: @size-text-h4;
   font-family: @font-body;
   color: @color-font-h4;
+  // padding-bottom: @size-text-h4;
 }
 h5 {
   font-size: @size-text-h5;

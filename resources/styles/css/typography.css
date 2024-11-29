@@ -13,6 +13,53 @@ p.sm {
 p.xs {
   font-size: 0.79rem;
 }
+a {
+  font-family: 'Work Sans', sans-serif;
+  color: #B2ACA4;
+  text-decoration: none;
+}
+a:visited {
+  color: #54190C;
+}
+a:hover {
+  color: #7E2611;
+  text-decoration: underline;
+}
+a:focus {
+  color: #54190C;
+  text-decoration: underline;
+}
+a:active {
+  color: #54190C;
+  text-decoration: none;
+}
+a a:not([href]) {
+  color: #B2ACA4;
+  cursor: default;
+  text-decoration: none;
+}
+a a[href=""] {
+  color: #B2ACA4;
+  cursor: default;
+  text-decoration: none;
+}
+.navbar a {
+  text-transform: lowercase small-caps;
+  /* Estilo small caps */
+  color: #2D2B29;
+  /* Color surface 900 */
+  text-decoration: none;
+  /* Sin subrayado */
+  font-size: 0.889rem;
+  /* Tamaño acorde a la tipografía secundaria */
+}
+.navbar a:hover,
+.navbar a:focus {
+  text-decoration: none;
+  /* Subrayado en hover y focus */
+  color: #A83217;
+  /* Cambio de color en interacción */
+}
 h1 {
   font-size: 2.027rem;
   font-family: 'Work Sans', sans-serif;
@@ -45,7 +92,7 @@ h5 {
   line-height: 1.3;
 }
 code {
-  font-family: 'IBM Plex Mono', monospace;
+  font-family: 'Roboto Mono', monospace;
   font-size: 1rem;
   color: #2D2B29;
 }

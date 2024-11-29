@@ -10,7 +10,7 @@
   align-items: center;
   justify-content: center;
   gap: @gap-md;                  // Espacio entre íconos y texto
-  padding: @padding-md @padding-lg;
+  padding: @padding-sm @padding-lg;
   border-radius: @corner-radius-xs;
   font-family: @font-body;
   font-size: @size-text-body-md;  // Usar tamaño de texto ajustado
@@ -19,6 +19,9 @@
   border-width: 2px;
   border-style: solid;
   cursor: pointer;
+  a {
+    text-decoration: none; 
+  }
 
   // Solo animación en el hover
   &:hover {
@@ -31,8 +34,15 @@
     color: @col-surf-50;
     border-color: transparent;
 
+    a{
+      color: @col-surf-50;
+    }
+
     &:hover {
       background-color: @col-prim-600;
+      a {
+        text-decoration: none; 
+      }
     }
 
     &:active {
@@ -45,6 +55,9 @@
       background-color: @col-surf-200;
       color: @col-surf-500;
       border-color: transparent;
+      a{
+        color: @col-surf-500;
+      }
     }
   }
 
@@ -52,9 +65,15 @@
     background-color: transparent;
     color: @col-surf-700;
     border-color: @col-surf-600;
+    a{
+      color: @col-surf-700;
+    }
 
     &:hover {
       background-color: @col-surf-200;
+      a {
+        text-decoration: none; 
+      }
     }
 
     &:active {
@@ -68,6 +87,9 @@
       background-color: @col-surf-200;
       color: @col-surf-500;
       border-color: transparent;
+      a{
+        color: @col-surf-500;
+      }
     }
   }
 
@@ -75,9 +97,15 @@
     background-color: @col-danger-200;
     color: @col-surf-50;
     border-color: transparent;
+    a{
+      color: @col-surf-50;
+    }
 
     &:hover {
       background-color: @col-danger-300;
+      a {
+        text-decoration: none; 
+      }
     }
 
     &:active {
@@ -90,6 +118,9 @@
       background-color: @col-surf-200;
       color: @col-surf-500;
       border-color: transparent;
+      a{
+        color: @col-surf-500;
+      }
     }
   }
 
@@ -97,9 +128,15 @@
     background-color: @col-succes-200;
     color: @col-surf-50;
     border-color: transparent;
+    a{
+      color: @col-surf-50;
+    }
 
     &:hover {
       background-color: @col-succes-300;
+      a {
+        text-decoration: none; 
+      }
     }
 
     &:active {
@@ -112,6 +149,9 @@
       background-color: @col-surf-200;
       color: @col-surf-500;
       border-color: transparent;
+      a{
+        color: @col-surf-500;
+      }
     }
   }
 
@@ -119,9 +159,15 @@
     background-color: @col-warning-200;
     color: @col-surf-50;
     border-color: transparent;
+    a{
+      color: @col-surf-50;
+    }
 
     &:hover {
       background-color: @col-warning-300;
+      a {
+        text-decoration: none; 
+      }
     }
 
     &:active {
@@ -134,6 +180,9 @@
       background-color: @col-surf-200;
       color: @col-surf-500;
       border-color: transparent;
+      a{
+        color: @col-surf-500;
+      }
     }
   }
 }

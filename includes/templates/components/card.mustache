@@ -1,0 +1,32 @@
+{{! ¿Qué es esto?
+}}
+{{! Esta es una plantilla de card
+}}
+
+
+{{! Enlaces a estilos para que se rendericen bien las plantillas:
+}}
+
+    <link rel="stylesheet" href=".../resources/styles/css/breakpoints.css">
+    <link rel="stylesheet" href=".../resources/styles/css/components.css">
+    <link rel="stylesheet" href=".../resources/styles/css/icons.css">
+    <link rel="stylesheet" href=".../resources/styles/css/typography.css">
+    <link rel="stylesheet" href=".../resources/styles/css/variables.css">
+    <link rel="stylesheet" href=".../resources/styles/css/grid.css">
+
+
+
+{{! Plantilla:
+}}
+
+
+<div class="card">
+  <div class="firstRow">
+    <img src="{{cardImage}}" alt="Imagen de la tarjeta" class="card-image">
+  </div>
+  <div class="secondRow">
+    <h4 class="h4">{{cardHeading}}</h4>
+    <p>{{cardDescription}}</p>
+  </div>
+  <a href="{{cardLink}}" class="card-link"></a>
+</div>
