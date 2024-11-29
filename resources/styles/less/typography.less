@@ -6,6 +6,7 @@
 @size-text-h3: 1.602rem;
 @size-text-h4: 1.424rem;
 @size-text-h5: 1.266rem;
+@size-text-h6: 1.125rem;
 @size-text-body-lg: 1.125rem;
 @size-text-body-md: 1rem;
 @size-text-body-sm: 0.889rem;
@@ -17,6 +18,7 @@
 @color-font-h3: @col-prim-600;
 @color-font-h4: @col-surf-900;
 @color-font-h5: @col-surf-700;
+@color-font-h6: @col-surf-700;
 
 
 // Estilos generales de texto
@@ -67,42 +69,12 @@ a {
     color: @col-surf-400;
     cursor: default; // Cambia el cursor para indicar que no es un enlace funcional
     text-decoration: none;
-   
-    &:hover {
-      color: @col-surf-600; // Cambiar color al pasar el cursor
-      text-decoration: underline; // Subrayar el texto al hover (opcional)
-    }
-  
-    &:focus {
-      color: @col-surf-700; // Cambiar color cuando el enlace está enfocado
-      text-decoration: underline;
-    }
-  
-    &:active {
-      color: @col-surf-700; // Cambiar color cuando el enlace está activo
-      text-decoration: none; // Opcional, eliminar subrayado en este estado
-    }
   }
   
   a[href=""] {
     color: @col-surf-400; // Similar al anterior, pero para enlaces con `href` vacío
     cursor: default;
     text-decoration: none;
-   
-    &:hover {
-      color: @col-surf-600; // Cambiar color al pasar el cursor
-      text-decoration: underline; // Subrayar el texto al hover (opcional)
-    }
-  
-    &:focus {
-      color: @col-surf-700; // Cambiar color cuando el enlace está enfocado
-      text-decoration: underline;
-    }
-  
-    &:active {
-      color: @col-surf-700; // Cambiar color cuando el enlace está activo
-      text-decoration: none; // Opcional, eliminar subrayado en este estado
-    }
   }
 
 }
@@ -125,27 +97,37 @@ h1 {
   font-size: @size-text-h1;
   font-family: @font-body;
   color: @color-font-h1;
+  padding-bottom: @size-text-h1;
 }
 h2 {
   font-size: @size-text-h2;
   font-family: @font-body;
   color: @color-font-h2;
+  padding-bottom: @size-text-h2;
 }
 h3 {
   font-size: @size-text-h3;
   font-family: @font-body;
   color: @color-font-h2;
+  padding-bottom: @size-text-h3;
 }
 h4 {
   font-size: @size-text-h4;
   font-family: @font-body;
   color: @color-font-h4;
-  // padding-bottom: @size-text-h4;
+  padding-bottom: @size-text-h4;
 }
 h5 {
   font-size: @size-text-h5;
   font-family: @font-body;
   color: @color-font-h5;
+  padding-bottom: @size-text-h5;
+}
+h6 {
+  font-size: @size-text-h6;
+  font-family: @font-body;
+  color: @color-font-h6;
+  padding-bottom: @size-text-h6;
 }
 
 // Estilo de captions
@@ -170,6 +152,7 @@ code {
   @size-text-h3: 1.4rem;
   @size-text-h4: 1.2rem;
   @size-text-h5: 1.1rem;
+  @size-text-h6: 1rem;
   @size-text-body-lg: 1rem;
   @size-text-body-md: 0.875rem;
   @size-text-body-sm: 0.8125rem;
@@ -215,5 +198,10 @@ code {
     font-size: @size-text-h5;
     font-family: @font-body;
     color: @color-font-h5;
+  }
+  h6 {
+    font-size: @size-text-h6;
+    font-family: @font-body;
+    color: @color-font-h6;
   }
 }

@@ -39,33 +39,9 @@ a a:not([href]) {
   cursor: default;
   text-decoration: none;
 }
-a a:not([href]):hover {
-  color: #7C7872;
-  text-decoration: underline;
-}
-a a:not([href]):focus {
-  color: #53504C;
-  text-decoration: underline;
-}
-a a:not([href]):active {
-  color: #53504C;
-  text-decoration: none;
-}
 a a[href=""] {
   color: #B2ACA4;
   cursor: default;
-  text-decoration: none;
-}
-a a[href=""]:hover {
-  color: #7C7872;
-  text-decoration: underline;
-}
-a a[href=""]:focus {
-  color: #53504C;
-  text-decoration: underline;
-}
-a a[href=""]:active {
-  color: #53504C;
   text-decoration: none;
 }
 .navbar a {
@@ -89,26 +65,37 @@ h1 {
   font-size: 2.027rem;
   font-family: 'Work Sans', sans-serif;
   color: #170101;
+  padding-bottom: 2.027rem;
 }
 h2 {
   font-size: 1.802rem;
   font-family: 'Work Sans', sans-serif;
   color: #54190C;
+  padding-bottom: 1.802rem;
 }
 h3 {
   font-size: 1.602rem;
   font-family: 'Work Sans', sans-serif;
   color: #54190C;
+  padding-bottom: 1.602rem;
 }
 h4 {
   font-size: 1.424rem;
   font-family: 'Work Sans', sans-serif;
   color: #2D2B29;
+  padding-bottom: 1.424rem;
 }
 h5 {
   font-size: 1.266rem;
   font-family: 'Work Sans', sans-serif;
   color: #53504C;
+  padding-bottom: 1.266rem;
+}
+h6 {
+  font-size: 1.125rem;
+  font-family: 'Work Sans', sans-serif;
+  color: #53504C;
+  padding-bottom: 1.125rem;
 }
 .caption {
   font-family: 'Work Sans', sans-serif;
@@ -156,6 +143,11 @@ code {
   }
   h5 {
     font-size: 1.1rem;
+    font-family: 'Work Sans', sans-serif;
+    color: #53504C;
+  }
+  h6 {
+    font-size: 1rem;
     font-family: 'Work Sans', sans-serif;
     color: #53504C;
   }
