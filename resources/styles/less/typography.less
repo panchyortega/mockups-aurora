@@ -164,15 +164,23 @@ var {
 
 // Estilos para listas (<ul> y <ol>)
 ul, ol {
-  padding-left: @padding-lg;
-  margin: @margin-md 0;
   font-family: @font-body;
   font-size: @size-text-body-md;
   color: @col-surf-900;
+  line-height: @size-text-body-md * 1.6;
+  padding-left: @space-6; // Espaciado desde el borde izquierdo
+
+  li {
+    margin-bottom: @space-3; // Espaciado entre elementos de la lista
+  }
 }
 
-li {
-  margin-bottom: @margin-sm;
+ul {
+  list-style-type: disc; // Puntos para listas no ordenadas
+}
+
+ol {
+  list-style-type: decimal; // Números para listas ordenadas
 }
 
 // Estilos para <dl>, <dt>, <dd>
