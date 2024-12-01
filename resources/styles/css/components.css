@@ -4,15 +4,6 @@ p {
   color: #2D2B29;
   line-height: 1.6rem;
 }
-p.lg {
-  font-size: 1.125rem;
-}
-p.sm {
-  font-size: 0.889rem;
-}
-p.xs {
-  font-size: 0.79rem;
-}
 a {
   font-family: 'Work Sans', sans-serif;
   color: #B2ACA4;
@@ -44,6 +35,110 @@ a a[href=""] {
   cursor: default;
   text-decoration: none;
 }
+blockquote {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 1.125rem;
+  color: #373633;
+  font-style: italic;
+  border-left: 4em solid #F6F5F5;
+}
+b,
+strong {
+  font-weight: 600;
+  color: #2D2B29;
+}
+i,
+em {
+  font-style: italic;
+  color: #2D2B29;
+}
+small {
+  font-size: 0.889rem;
+  color: #2D2B29;
+}
+big {
+  font-size: 1.125rem;
+  color: #2D2B29;
+}
+mark {
+  background-color: #D4998B;
+  color: #2D2B29;
+  padding: 0 4px;
+  border-radius: 4px;
+}
+ins {
+  text-decoration: underline;
+  color: #53504C;
+}
+del {
+  text-decoration: line-through;
+  color: #959089;
+}
+u {
+  text-decoration: underline;
+  text-decoration-color: #53504C;
+}
+code {
+  font-family: 'Roboto Mono', monospace;
+  font-size: 1rem;
+  color: #2D2B29;
+}
+kbd {
+  font-family: 'Roboto Mono', monospace;
+  font-size: 1rem;
+  color: #2D2B29;
+}
+samp {
+  font-family: 'Roboto Mono', monospace;
+  font-size: 1rem;
+  color: #2D2B29;
+}
+pre {
+  font-family: 'Roboto Mono', monospace;
+  font-size: 1rem;
+  color: #2D2B29;
+  overflow-x: auto;
+}
+var {
+  font-style: italic;
+  color: #972D15;
+}
+ul,
+ol {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 1rem;
+  color: #2D2B29;
+  line-height: 1.6rem;
+}
+ul li,
+ol li {
+  margin-bottom: 8px;
+}
+dl {
+  margin: 12px 0;
+}
+dt {
+  font-family: 'Work Sans', sans-serif;
+  font-weight: bold;
+  color: #2D2B29;
+}
+dd {
+  margin-left: 12px;
+  font-family: 'Work Sans', sans-serif;
+  color: #373633;
+}
+sup,
+sub {
+  font-size: 0.79rem;
+  vertical-align: baseline;
+  position: relative;
+}
+sup {
+  top: -0.5em;
+}
+sub {
+  bottom: -0.2em;
+}
 .navbar a {
   text-transform: lowercase small-caps;
   /* Estilo small caps */
@@ -65,7 +160,7 @@ h1 {
   font-size: 2.027rem;
   font-family: 'Work Sans', sans-serif;
   color: #170101;
-  padding-bottom: 1.424rem;
+  padding-bottom: 2.027rem;
 }
 h2 {
   font-size: 1.802rem;
@@ -102,55 +197,6 @@ h6 {
   font-size: 0.79rem;
   color: #959089;
   line-height: 1.3;
-}
-code {
-  font-family: 'Roboto Mono', monospace;
-  font-size: 1rem;
-  color: #2D2B29;
-}
-@media (max-width: 719px) {
-  p {
-    font-size: 0.875rem;
-  }
-  p.lg {
-    font-size: 1rem;
-  }
-  p.sm {
-    font-size: 0.8125rem;
-  }
-  p.xs {
-    font-size: 0.75rem;
-  }
-  h1 {
-    font-size: 1.8rem;
-    font-family: 'Work Sans', sans-serif;
-    color: #170101;
-  }
-  h2 {
-    font-size: 1.6rem;
-    font-family: 'Work Sans', sans-serif;
-    color: #54190C;
-  }
-  h3 {
-    font-size: 1.4rem;
-    font-family: 'Work Sans', sans-serif;
-    color: #7E2611;
-  }
-  h4 {
-    font-size: 1.2rem;
-    font-family: 'Work Sans', sans-serif;
-    color: #2D2B29;
-  }
-  h5 {
-    font-size: 1.1rem;
-    font-family: 'Work Sans', sans-serif;
-    color: #53504C;
-  }
-  h6 {
-    font-size: 1rem;
-    font-family: 'Work Sans', sans-serif;
-    color: #53504C;
-  }
 }
 .icon {
   width: 16px;
