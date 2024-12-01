@@ -160,37 +160,31 @@ h1 {
   font-size: 2.027rem;
   font-family: 'Work Sans', sans-serif;
   color: #170101;
-  padding-bottom: 2.027rem;
 }
 h2 {
   font-size: 1.802rem;
   font-family: 'Work Sans', sans-serif;
   color: #54190C;
-  padding-bottom: 1.802rem;
 }
 h3 {
   font-size: 1.602rem;
   font-family: 'Work Sans', sans-serif;
   color: #54190C;
-  padding-bottom: 1.602rem;
 }
 h4 {
   font-size: 1.424rem;
   font-family: 'Work Sans', sans-serif;
   color: #2D2B29;
-  padding-bottom: 1.424rem;
 }
 h5 {
   font-size: 1.266rem;
   font-family: 'Work Sans', sans-serif;
   color: #53504C;
-  padding-bottom: 1.266rem;
 }
 h6 {
   font-size: 1.125rem;
   font-family: 'Work Sans', sans-serif;
   color: #53504C;
-  padding-bottom: 1.125rem;
 }
 .caption {
   font-family: 'Work Sans', sans-serif;
@@ -416,14 +410,12 @@ h6 {
   gap: 0;
   /* Espaciado entre título y descripción */
   text-align: left;
-  /* Alineación del texto */
+  /* Alineación del texto a */
   width: 100%;
-  display: block;
   margin-block-start: 0em;
   margin-block-end: 0em;
   margin-inline-start: 0px;
   margin-inline-end: 0px;
-  font-weight: bold;
 }
 .card .card-link {
   position: relative;
