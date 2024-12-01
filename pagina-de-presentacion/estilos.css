@@ -1,5 +1,5 @@
 /* Barra de navegación */
-.navbar {
+.navbar-presentacion {
     position: fixed;
     top: 0;
     left: 0;
@@ -23,7 +23,7 @@
   }
   
   /* Footer */
-  .footer {
+  .footer-presentacion {
     width: 100%; /* Ocupa todo el ancho */
     background-color: #EDECEA;
     display: flex;
@@ -45,7 +45,7 @@
 
 
   /* Estilos para la sección principal */
-.main-section {
+.main-section-presentacion {
     display: grid;
     grid-template-columns: 400px minmax(400px, 700px); /* Dos columnas iguales */
     align-items: center; /* Centrar verticalmente */
@@ -55,7 +55,7 @@
   
   /* Adaptabilidad para pantallas pequeñas */
   @media (max-width: 719px) {
-    .main-section {
+    .main-section-presentacion {
       grid-template-columns: 1fr; /* Una columna */
       gap: 16px; /* Reducir el espacio entre filas */
       padding: 20px; /* Reducir el padding */
