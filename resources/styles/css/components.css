@@ -114,6 +114,12 @@ ul li,
 ol li {
   margin-bottom: 2px;
 }
+ul {
+  list-style-type: circle;
+}
+ol {
+  list-style-type: decimal;
+}
 dl {
   margin: 12px 0;
 }
