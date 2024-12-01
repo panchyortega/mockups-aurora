@@ -11,6 +11,7 @@
 @size-text-body-md: 1rem;
 @size-text-body-sm: 0.889rem;
 @size-text-body-xs: 0.79rem;
+@size-text-code: 1rem;
 
 // Colores tipografías
 @color-font-h1: @col-prim-900;
@@ -19,6 +20,7 @@
 @color-font-h4: @col-surf-900;
 @color-font-h5: @col-surf-700;
 @color-font-h6: @col-surf-700;
+@col-code: @col-surf-900;
 
 
 // Estilos generales de texto
@@ -29,17 +31,7 @@ p {
   line-height: @size-text-body-md * 1.6;
 }
 
-// Párrafos con variaciones de tamaño
-p.lg {
-  font-size: @size-text-body-lg;
-}
-p.sm {
-  font-size: @size-text-body-sm;
-}
-p.xs {
-  font-size: @size-text-body-xs;
-}
-
+// Enlaces
 a {
   font-family: @font-body;
   color: @col-surf-400;
@@ -79,6 +71,145 @@ a {
 
 }
 
+
+// Etiquetas
+
+// Estilos para blockquote
+blockquote {
+  font-family: @font-body;
+  font-size: @size-text-body-lg;
+  color: @col-surf-800;
+  font-style: italic;
+  border-left: 4em solid @col-surf-50;
+}
+
+// Estilos para <b> y <strong>
+b, strong {
+  font-weight: 600;
+  color: @col-surf-900;
+}
+
+// Estilos para <i> y <em>
+i, em {
+  font-style: italic;
+  color: @col-surf-900;
+}
+
+// Estilos para <small>
+small {
+  font-size: @size-text-body-sm;
+  color: @col-surf-900;
+}
+
+// Estilos para <mark>
+mark {
+  background-color: @col-prim-200;
+  color: @col-surf-900;
+  padding: 0 @padding-xs;
+  border-radius: @corner-radius-sm;
+}
+
+// Estilos para <ins>
+ins {
+  text-decoration: underline;
+  color: @col-surf-700;
+}
+
+// Estilos para <del>
+del {
+  text-decoration: line-through;
+  color: @col-surf-500;
+}
+
+// Estilos para <u>
+u {
+  text-decoration: underline;
+  text-decoration-color: @col-surf-700;
+}
+
+// Estilo de texto para código
+code {
+  font-family: @font-code;
+  font-size: @size-text-code;
+  color: @col-code;
+}
+
+// Estilos para <kbd>
+kbd {
+  font-family: @font-code;
+  font-size: @size-text-code;
+  color: @col-code;
+}
+
+// Estilos para <samp>
+samp {
+  font-family: @font-code;
+  font-size: @size-text-code;
+  color: @col-code;
+}
+
+// Estilos para <pre>
+pre {
+  font-family: @font-code;
+  font-size: @size-text-code;
+  color: @col-code;
+  overflow-x: auto;
+}
+
+// Estilos para <var>
+var {
+  font-style: italic;
+  color: @col-prim-500;
+}
+
+// Estilos para listas (<ul> y <ol>)
+ul, ol {
+  padding-left: @padding-lg;
+  margin: @margin-md 0;
+}
+
+li {
+  font-family: @font-body;
+  font-size: @size-text-body-md;
+  color: @col-surf-900;
+  margin-bottom: @margin-sm;
+}
+
+// Estilos para <dl>, <dt>, <dd>
+dl {
+  margin: @margin-md 0;
+}
+
+dt {
+  font-family: @font-body;
+  font-weight: bold;
+  color: @col-surf-900;
+}
+
+dd {
+  margin-left: @padding-md;
+  font-family: @font-body;
+  color: @col-surf-800;
+}
+
+// Estilos para superíndices y subíndices
+sup, sub {
+  font-size: @size-text-body-xs;
+  vertical-align: baseline;
+  position: relative;
+}
+
+sup {
+  top: -0.5em;
+}
+
+sub {
+  bottom: -0.2em;
+}
+
+
+//nav
+
 .navbar a {
   text-transform: lowercase small-caps; /* Estilo small caps */
   color: @col-surf-900; /* Color surface 900 */
@@ -97,7 +228,7 @@ h1 {
   font-size: @size-text-h1;
   font-family: @font-body;
   color: @color-font-h1;
-  padding-bottom: @size-text-h4;
+  padding-bottom: @size-text-h1;
 }
 h2 {
   font-size: @size-text-h2;
@@ -138,12 +269,6 @@ h6 {
   line-height: 1.3;
 }
 
-// Estilo de texto para código
-code {
-  font-family: @font-code;
-  font-size: @size-text-code;
-  color: @col-code;
-}
 
 // Media queries para ajustar en mobile
 @media (max-width: 719px) {
