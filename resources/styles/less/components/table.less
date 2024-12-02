@@ -1,0 +1,52 @@
+// Importar estilos necesarios
+@import "../variables.less";     // Importar variables generales
+@import "../typography.less";    // Importar tipografía para tamaños de texto
+@import "../breakpoints.less";   // Importar breakpoints
+@import "../icons.less";         // Importar íconos
+
+// Estilos del componente
+
+.table-container {
+    width: 100%;
+    overflow-x: auto;      // Activa el scroll horizontal si la tabla la pantalla es muy pequeña
+}  
+
+table {
+  width: 100%;                 // Ocupa todo el ancho del contenedor
+  border-collapse: collapse;   // Elimina espacios entre bordes
+  margin-bottom: @padding-sm;// Espacio inferior entre tabla y otros elementos
+  font-family: @font-body;     // Usa la fuente base
+  font-size: @size-text-body-md;
+  color: @col-surf-900;
+
+  th, td {
+    padding: @padding-sm;      // Espaciado interno en celdas
+    text-align: left;          // Alinea el texto a la izquierda por defecto
+    border-bottom: 1px solid @col-surf-300; // Línea divisoria entre filas
+  }
+
+  thead {
+    background-color: @col-surf-50; // Fondo más claro para la cabecera
+    font-weight: bold;              // Resalta el texto en cabecera
+    color: @col-surf-900;
+  }
+
+  tbody tr:nth-child(odd) {
+    background-color: @col-surf-100; // Alterna fondo de filas
+  }
+
+  tfoot {
+    font-style: italic;          // Da un estilo diferente al pie de la tabla
+    background-color: @col-surf-100;
+    color: @col-surf-800;
+    text-align: right;           // Alinea el texto del pie a la derecha
+  }
+}
+
+// Asegurar que las tablas se adapten a pantallas pequeñas
+@media (max-width: @breakpoint-mobile) {
+
+  th, td {
+    padding: @padding-xs; // Reduce el padding en pantallas pequeñas
+  }
+}

@@ -368,6 +368,115 @@ print("Hola, mundo")
   
     
 
+         <!-- Formulario -->
+         <section id="formulario">
+            <h2>Formulario de Registro</h2>
+            <form action="/submit" method="post">
+                <fieldset>
+                    <legend>Información Personal</legend>
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" name="nombre" required>
+                    
+                    <label for="email">Correo Electrónico:</label>
+                    <input type="email" id="email" name="email" required>
+                    
+                    <label for="mensaje">Mensaje:</label>
+                    <textarea id="mensaje" name="mensaje"></textarea>
+                    
+                    <label for="preferencias">Preferencias:</label>
+                    <select id="preferencias" name="preferencias">
+                        <option value="boletin">Boletín</option>
+                        <option value="ofertas">Ofertas</option>
+                        <option value="ambos">Ambos</option>
+                    </select>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Intereses</legend>
+                    <label>
+                        <input type="checkbox" name="intereses" value="deporte"> Deportes
+                    </label>
+                    <label>
+                        <input type="checkbox" name="intereses" value="musica"> Música
+                    </label>
+                    
+                    <label>
+                        <input type="radio" name="suscripcion" value="gratis" checked> Gratis
+                    </label>
+                    <label>
+                        <input type="radio" name="suscripcion" value="premium"> Premium
+                    </label>
+                </fieldset>
+
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+
+        <!-- Elementos Interactivos -->
+        <section id="interactivas">
+            <h2>Elementos Interactivos</h2>
+            <details>
+                <summary>¿Qué es HTML?</summary>
+                <p>HTML es el lenguaje estándar para crear páginas web.</p>
+            </details>
+            
+            <dialog open>
+                <p>Esto es un ejemplo de un cuadro de diálogo.</p>
+                <button>Entendido</button>
+            </dialog>
+        </section>
+
+        <!-- Tablas -->
+        <section id="tablas">
+            <h2>Tabla de Datos</h2>
+            <table>
+                <caption>Estadísticas Mensuales</caption>
+                <thead>
+                    <tr>
+                        <th>Mes</th>
+                        <th>Ventas</th>
+                        <th>Ganancias</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Enero</td>
+                        <td>150</td>
+                        <td>$3000</td>
+                    </tr>
+                    <tr>
+                        <td>Febrero</td>
+                        <td>200</td>
+                        <td>$4000</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td>Total</td>
+                        <td>350</td>
+                        <td>$7000</td>
+                    </tr>
+                </tfoot>
+            </table>
+        </section>
+
+        <!-- Semánticas -->
+        <section id="semanticas">
+            <h2>Elementos Semánticos</h2>
+            <article>
+                <header>
+                    <h3>Artículo sobre HTML</h3>
+                    <time datetime="2024-11-21">21 de Noviembre, 2024</time>
+                </header>
+                <p>HTML permite estructurar páginas web con etiquetas semánticas que mejoran la accesibilidad y el SEO.</p>
+                <blockquote cite="https://es.wikipedia.org/wiki/HTML">
+                    HTML es el estándar más utilizado para la creación de sitios web.
+                </blockquote>
+                <footer>
+                    <cite><a href="https://es.wikipedia.org/wiki/HTML">Wikipedia</a></cite>
+                </footer>
+            </article>
+        </section>
 
 
 

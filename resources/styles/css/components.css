@@ -635,6 +635,44 @@ h6 {
 .navbar .nav-user {
   margin-left: 12px;
 }
+.table-container {
+  width: 100%;
+  overflow-x: auto;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 8px;
+  font-family: 'Work Sans', sans-serif;
+  font-size: 1rem;
+  color: #2D2B29;
+}
+table th,
+table td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #C5BEB7;
+}
+table thead {
+  background-color: #F6F5F5;
+  font-weight: bold;
+  color: #2D2B29;
+}
+table tbody tr:nth-child(odd) {
+  background-color: #EDECEA;
+}
+table tfoot {
+  font-style: italic;
+  background-color: #EDECEA;
+  color: #373633;
+  text-align: right;
+}
+@media (max-width: 719px) {
+  th,
+  td {
+    padding: 4px;
+  }
+}
 .tab {
   display: inline-flex;
   align-items: center;
