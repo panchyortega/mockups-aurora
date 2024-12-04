@@ -6,14 +6,16 @@ p {
   font-size: 18px;
   color: #2D2B29;
   line-height: 27px;
-  padding-top: 6px;
-  padding-bottom: 9px;
+  margin-block-start: 6px;
+  margin-block-end: 9px;
 }
 a {
   font-family: 'Work Sans', sans-serif;
   line-height: 27px;
   color: #B2ACA4;
   text-decoration: none;
+  margin-block-start: 0;
+  margin-block-end: 0;
 }
 a:visited {
   color: #54190C;
@@ -48,6 +50,8 @@ blockquote {
   color: #373633;
   font-style: italic;
   border-left: 4em solid #F6F5F5;
+  margin-block-start: 18px;
+  margin-block-end: 18px;
 }
 b,
 strong {
@@ -119,7 +123,8 @@ ol {
 }
 ul li,
 ol li {
-  margin-bottom: 2px;
+  margin-block-start: 6px;
+  margin-block-end: 0;
 }
 ul {
   list-style-type: disc;
@@ -174,36 +179,48 @@ h1 {
   font-family: 'Work Sans', sans-serif;
   color: #170101;
   line-height: 57.45642942px;
+  margin-block-start: 0;
+  margin-block-end: 23.94017892px;
 }
 h2 {
   font-size: 41.63509378px;
   font-family: 'Work Sans', sans-serif;
   line-height: 49.96211254px;
   color: #54190C;
+  margin-block-start: 20.81754689px;
+  margin-block-end: 13.87836459px;
 }
 h3 {
   font-size: 36.20442937px;
   font-family: 'Work Sans', sans-serif;
   line-height: 43.44531525px;
   color: #54190C;
+  margin-block-start: 18.10221469px;
+  margin-block-end: 12.06814312px;
 }
 h4 {
   font-size: 31.4821125px;
   font-family: 'Work Sans', sans-serif;
   line-height: 37.778535px;
   color: #2D2B29;
+  margin-block-start: 15.74105625px;
+  margin-block-end: 10.4940375px;
 }
 h5 {
   font-size: 27.37575px;
   font-family: 'Work Sans', sans-serif;
   line-height: 32.8509px;
   color: #53504C;
+  margin-block-start: 13.687875px;
+  margin-block-end: 9.12525px;
 }
 h6 {
   font-size: 23.805px;
   font-family: 'Work Sans', sans-serif;
   line-height: 28.566px;
   color: #53504C;
+  margin-block-start: 11.9025px;
+  margin-block-end: 7.935px;
 }
 .caption {
   font-family: 'Work Sans', sans-serif;
