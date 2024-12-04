@@ -213,111 +213,6 @@ h6 {
 }
 @media (max-width: 1279px) {
   html {
-    font-size: 17px;
-  }
-  p {
-    font-size: 17px;
-    line-height: 25.5px;
-  }
-  .caption {
-    font-size: 13.43209877px;
-    line-height: 20.14814815px;
-  }
-  h1 {
-    font-size: 38.77185488px;
-    line-height: 46.52622585px;
-  }
-  h2 {
-    font-size: 34.463871px;
-    line-height: 41.3566452px;
-  }
-  h3 {
-    font-size: 30.634552px;
-    line-height: 36.7614624px;
-  }
-  h4 {
-    font-size: 27.23071289px;
-    line-height: 32.67685547px;
-  }
-  h5 {
-    font-size: 24.20507813px;
-    line-height: 29.04609375px;
-  }
-  h6 {
-    font-size: 21.515625px;
-    line-height: 25.81875px;
-  }
-  a {
-    font-size: 17px;
-    line-height: 25.5px;
-  }
-  blockquote {
-    font-size: 19.125px;
-    line-height: 28.6875px;
-  }
-  b,
-  strong {
-    font-size: 17px;
-  }
-  i,
-  em {
-    font-size: 17px;
-  }
-  small {
-    font-size: 15.11111111px;
-  }
-  big {
-    font-size: 19.125px;
-  }
-  mark {
-    font-size: 17px;
-  }
-  ins {
-    font-size: 17px;
-  }
-  del {
-    font-size: 17px;
-  }
-  u {
-    font-size: 15.11111111px;
-  }
-  code {
-    font-size: 19.125px;
-  }
-  kbd {
-    font-size: 17px;
-  }
-  samp {
-    font-size: 17px;
-  }
-  pre {
-    font-size: 17px;
-  }
-  var {
-    font-size: 17px;
-  }
-  ul,
-  ol,
-  li {
-    font-size: 17px;
-    line-height: 20.4px;
-  }
-  dl,
-  dt,
-  dd {
-    font-size: 19.125px;
-  }
-  sup,
-  sub {
-    font-size: 13.43209877px;
-  }
-  .navbar a {
-    font-size: 17px;
-    line-height: 25.5px;
-  }
-}
-@media (max-width: 719px) {
-  html {
     font-size: 16px;
   }
   p {
@@ -325,56 +220,54 @@ h6 {
     line-height: 24px;
   }
   .caption {
-    font-size: 14.05371506px;
-    line-height: 21.08057258px;
+    font-size: 12.64197531px;
+    line-height: 18.96296296px;
   }
   h1 {
-    font-size: 25.19247978px;
-    line-height: 30.23097573px;
+    font-size: 36.49115753px;
+    line-height: 43.78938904px;
   }
   h2 {
-    font-size: 23.61057149px;
-    line-height: 28.33268579px;
+    font-size: 32.43658447px;
+    line-height: 38.92390137px;
   }
   h3 {
-    font-size: 22.12799577px;
-    line-height: 26.55359493px;
+    font-size: 28.83251953px;
+    line-height: 34.59902344px;
   }
   h4 {
-    font-size: 20.73851525px;
-    line-height: 24.8862183px;
+    font-size: 25.62890625px;
+    line-height: 30.7546875px;
   }
   h5 {
-    font-size: 19.43628421px;
-    line-height: 23.32354105px;
+    font-size: 22.78125px;
+    line-height: 27.3375px;
   }
   h6 {
-    font-size: 18.215824px;
-    line-height: 21.8589888px;
+    font-size: 20.25px;
+    line-height: 24.3px;
   }
   a {
     font-size: 16px;
     line-height: 24px;
   }
   blockquote {
-    font-size: 17.072px;
-    line-height: 25.608px;
+    font-size: 18px;
+    line-height: 27px;
   }
   b,
   strong {
     font-size: 16px;
-    line-height: 24px;
   }
   i,
   em {
     font-size: 16px;
-    line-height: 24px;
   }
   small {
-    font-size: 14.99531396px;
+    font-size: 14.22222222px;
   }
   big {
-    font-size: 17.072px;
+    font-size: 18px;
   }
   mark {
     font-size: 16px;
@@ -386,11 +279,10 @@ h6 {
     font-size: 16px;
   }
   u {
-    font-size: 14.99531396px;
+    font-size: 14.22222222px;
   }
   code {
-    font-size: 17.072px;
-    line-height: 25.608px;
+    font-size: 18px;
   }
   kbd {
     font-size: 16px;
@@ -413,15 +305,123 @@ h6 {
   dl,
   dt,
   dd {
-    font-size: 17.072px;
+    font-size: 18px;
   }
   sup,
   sub {
-    font-size: 14.05371506px;
+    font-size: 12.64197531px;
   }
   .navbar a {
     font-size: 16px;
     line-height: 24px;
+  }
+}
+@media (max-width: 719px) {
+  html {
+    font-size: 14px;
+  }
+  p {
+    font-size: 14px;
+    line-height: 21px;
+  }
+  .caption {
+    font-size: 12.29700067px;
+    line-height: 18.44550101px;
+  }
+  h1 {
+    font-size: 22.04341981px;
+    line-height: 26.45210377px;
+  }
+  h2 {
+    font-size: 20.65925005px;
+    line-height: 24.79110006px;
+  }
+  h3 {
+    font-size: 19.3619963px;
+    line-height: 23.23439556px;
+  }
+  h4 {
+    font-size: 18.14620084px;
+    line-height: 21.77544101px;
+  }
+  h5 {
+    font-size: 17.00674868px;
+    line-height: 20.40809842px;
+  }
+  h6 {
+    font-size: 15.938846px;
+    line-height: 19.1266152px;
+  }
+  a {
+    font-size: 14px;
+    line-height: 21px;
+  }
+  blockquote {
+    font-size: 14.938px;
+    line-height: 22.407px;
+  }
+  b,
+  strong {
+    font-size: 14px;
+    line-height: 21px;
+  }
+  i,
+  em {
+    font-size: 14px;
+    line-height: 21px;
+  }
+  small {
+    font-size: 13.12089972px;
+  }
+  big {
+    font-size: 14.938px;
+  }
+  mark {
+    font-size: 14px;
+  }
+  ins {
+    font-size: 14px;
+  }
+  del {
+    font-size: 14px;
+  }
+  u {
+    font-size: 13.12089972px;
+  }
+  code {
+    font-size: 14.938px;
+    line-height: 22.407px;
+  }
+  kbd {
+    font-size: 14px;
+  }
+  samp {
+    font-size: 14px;
+  }
+  pre {
+    font-size: 14px;
+  }
+  var {
+    font-size: 14px;
+  }
+  ul,
+  ol,
+  li {
+    font-size: 14px;
+    line-height: 16.8px;
+  }
+  dl,
+  dt,
+  dd {
+    font-size: 14.938px;
+  }
+  sup,
+  sub {
+    font-size: 12.29700067px;
+  }
+  .navbar a {
+    font-size: 14px;
+    line-height: 21px;
   }
 }
 .icon {
@@ -593,12 +593,12 @@ h6 {
 }
 @media (max-width: 1279px) {
   .button {
-    font-size: 17px;
+    font-size: 16px;
   }
 }
 @media (max-width: 719px) {
   .button {
-    font-size: 16px;
+    font-size: 14px;
   }
 }
 .card-group {
