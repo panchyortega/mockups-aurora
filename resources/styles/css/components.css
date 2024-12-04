@@ -1,17 +1,17 @@
 html {
-  font-size: 18px;
+  font-size: 16px;
 }
 p {
   font-family: 'Work Sans', sans-serif;
-  font-size: 18px;
+  font-size: 16px;
   color: #2D2B29;
-  line-height: 27px;
-  margin-block-start: 6px;
-  margin-block-end: 9px;
+  line-height: 24px;
+  margin-block-start: 5.33333333px;
+  margin-block-end: 8px;
 }
 a {
   font-family: 'Work Sans', sans-serif;
-  line-height: 27px;
+  line-height: 24px;
   color: #B2ACA4;
   text-decoration: none;
   margin-block-start: 0;
@@ -45,13 +45,13 @@ a a[href=""] {
 }
 blockquote {
   font-family: 'Work Sans', sans-serif;
-  font-size: 20.7px;
-  line-height: 31.05px;
+  font-size: 18.4px;
+  line-height: 27.6px;
   color: #373633;
   font-style: italic;
   border-left: 4em solid #F6F5F5;
-  margin-block-start: 18px;
-  margin-block-end: 18px;
+  margin-block-start: 16px;
+  margin-block-end: 16px;
 }
 b,
 strong {
@@ -64,11 +64,11 @@ em {
   color: #2D2B29;
 }
 small {
-  font-size: 15.65217391px;
+  font-size: 13.91304348px;
   color: #2D2B29;
 }
 big {
-  font-size: 20.7px;
+  font-size: 18.4px;
   color: #2D2B29;
 }
 mark {
@@ -91,22 +91,22 @@ u {
 }
 code {
   font-family: 'Roboto Mono', monospace;
-  font-size: 18px;
+  font-size: 16px;
   color: #2D2B29;
 }
 kbd {
   font-family: 'Roboto Mono', monospace;
-  font-size: 18px;
+  font-size: 16px;
   color: #2D2B29;
 }
 samp {
   font-family: 'Roboto Mono', monospace;
-  font-size: 18px;
+  font-size: 16px;
   color: #2D2B29;
 }
 pre {
   font-family: 'Roboto Mono', monospace;
-  font-size: 18px;
+  font-size: 16px;
   color: #2D2B29;
   overflow-x: auto;
 }
@@ -117,13 +117,13 @@ var {
 ul,
 ol {
   font-family: 'Work Sans', sans-serif;
-  font-size: 18px;
+  font-size: 16px;
   color: #2D2B29;
-  line-height: 21.6px;
+  line-height: 19.2px;
 }
 ul li,
 ol li {
-  margin-block-start: 6px;
+  margin-block-start: 5.33333333px;
   margin-block-end: 0;
 }
 ul {
@@ -147,7 +147,7 @@ dd {
 }
 sup,
 sub {
-  font-size: 13.61058601px;
+  font-size: 12.09829868px;
   vertical-align: baseline;
   position: relative;
 }
@@ -164,7 +164,7 @@ sub {
   /* Color surface 900 */
   text-decoration: none;
   /* Sin subrayado */
-  font-size: 15.65217391px;
+  font-size: 13.91304348px;
   /* Tamaño acorde a la tipografía secundaria */
 }
 .navbar a:hover,
@@ -175,58 +175,58 @@ sub {
   /* Cambio de color en interacción */
 }
 h1 {
-  font-size: 47.88035785px;
+  font-size: 42.56031809px;
   font-family: 'Work Sans', sans-serif;
   color: #170101;
-  line-height: 57.45642942px;
+  line-height: 51.0723817px;
   margin-block-start: 0;
-  margin-block-end: 23.94017892px;
+  margin-block-end: 21.28015904px;
 }
 h2 {
-  font-size: 41.63509378px;
+  font-size: 37.00897225px;
   font-family: 'Work Sans', sans-serif;
-  line-height: 49.96211254px;
+  line-height: 44.4107667px;
   color: #54190C;
-  margin-block-start: 20.81754689px;
-  margin-block-end: 13.87836459px;
+  margin-block-start: 18.50448612px;
+  margin-block-end: 12.33632408px;
 }
 h3 {
-  font-size: 36.20442937px;
+  font-size: 32.181715px;
   font-family: 'Work Sans', sans-serif;
-  line-height: 43.44531525px;
+  line-height: 38.618058px;
   color: #54190C;
-  margin-block-start: 18.10221469px;
-  margin-block-end: 12.06814312px;
+  margin-block-start: 16.0908575px;
+  margin-block-end: 10.72723833px;
 }
 h4 {
-  font-size: 31.4821125px;
+  font-size: 27.9841px;
   font-family: 'Work Sans', sans-serif;
-  line-height: 37.778535px;
+  line-height: 33.58092px;
   color: #2D2B29;
-  margin-block-start: 15.74105625px;
-  margin-block-end: 10.4940375px;
+  margin-block-start: 13.99205px;
+  margin-block-end: 9.32803333px;
 }
 h5 {
-  font-size: 27.37575px;
+  font-size: 24.334px;
   font-family: 'Work Sans', sans-serif;
-  line-height: 32.8509px;
+  line-height: 29.2008px;
   color: #53504C;
-  margin-block-start: 13.687875px;
-  margin-block-end: 9.12525px;
+  margin-block-start: 12.167px;
+  margin-block-end: 8.11133333px;
 }
 h6 {
-  font-size: 23.805px;
+  font-size: 21.16px;
   font-family: 'Work Sans', sans-serif;
-  line-height: 28.566px;
+  line-height: 25.392px;
   color: #53504C;
-  margin-block-start: 11.9025px;
-  margin-block-end: 7.935px;
+  margin-block-start: 10.58px;
+  margin-block-end: 7.05333333px;
 }
 .caption {
   font-family: 'Work Sans', sans-serif;
-  font-size: 13.61058601px;
+  font-size: 12.09829868px;
   color: #959089;
-  line-height: 20.41587902px;
+  line-height: 18.14744802px;
 }
 @media (max-width: 1279px) {
   html {
@@ -454,9 +454,9 @@ h6 {
   padding: 8px 16px;
   border-radius: 2px;
   font-family: 'Work Sans', sans-serif;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 600;
-  line-height: 27px;
+  line-height: 24px;
   border-width: 2px;
   border-style: solid;
   cursor: pointer;
@@ -749,9 +749,9 @@ h6 {
 }
 .checkboxLabel {
   font-family: 'Work Sans', sans-serif;
-  font-size: 18px;
+  font-size: 16px;
   color: #53504C;
-  line-height: 28.8px;
+  line-height: 25.6px;
 }
 .checkboxContainer.disabled .checkboxLabel {
   color: #B2ACA4;
@@ -823,9 +823,9 @@ h6 {
 }
 .input .input-header .input-label {
   font-family: 'Work Sans', sans-serif;
-  font-size: 18px;
+  font-size: 16px;
   color: #53504C;
-  line-height: 28.8px;
+  line-height: 25.6px;
 }
 @media (max-width: 1279px) {
   .input .input-header .input-label {
@@ -841,9 +841,9 @@ h6 {
 }
 .input .input-header .input-requirement {
   font-family: 'Work Sans', sans-serif;
-  font-size: 18px;
+  font-size: 16px;
   color: #53504C;
-  line-height: 28.8px;
+  line-height: 25.6px;
   /* Cambiar color en estado de error */
 }
 .error .input .input-header .input-requirement {
@@ -892,7 +892,7 @@ h6 {
 .input .input-body .text-input {
   flex-grow: 1;
   color: #959089;
-  font-size: 18px;
+  font-size: 16px;
 }
 @media (max-width: 1279px) {
   .input .input-body .text-input {
@@ -912,7 +912,7 @@ h6 {
 }
 .input .input-helptext {
   font-family: 'Work Sans', sans-serif;
-  font-size: 13.61058601px;
+  font-size: 12.09829868px;
   color: #53504C;
   /* Cambiar color en estado de error */
   /* En caso de estado error y disabled */
@@ -959,7 +959,7 @@ h6 {
   gap: 8px;
   padding: 8px 16px;
   font-family: 'Work Sans', sans-serif;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 600;
   border: none;
   cursor: pointer;
@@ -1022,7 +1022,7 @@ h6 {
   margin-left: 8px;
 }
 .nav-tabs .tab .tab-text {
-  font-size: 18px;
+  font-size: 16px;
   color: inherit;
 }
 .navbar {
@@ -1050,7 +1050,7 @@ table {
   border-collapse: collapse;
   margin-bottom: 8px;
   font-family: 'Work Sans', sans-serif;
-  font-size: 18px;
+  font-size: 16px;
   color: #2D2B29;
 }
 table th,
@@ -1085,7 +1085,7 @@ table tfoot {
   justify-content: center;
   gap: 8px;
   font-family: 'Work Sans', sans-serif;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 600;
   cursor: pointer;
   transition: background-color 0.2s ease, border-color 0.2s ease;
@@ -1164,6 +1164,6 @@ table tfoot {
   border-bottom-color: transparent;
 }
 .tab .tab-text {
-  font-size: 18px;
+  font-size: 16px;
   color: inherit;
 }
