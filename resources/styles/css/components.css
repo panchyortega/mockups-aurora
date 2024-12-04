@@ -619,19 +619,17 @@ h6 {
   }
 }
 .card-group {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, 400px);
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  align-content: flex-start;
   gap: 12px;
-  padding-bottom: 12px;
-}
-@media (max-width: 719px) {
-  .card-group {
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 12px;
-    padding-bottom: 12px;
-  }
 }
 .card {
+  flex-grow: 0;
+  flex-shrink: 0;
   position: relative;
   /* Para el enlace absoluto */
   display: flex;

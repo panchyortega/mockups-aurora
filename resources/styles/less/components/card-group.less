@@ -8,16 +8,25 @@
 // Estilos del componente
 
 .card-group {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, 400px); // Las cards se ajustan al ancho disponible
-    gap: @gap-md; // Espaciado entre las cards
-    padding-bottom: @padding-md; // Espaciado inferior del grupo
 
-    @media (max-width: @breakpoint-mobile) {
-        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); // Las cards se ajustan al ancho disponible
-        gap: @gap-md;
-        padding-bottom: @padding-md;
-      }
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  align-content: flex-start;
+  gap: @gap-md;
+  
+  // display: grid;
+    // grid-template-columns: repeat(auto-fit, 400px); // Las cards se ajustan al ancho disponible
+    // // Espaciado entre las cards
+    // padding-bottom: @padding-md; // Espaciado inferior del grupo
+
+    // @media (max-width: @breakpoint-mobile) {
+    //     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); // Las cards se ajustan al ancho disponible
+    //     gap: @gap-md;
+    //     padding-bottom: @padding-md;
+    //   }
     
 }
 

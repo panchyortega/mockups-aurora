@@ -1,31 +1,103 @@
 /* Barra de navegación */
 .navbar-presentacion {
-     display: flex;
-    padding: 16px 20px;
-    position: fixed;
+    width: 100%;
+    background-color: #EDECEA;  
     top: 0;
     left: 0;
-    width: 100%; /* Ocupa todo el ancho de la pantalla */
-    background-color: #EDECEA;
-    
+    padding: 16px 0;
+    position: fixed;
+    z-index: 1000; /* Asegura que esté encima del resto */
+ }
+  
+  .nav-links{
+    display: flex;
+    flex-direction: row;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
     justify-content: space-between;
-    gap: auto;
     align-items: center;
     flex-wrap: wrap;
-    z-index: 1000; /* Asegura que esté encima del resto */
+    @media (max-width: 719px) {
+      width: 80%;
+    }
   }
-  
+
+
   .nav-links-left,
   .nav-links-right {
+ 
     display: flex;
-    gap: 16px; /* Espaciado entre los links */
+    flex-direction: row;
+    gap: 16px;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
   }
   
-  .nav-links-right a {
+
+
+  /* Estilos para la sección principal */
+
+
+.hero {
+    display: grid;
+    grid-template-columns: auto 1fr; /* Dos columnas iguales */
+    align-items: center; /* Centrar verticalmente */
+    gap: 32px; 
+    padding-bottom: 40px;
+    padding-top: 72px;
+    width: 60%;
     margin-left: auto;
+    margin-right: auto;
+
+    p{
+      min-width: 320px;
+    }
+
+    @media (max-width: 1279px) {
+      grid-template-columns: 1fr; /* Una columna */
+      gap: 16px; /* Reducir el espacio entre filas */
+      padding-bottom: 20px; /* Reducir el padding */
+      width: 60%;
+      justify-content: center;
+
+      .hero-img{
+        justify-self: center;
+      }
+    }
+
+    @media (max-width: 719px) {
+      grid-template-columns: 1fr; /* Una columna */
+      gap: 16px; /* Reducir el espacio entre filas */
+      padding-bottom: 20px; /* Reducir el padding */
+      width: 80%;
+      justify-content: center;
+    }
   }
+
+  .buttons-row{
+    display:flexbox;
+    gap: 16px;
   
+  }
+
+    /* ==== GRID SYSTEM ==== */
+
+.container {
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+  @media (max-width: 719px) {
+    width: 80%;
+  }
+}
+
+
+
   /* Footer */
+
+  
   .footer-presentacion {
     width: 100%; /* Ocupa todo el ancho */
     background-color: #EDECEA;
@@ -38,30 +110,3 @@
         gap: 20px;
     }
   }
-  
-
-  .buttons-row{
-    display:flexbox;
-    gap: 16px;
-  
-  }
-
-
-  /* Estilos para la sección principal */
-.main-section-presentacion {
-    display: grid;
-    grid-template-columns: 400px minmax(400px, 700px); /* Dos columnas iguales */
-    align-items: center; /* Centrar verticalmente */
-    gap: 32px; /* Espaciado entre columnas */
-    padding: 40px; /* Espaciado interno */
-  }
-  
-  /* Adaptabilidad para pantallas pequeñas */
-  @media (max-width: 719px) {
-    .main-section-presentacion {
-      grid-template-columns: 1fr; /* Una columna */
-      gap: 16px; /* Reducir el espacio entre filas */
-      padding: 20px; /* Reducir el padding */
-    }
-  }
-  
