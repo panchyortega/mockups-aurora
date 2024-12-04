@@ -8,7 +8,7 @@
   "less-typography": "lessc resources/styles/less/typography.less resources/styles/css/components.css",
   "less-breakpoints": "lessc resources/styles/less/breakpoints.less resources/styles/css/components.css",
   "less-icons": "lessc resources/styles/less/icons.less resources/styles/css/components.css",
-  "less-grid": "lessc resources/styles/less/grid.less resources/styles/css/components.css",
+  "less-grid": "lessc resources/styles/less/grid.less resources/styles/css/grid.css",
   "less-components": "lessc resources/styles/less/components.less resources/styles/css/components.css",
   "compile-all": "npm run less-variables && npm run less-typography && npm run less-breakpoints && npm run less-icons && npm run less-grid && npm run less-components",
   "watch": "watch \"npm run compile-all\" resources/styles/less"

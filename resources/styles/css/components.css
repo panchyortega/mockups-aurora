@@ -1,8 +1,11 @@
+html {
+  font-size: 18px;
+}
 p {
   font-family: 'Work Sans', sans-serif;
-  font-size: 1rem;
+  font-size: 18px;
   color: #2D2B29;
-  line-height: 1.6rem;
+  line-height: 28.8px;
 }
 a {
   font-family: 'Work Sans', sans-serif;
@@ -37,7 +40,7 @@ a a[href=""] {
 }
 blockquote {
   font-family: 'Work Sans', sans-serif;
-  font-size: 1.125rem;
+  font-size: 20.7px;
   color: #373633;
   font-style: italic;
   border-left: 4em solid #F6F5F5;
@@ -53,11 +56,11 @@ em {
   color: #2D2B29;
 }
 small {
-  font-size: 0.889rem;
+  font-size: 18px / 1.15;
   color: #2D2B29;
 }
 big {
-  font-size: 1.125rem;
+  font-size: 20.7px;
   color: #2D2B29;
 }
 mark {
@@ -80,22 +83,22 @@ u {
 }
 code {
   font-family: 'Roboto Mono', monospace;
-  font-size: 1rem;
+  font-size: 18px;
   color: #2D2B29;
 }
 kbd {
   font-family: 'Roboto Mono', monospace;
-  font-size: 1rem;
+  font-size: 18px;
   color: #2D2B29;
 }
 samp {
   font-family: 'Roboto Mono', monospace;
-  font-size: 1rem;
+  font-size: 18px;
   color: #2D2B29;
 }
 pre {
   font-family: 'Roboto Mono', monospace;
-  font-size: 1rem;
+  font-size: 18px;
   color: #2D2B29;
   overflow-x: auto;
 }
@@ -106,16 +109,16 @@ var {
 ul,
 ol {
   font-family: 'Work Sans', sans-serif;
-  font-size: 1rem;
+  font-size: 18px;
   color: #2D2B29;
-  line-height: 1.2rem;
+  line-height: 21.6px;
 }
 ul li,
 ol li {
   margin-bottom: 2px;
 }
 ul {
-  list-style-type: circle;
+  list-style-type: disc;
 }
 ol {
   list-style-type: decimal;
@@ -135,7 +138,7 @@ dd {
 }
 sup,
 sub {
-  font-size: 0.79rem;
+  font-size: 18px / 1.15 / 1.15;
   vertical-align: baseline;
   position: relative;
 }
@@ -152,7 +155,7 @@ sub {
   /* Color surface 900 */
   text-decoration: none;
   /* Sin subrayado */
-  font-size: 0.889rem;
+  font-size: 18px / 1.15;
   /* Tamaño acorde a la tipografía secundaria */
 }
 .navbar a:hover,
@@ -163,40 +166,329 @@ sub {
   /* Cambio de color en interacción */
 }
 h1 {
-  font-size: 2.027rem;
+  font-size: 41.63509378px;
   font-family: 'Work Sans', sans-serif;
   color: #170101;
+  line-height: 49.96211254px;
 }
 h2 {
-  font-size: 1.802rem;
+  font-size: 36.20442937px;
   font-family: 'Work Sans', sans-serif;
   color: #54190C;
 }
 h3 {
-  font-size: 1.602rem;
+  font-size: 31.4821125px;
   font-family: 'Work Sans', sans-serif;
   color: #54190C;
 }
 h4 {
-  font-size: 1.424rem;
+  font-size: 27.37575px;
   font-family: 'Work Sans', sans-serif;
   color: #2D2B29;
 }
 h5 {
-  font-size: 1.266rem;
+  font-size: 23.805px;
   font-family: 'Work Sans', sans-serif;
   color: #53504C;
 }
 h6 {
-  font-size: 1.125rem;
+  font-size: 20.7px;
   font-family: 'Work Sans', sans-serif;
   color: #53504C;
 }
 .caption {
   font-family: 'Work Sans', sans-serif;
-  font-size: 0.79rem;
+  font-size: 18px / 1.15 / 1.15;
   color: #959089;
   line-height: 1.3;
+}
+@media (max-width: 1279px) {
+  html {
+    font-size: 17px;
+  }
+  p {
+    font-size: 17px;
+    line-height: 25.5px;
+  }
+  h1 {
+    font-size: 34.463871px;
+    line-height: 41.3566452px;
+  }
+  h2 {
+    font-size: 30.634552px;
+    line-height: 36.7614624px;
+  }
+  h3 {
+    font-size: 27.23071289px;
+    line-height: 32.67685547px;
+  }
+  h4 {
+    font-size: 24.20507813px;
+    line-height: 29.04609375px;
+  }
+  h5 {
+    font-size: 21.515625px;
+    line-height: 25.81875px;
+  }
+  h6 {
+    font-size: 19.125px;
+    line-height: 22.95px;
+  }
+  a {
+    font-size: 17px;
+    line-height: 25.5px;
+  }
+  a {
+    font-size: 17px;
+    line-height: 25.5px;
+  }
+  blockquote {
+    font-size: 19.125px;
+    line-height: 28.6875px;
+  }
+  b,
+  strong {
+    font-size: 17px;
+    line-height: 25.5px;
+  }
+  i,
+  em {
+    font-size: 17px;
+    line-height: 25.5px;
+  }
+  small {
+    font-size: 17px / 1.125;
+    line-height: 17px / 1.125 * 1.5;
+  }
+  big {
+    font-size: 19.125px;
+    line-height: 28.6875px;
+  }
+  mark {
+    font-size: 17px;
+    line-height: 25.5px;
+  }
+  ins {
+    font-size: 17px;
+    line-height: 25.5px;
+  }
+  del {
+    font-size: 17px;
+    line-height: 25.5px;
+  }
+  u {
+    font-size: 17px / 1.125;
+    line-height: 17px / 1.125 * 1.5;
+  }
+  code {
+    font-size: 19.125px;
+    line-height: 28.6875px;
+  }
+  kbd {
+    font-size: 17px;
+    line-height: 25.5px;
+  }
+  samp {
+    font-size: 17px;
+    line-height: 25.5px;
+  }
+  pre {
+    font-size: 17px;
+    line-height: 25.5px;
+  }
+  var {
+    font-size: 17px;
+    line-height: 25.5px;
+  }
+  u {
+    font-size: 17px / 1.125;
+    line-height: 17px / 1.125 * 1.5;
+  }
+  code {
+    font-size: 19.125px;
+    line-height: 28.6875px;
+  }
+  kbd {
+    font-size: 17px;
+    line-height: 25.5px;
+  }
+  samp {
+    font-size: 17px;
+    line-height: 25.5px;
+  }
+  pre {
+    font-size: 17px;
+    line-height: 25.5px;
+  }
+  var {
+    font-size: 17px;
+    line-height: 25.5px;
+  }
+  ul,
+  ol,
+  li {
+    font-size: 17px / 1.125;
+    line-height: 17px / 1.125 * 1.5;
+  }
+  dl,
+  dt,
+  dd {
+    font-size: 19.125px;
+    line-height: 28.6875px;
+  }
+  sup,
+  sub {
+    font-size: 17px;
+    line-height: 25.5px;
+  }
+  .navbar a {
+    font-size: 17px;
+    line-height: 25.5px;
+  }
+}
+@media (max-width: 719px) {
+  html {
+    font-size: 16px;
+  }
+  p {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  h1 {
+    font-size: 23.61057149px;
+    line-height: 28.33268579px;
+  }
+  h2 {
+    font-size: 22.12799577px;
+    line-height: 26.55359493px;
+  }
+  h3 {
+    font-size: 20.73851525px;
+    line-height: 24.8862183px;
+  }
+  h4 {
+    font-size: 19.43628421px;
+    line-height: 23.32354105px;
+  }
+  h5 {
+    font-size: 18.215824px;
+    line-height: 21.8589888px;
+  }
+  h6 {
+    font-size: 17.072px;
+    line-height: 20.4864px;
+  }
+  a {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  a {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  blockquote {
+    font-size: 17.072px;
+    line-height: 25.608px;
+  }
+  b,
+  strong {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  i,
+  em {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  small {
+    font-size: 16px / 1.067;
+    line-height: 16px / 1.067 * 1.5;
+  }
+  big {
+    font-size: 17.072px;
+    line-height: 25.608px;
+  }
+  mark {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  ins {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  del {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  u {
+    font-size: 16px / 1.067;
+    line-height: 16px / 1.067 * 1.5;
+  }
+  code {
+    font-size: 17.072px;
+    line-height: 25.608px;
+  }
+  kbd {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  samp {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  pre {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  var {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  u {
+    font-size: 16px / 1.067;
+    line-height: 16px / 1.067 * 1.5;
+  }
+  code {
+    font-size: 17.072px;
+    line-height: 25.608px;
+  }
+  kbd {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  samp {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  pre {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  var {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  ul,
+  ol,
+  li {
+    font-size: 16px / 1.067;
+    line-height: 16px / 1.067 * 1.5;
+  }
+  dl,
+  dt,
+  dd {
+    font-size: 17.072px;
+    line-height: 25.608px;
+  }
+  sup,
+  sub {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .navbar a {
+    font-size: 16px;
+    line-height: 24px;
+  }
 }
 .icon {
   width: 16px;
@@ -211,9 +503,9 @@ h6 {
   padding: 8px 16px;
   border-radius: 2px;
   font-family: 'Work Sans', sans-serif;
-  font-size: 1rem;
+  font-size: 18px;
   font-weight: 600;
-  line-height: 1.6rem;
+  line-height: 28.8px;
   border-width: 2px;
   border-style: solid;
   cursor: pointer;
@@ -434,6 +726,96 @@ h6 {
   text-decoration: none;
   /* Sin subrayado */
 }
+.checkboxContainer {
+  display: flex;
+  align-items: flex-start;
+  gap: 4px;
+}
+.checkboxContainer.padding-on {
+  padding: 8px 16px;
+  border-radius: 2px;
+}
+.checkboxContainer.padding-on:hover {
+  background-color: #F6EAE8;
+  cursor: pointer;
+}
+.checkboxContainer.padding-on:checked {
+  background-color: #F6EAE8;
+  border-color: #EED6D1;
+}
+.checkboxContainer.padding-on:checked:hover {
+  background-color: #F6EAE8;
+  border-color: #D4998B;
+  cursor: pointer;
+}
+.checkbox {
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  border: 1px solid #53504C;
+  border-radius: 4px;
+  background-color: transparent;
+  position: relative;
+  cursor: pointer;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+.checkbox:checked {
+  background-color: #A83217;
+  border-color: #A83217;
+}
+.checkbox:hover::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 30px;
+  height: 30px;
+  background-color: #F6EAE8;
+  border-radius: 50%;
+  z-index: -1;
+}
+.checkbox:checked:hover {
+  background-color: #A83217;
+  border-color: #D4998B;
+}
+.checkbox:disabled {
+  border-color: #B2ACA4;
+  cursor: not-allowed;
+  background-color: #B2ACA4;
+}
+.checkboxLabel {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 18px;
+  color: #53504C;
+  line-height: 28.8px;
+}
+.checkboxContainer.disabled .checkboxLabel {
+  color: #B2ACA4;
+}
+.checkboxLabel:hover {
+  cursor: pointer;
+}
+.checkboxLabel:checked:hover {
+  cursor: pointer;
+}
+.checkboxGroup {
+  display: flex;
+  flex-wrap: wrap;
+}
+.checkboxGroup.vertical {
+  flex-direction: column;
+  gap: 16px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+.checkboxGroup.horizontal {
+  flex-direction: row;
+  justify-content: flex-start;
+  gap: 0;
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
 .input {
   display: flex;
   flex-direction: column;
@@ -467,10 +849,10 @@ h6 {
   color: #53504C;
 }
 .input .input-header .input-label {
-  font-size: 0.889rem;
+  font-size: 18px / 1.15;
 }
 .input .input-header .input-requirement {
-  font-size: 0.79rem;
+  font-size: 18px / 1.15 / 1.15;
   color: #53504C;
   /* Cambiar color en estado de error */
 }
@@ -511,14 +893,14 @@ h6 {
 .input .input-body .text-input {
   flex-grow: 1;
   color: #959089;
-  font-size: 1rem;
+  font-size: 18px;
 }
 .input .input-body .icon-left,
 .input .input-body .icon-right {
   color: #53504C;
 }
 .input .input-helptext {
-  font-size: 0.79rem;
+  font-size: 18px / 1.15 / 1.15;
   color: #53504C;
   /* Cambiar color en estado de error */
   /* En caso de estado error y disabled */
@@ -553,7 +935,7 @@ h6 {
   gap: 8px;
   padding: 8px 16px;
   font-family: 'Work Sans', sans-serif;
-  font-size: 1rem;
+  font-size: 18px;
   font-weight: 600;
   border: none;
   cursor: pointer;
@@ -616,7 +998,7 @@ h6 {
   margin-left: 8px;
 }
 .nav-tabs .tab .tab-text {
-  font-size: 1rem;
+  font-size: 18px;
   color: inherit;
 }
 .navbar {
@@ -644,7 +1026,7 @@ table {
   border-collapse: collapse;
   margin-bottom: 8px;
   font-family: 'Work Sans', sans-serif;
-  font-size: 1rem;
+  font-size: 18px;
   color: #2D2B29;
 }
 table th,
@@ -679,7 +1061,7 @@ table tfoot {
   justify-content: center;
   gap: 8px;
   font-family: 'Work Sans', sans-serif;
-  font-size: 1rem;
+  font-size: 18px;
   font-weight: 600;
   cursor: pointer;
   transition: background-color 0.2s ease, border-color 0.2s ease;
@@ -758,6 +1140,6 @@ table tfoot {
   border-bottom-color: transparent;
 }
 .tab .tab-text {
-  font-size: 1rem;
+  font-size: 18px;
   color: inherit;
 }

@@ -1,17 +1,49 @@
 @import "variables.less";  // Importar las variables generales
 
-// Definiciones de tamaños de texto para desktop
-@size-text-h1: 2.027rem;
-@size-text-h2: 1.802rem;
-@size-text-h3: 1.602rem;
-@size-text-h4: 1.424rem;
-@size-text-h5: 1.266rem;
-@size-text-h6: 1.125rem;
-@size-text-body-lg: 1.125rem;
-@size-text-body-md: 1rem;
-@size-text-body-sm: 0.889rem;
-@size-text-body-xs: 0.79rem;
-@size-text-code: 1rem;
+// Definiciones de tamaños responsivos
+
+// Escalas según pantalla... revisar:https://typescale.com/
+
+// @sc-desktop: 1.2; //Minor third
+// @sc-tablet: 1.125; //Mayor second
+// @sc-mobile: 1.067; //Minor second
+
+
+// Tamaños según escalas
+// @size-text-h1: @size-text-h2*@sc;
+// @size-text-h2: @size-text-h3*@sc;
+// @size-text-h3: @size-text-h4*@sc;
+// @size-text-h4: @size-text-h5*@sc;
+// @size-text-h5: @size-text-h6*@sc;
+// @size-text-h6: @size-text-body-md*@sc;
+// @size-text-body-lg: @size-text-body-md*@sc;
+// @size-text-body-md: @rem;
+// @size-text-body-sm: @size-text-body-md/@sc;
+// @size-text-body-xs: @size-text-body-sm/@sc;
+// @size-text-code: @rem;
+
+
+// Usa las variables CSS en LESS
+@rem: 18px; // Valor predeterminado de 16px
+@sc: 1.15; // Escala predeterminada para mobile
+
+html{
+  font-size: @rem;
+}
+
+@size-text-h1: @size-text-h2 * @sc;
+@size-text-h2: @size-text-h3 * @sc;
+@size-text-h3: @size-text-h4 * @sc;
+@size-text-h4: @size-text-h5 * @sc;
+@size-text-h5: @size-text-h6 * @sc;
+@size-text-h6: @size-text-body-md * @sc;
+@size-text-body-lg: @size-text-body-md * @sc;
+@size-text-body-md: @rem;
+@size-text-body-sm: @size-text-body-md / @sc;
+@size-text-body-xs: @size-text-body-sm / @sc;
+@size-text-code: @rem;
+
+
 
 // Colores tipografías
 @color-font-h1: @col-prim-900;
@@ -181,7 +213,7 @@ ul, ol {
 }
 
  ul {
-   list-style-type: circle; // Puntos para listas no ordenadas
+   list-style-type: disc; // Puntos para listas no ordenadas
  }
 
  ol {
@@ -241,6 +273,7 @@ h1 {
   font-size: @size-text-h1;
   font-family: @font-body;
   color: @color-font-h1;
+  line-height: @size-text-h1 * 1.2;
   // padding-bottom: @size-text-h1;
 }
 h2 {
@@ -283,63 +316,383 @@ h6 {
 }
 
 
+// Media queries para ajustar en tablet
+@media (max-width: @breakpoint-tablet) {
+  @size-text-h1: @size-text-h2 * @sc;
+  @size-text-h2: @size-text-h3 * @sc;
+  @size-text-h3: @size-text-h4 * @sc;
+  @size-text-h4: @size-text-h5 * @sc;
+  @size-text-h5: @size-text-h6 * @sc;
+  @size-text-h6: @size-text-body-md * @sc;
+  @size-text-body-lg: @size-text-body-md * @sc;
+  @size-text-body-md: @rem;
+  @size-text-body-sm: @size-text-body-md / @sc;
+  @size-text-body-xs: @size-text-body-sm / @sc;
+  @size-text-code: @rem;
+
+   @rem: 17px;
+   @sc: 1.125;
+
+   html{
+    font-size: @rem;
+  }
+
+    p {
+      font-size: @size-text-body-md;
+      line-height: @size-text-body-md * 1.5;
+    }
+
+    h1 {
+      font-size: @size-text-h1;
+      line-height: @size-text-h1 * 1.2;
+    }
+
+    h2 {
+      font-size: @size-text-h2;
+      line-height: @size-text-h2 * 1.2;
+    }
+
+    h3 {
+      font-size: @size-text-h3;
+      line-height: @size-text-h3 * 1.2;
+    }
+
+    h4 {
+      font-size: @size-text-h4;
+      line-height: @size-text-h4 * 1.2;
+    }
+
+    h5 {
+      font-size: @size-text-h5;
+      line-height: @size-text-h5 * 1.2;
+    }
+
+    h6 {
+      font-size: @size-text-h6;
+      line-height: @size-text-h6 * 1.2;
+    }
+  
+    a {
+      font-size: @size-text-body-md;
+      line-height: @size-text-body-md * 1.5;
+    }
+
+    a {
+      font-size: @size-text-body-md;
+      line-height: @size-text-body-md * 1.5;
+    }
+ 
+    blockquote {
+      font-size: @size-text-body-lg;
+      line-height: @size-text-body-lg * 1.5;
+    }
+ 
+    b, strong {
+      font-size: @size-text-body-md;
+      line-height: @size-text-body-md * 1.5;
+    }
+ 
+    i, em {
+      font-size: @size-text-body-md;
+      line-height: @size-text-body-md * 1.5;
+    }
+ 
+    small {
+      font-size: @size-text-body-sm;
+      line-height: @size-text-body-sm * 1.5;
+    }
+ 
+    big {
+      font-size: @size-text-body-lg;
+      line-height: @size-text-body-lg * 1.5;
+    }
+ 
+    mark {
+      font-size: @size-text-body-md;
+      line-height: @size-text-body-md * 1.5;
+    }
+ 
+    ins {
+      font-size: @size-text-body-md;
+      line-height: @size-text-body-md * 1.5;
+    }
+    
+    del {
+      font-size: @size-text-body-md;
+      line-height: @size-text-body-md * 1.5;
+    }
+ 
+    u {
+      font-size: @size-text-body-sm;
+      line-height: @size-text-body-sm * 1.5;
+    }
+ 
+    code {
+      font-size: @size-text-body-lg;
+      line-height: @size-text-body-lg * 1.5;
+    }
+ 
+    kbd {
+      font-size: @size-text-body-md;
+      line-height: @size-text-body-md * 1.5;
+    }
+ 
+    samp {
+      font-size: @size-text-body-md;
+      line-height: @size-text-body-md * 1.5;
+    }
+
+    pre {
+      font-size: @size-text-body-md;
+      line-height: @size-text-body-md * 1.5;
+    }
+ 
+    var {
+      font-size: @size-text-body-md;
+      line-height: @size-text-body-md * 1.5;
+    }
+ 
+    u {
+      font-size: @size-text-body-sm;
+      line-height: @size-text-body-sm * 1.5;
+    }
+ 
+    code {
+      font-size: @size-text-body-lg;
+      line-height: @size-text-body-lg * 1.5;
+    }
+ 
+    kbd {
+      font-size: @size-text-body-md;
+      line-height: @size-text-body-md * 1.5;
+    }
+ 
+    samp {
+      font-size: @size-text-body-md;
+      line-height: @size-text-body-md * 1.5;
+    }
+
+    pre {
+      font-size: @size-text-body-md;
+      line-height: @size-text-body-md * 1.5;
+    }
+ 
+    var {
+      font-size: @size-text-body-md;
+      line-height: @size-text-body-md * 1.5;
+    }
+ 
+    ul, ol, li {
+      font-size: @size-text-body-sm;
+      line-height: @size-text-body-sm * 1.5;
+    }
+ 
+    dl, dt, dd {
+      font-size: @size-text-body-lg;
+      line-height: @size-text-body-lg * 1.5;
+    }
+ 
+    sup, sub {
+      font-size: @size-text-body-md;
+      line-height: @size-text-body-md * 1.5;
+    }
+ 
+    .navbar a {
+      font-size: @size-text-body-md;
+      line-height: @size-text-body-md * 1.5;
+    }
+
+
+ 
+  }
+
+
 // Media queries para ajustar en mobile
-@media (max-width: 719px) {
-  @size-text-h1: 1.8rem;
-  @size-text-h2: 1.6rem;
-  @size-text-h3: 1.4rem;
-  @size-text-h4: 1.2rem;
-  @size-text-h5: 1.1rem;
-  @size-text-h6: 1rem;
-  @size-text-body-lg: 1rem;
-  @size-text-body-md: 0.875rem;
-  @size-text-body-sm: 0.8125rem;
-  @size-text-body-xs: 0.75rem;
+ @media (max-width: @breakpoint-mobile) {
+  @size-text-h1: @size-text-h2 * @sc;
+  @size-text-h2: @size-text-h3 * @sc;
+  @size-text-h3: @size-text-h4 * @sc;
+  @size-text-h4: @size-text-h5 * @sc;
+  @size-text-h5: @size-text-h6 * @sc;
+  @size-text-h6: @size-text-body-md * @sc;
+  @size-text-body-lg: @size-text-body-md * @sc;
+  @size-text-body-md: @rem;
+  @size-text-body-sm: @size-text-body-md / @sc;
+  @size-text-body-xs: @size-text-body-sm / @sc;
+  @size-text-code: @rem;
 
-  // p {
-  //   font-size: @size-text-body-md;
-  // }
+   @rem: 16px;
+   @sc: 1.067;
 
-  // p.lg {
-  //   font-size: @size-text-body-lg;
-  // }
+   html{
+    font-size: @rem;
+  }
 
-  // p.sm {
-  //   font-size: @size-text-body-sm;
-  // }
+    p {
+      font-size: @size-text-body-md;
+      line-height: @size-text-body-md * 1.5;
+    }
 
-  // p.xs {
-  //   font-size: @size-text-body-xs;
-  // }
+    h1 {
+      font-size: @size-text-h1;
+      line-height: @size-text-h1 * 1.2;
+    }
 
-  // h1 {
-  //   font-size: @size-text-h1;
-  //   font-family: @font-body;
-  //   color: @color-font-h1;
-  // }
-  // h2 {
-  //   font-size: @size-text-h2;
-  //   font-family: @font-body;
-  //   color: @color-font-h2;
-  // }
-  // h3 {
-  //   font-size: @size-text-h3;
-  //   font-family: @font-body;
-  //   color: @color-font-h3;
-  // }
-  // h4 {
-  //   font-size: @size-text-h4;
-  //   font-family: @font-body;
-  //   color: @color-font-h4;
-  // }
-  // h5 {
-  //   font-size: @size-text-h5;
-  //   font-family: @font-body;
-  //   color: @color-font-h5;
-  // }
-  // h6 {
-  //   font-size: @size-text-h6;
-  //   font-family: @font-body;
-  //   color: @color-font-h6;
-  // }
-}
+    h2 {
+      font-size: @size-text-h2;
+      line-height: @size-text-h2 * 1.2;
+    }
+
+    h3 {
+      font-size: @size-text-h3;
+      line-height: @size-text-h3 * 1.2;
+    }
+
+    h4 {
+      font-size: @size-text-h4;
+      line-height: @size-text-h4 * 1.2;
+    }
+
+    h5 {
+      font-size: @size-text-h5;
+      line-height: @size-text-h5 * 1.2;
+    }
+
+    h6 {
+      font-size: @size-text-h6;
+      line-height: @size-text-h6 * 1.2;
+    }
+  
+    a {
+      font-size: @size-text-body-md;
+      line-height: @size-text-body-md * 1.5;
+    }
+
+    a {
+      font-size: @size-text-body-md;
+      line-height: @size-text-body-md * 1.5;
+    }
+ 
+    blockquote {
+      font-size: @size-text-body-lg;
+      line-height: @size-text-body-lg * 1.5;
+    }
+ 
+    b, strong {
+      font-size: @size-text-body-md;
+      line-height: @size-text-body-md * 1.5;
+    }
+ 
+    i, em {
+      font-size: @size-text-body-md;
+      line-height: @size-text-body-md * 1.5;
+    }
+ 
+    small {
+      font-size: @size-text-body-sm;
+      line-height: @size-text-body-sm * 1.5;
+    }
+ 
+    big {
+      font-size: @size-text-body-lg;
+      line-height: @size-text-body-lg * 1.5;
+    }
+ 
+    mark {
+      font-size: @size-text-body-md;
+      line-height: @size-text-body-md * 1.5;
+    }
+ 
+    ins {
+      font-size: @size-text-body-md;
+      line-height: @size-text-body-md * 1.5;
+    }
+    
+    del {
+      font-size: @size-text-body-md;
+      line-height: @size-text-body-md * 1.5;
+    }
+ 
+    u {
+      font-size: @size-text-body-sm;
+      line-height: @size-text-body-sm * 1.5;
+    }
+ 
+    code {
+      font-size: @size-text-body-lg;
+      line-height: @size-text-body-lg * 1.5;
+    }
+ 
+    kbd {
+      font-size: @size-text-body-md;
+      line-height: @size-text-body-md * 1.5;
+    }
+ 
+    samp {
+      font-size: @size-text-body-md;
+      line-height: @size-text-body-md * 1.5;
+    }
+
+    pre {
+      font-size: @size-text-body-md;
+      line-height: @size-text-body-md * 1.5;
+    }
+ 
+    var {
+      font-size: @size-text-body-md;
+      line-height: @size-text-body-md * 1.5;
+    }
+ 
+    u {
+      font-size: @size-text-body-sm;
+      line-height: @size-text-body-sm * 1.5;
+    }
+ 
+    code {
+      font-size: @size-text-body-lg;
+      line-height: @size-text-body-lg * 1.5;
+    }
+ 
+    kbd {
+      font-size: @size-text-body-md;
+      line-height: @size-text-body-md * 1.5;
+    }
+ 
+    samp {
+      font-size: @size-text-body-md;
+      line-height: @size-text-body-md * 1.5;
+    }
+
+    pre {
+      font-size: @size-text-body-md;
+      line-height: @size-text-body-md * 1.5;
+    }
+ 
+    var {
+      font-size: @size-text-body-md;
+      line-height: @size-text-body-md * 1.5;
+    }
+ 
+    ul, ol, li {
+      font-size: @size-text-body-sm;
+      line-height: @size-text-body-sm * 1.5;
+    }
+ 
+    dl, dt, dd {
+      font-size: @size-text-body-lg;
+      line-height: @size-text-body-lg * 1.5;
+    }
+ 
+    sup, sub {
+      font-size: @size-text-body-md;
+      line-height: @size-text-body-md * 1.5;
+    }
+ 
+    .navbar a {
+      font-size: @size-text-body-md;
+      line-height: @size-text-body-md * 1.5;
+    }
+
+
+ 
+  }

@@ -1,0 +1,159 @@
+// Importar estilos necesarios
+
+@import "../variables.less";     // Importar variables generales
+@import "../typography.less";    // Importar tipografía para tamaños de texto
+@import "../breakpoints.less";   // Importar breakpoints
+@import "../icons.less";         // Importar íconos
+
+// Estilos del componente
+
+// Estilos del contenedor
+
+.checkboxContainer {
+  display: flex;
+  align-items: flex-start; // Alinea de arriba hacia abajo
+  gap: @gap-xs;
+
+  &.padding-on {
+      padding: @padding-sm @padding-lg;
+      border-radius: @corner-radius-xs;
+      //background-color: @col-surf-50;
+
+      // Cambios de estilo basados en el estado del input
+      // input[type="checkbox"]:checked + & {
+      //     background-color: @col-prim-400;
+      //     border-color: @col-prim-400;
+      // }
+
+      // input[type="checkbox"]:hover + & {
+      //     border-color: @col-surf-400;
+      //     fill: @col-prim-300;
+      // }
+
+      // input[type="checkbox"]:checked:hover + & {
+      //     background-color: @col-prim-400;
+      //     border-color: @col-prim-200;
+      // }
+
+      // input[type="checkbox"]:disabled + & {
+      //     border-color: @col-surf-400;
+      //     cursor: not-allowed;
+      //     background-color: @col-surf-400;
+      // }
+
+  
+      &:hover {
+        background-color: @col-prim-50;
+        cursor: pointer;
+      }
+
+      &:checked {
+        background-color: @col-prim-50;
+        border-color: @col-prim-100;
+      }
+    
+      &:checked:hover {
+        background-color: @col-prim-50;
+        border-color: @col-prim-200;
+        cursor: pointer;
+      }
+  }
+}
+
+
+// Estilos del checkbox (la cajita con el check)
+
+.checkbox {
+  appearance: none; // Eliminamos estilos nativos
+  width: 16px;
+  height: 16px;
+  border: 1px solid @col-surf-700;
+  border-radius: @corner-radius-sm;
+  background-color: transparent;
+  position: relative;
+  cursor: pointer;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+
+  // Estados interactivos
+  &:checked {
+    background-color: @col-prim-400;
+    border-color: @col-prim-400;
+  }
+
+  &:hover {
+    // border-color: @col-prim-200;
+
+    // Círculo en hover
+    &::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 30px; // Tamaño del círculo
+      height: 30px; // Tamaño del círculo
+      background-color: @col-prim-50;
+      border-radius: 50%;
+      z-index: -1; // Coloca el círculo detrás del checkbox
+    }
+  }
+
+  &:checked:hover {
+    background-color: @col-prim-400;
+    border-color: @col-prim-200;
+  }
+
+  &:disabled {
+    border-color: @col-surf-400;
+    cursor: not-allowed;
+    background-color: @col-surf-400;
+  }
+}
+
+  
+  
+
+  // Estilos del label (texto)
+
+  .checkboxLabel {
+    font-family: @font-body;
+    font-size: @size-text-body-md;
+    color: @col-surf-700;
+    line-height: @size-text-body-md * 1.6;
+  
+    .checkboxContainer.disabled & {
+      color: @col-surf-400;
+    }
+
+    &:hover {
+      cursor: pointer;
+    }
+  
+    &:checked:hover {
+      cursor: pointer;
+    }
+  }
+  
+
+   // Estilos del checkboxGroup (vertical y horizontal)
+
+  .checkboxGroup {
+    display: flex;
+    flex-wrap: wrap;
+  
+    &.vertical {
+      flex-direction: column;
+      gap: @gap-lg;
+      padding-top: @padding-lg;
+      padding-bottom: @padding-lg;
+    }
+  
+    &.horizontal {
+      flex-direction: row;
+      justify-content: flex-start;
+      gap: @gap-0;
+      padding-top: @padding-lg;
+      padding-bottom: @padding-lg;
+    }
+  }
+  

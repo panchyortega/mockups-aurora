@@ -1,0 +1,36 @@
+{{! ¿Qué es esto?
+}}
+{{! plantilla del checkbox
+}}
+
+
+{{! Enlaces a estilos para que se rendericen bien las plantillas:
+}}
+
+    <link rel="stylesheet" href=".../resources/styles/css/breakpoints.css">
+    <link rel="stylesheet" href=".../resources/styles/css/components.css">
+    <link rel="stylesheet" href=".../resources/styles/css/icons.css">
+    <link rel="stylesheet" href=".../resources/styles/css/typography.css">
+    <link rel="stylesheet" href=".../resources/styles/css/variables.css">
+    <link rel="stylesheet" href=".../resources/styles/css/grid.css">
+
+
+
+{{! Plantillas:
+}}
+
+{{#checkboxGroups}}
+<div class="checkboxGroup {{groupType}}">
+  {{#checkboxes}}
+  <div class="checkboxContainer padding-{{padding}}">
+    <input 
+      type="checkbox" 
+      id="{{label}}" 
+      class="checkbox" 
+      {{#disabled}}disabled{{/disabled}} 
+    >
+    <label for="{{label}}" class="checkboxLabel">{{label}}</label>
+  </div>
+  {{/checkboxes}}
+</div>
+{{/checkboxGroups}}
