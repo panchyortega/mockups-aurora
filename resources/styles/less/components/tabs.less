@@ -120,6 +120,21 @@
     .tab-text {
       font-size: @size-text-body-md;
       color: inherit;  // Hereda el color según el estado del tab
-    }
+    
+        @media (max-width: @breakpoint-tablet) {
+          @rem: @rem-tablet;
+          @sc: @sc-tablet;
+          @size-text-body-md: @rem;
+          font-size: @size-text-body-md;
+        }
+
+        @media (max-width: @breakpoint-mobile) {  
+          @rem: @rem-mobile;
+          @sc: @sc-mobile;
+          @size-text-body-md: @rem;
+          font-size: @size-text-body-md;
+        }
+      }
+
   }
   
