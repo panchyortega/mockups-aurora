@@ -15,7 +15,7 @@
   font-family: @font-body;
   font-size: @size-text-body-md;  // Usar tamaño de texto ajustado
   font-weight: 600;               // Semibold por defecto
-  line-height: @size-text-body-md * 1.6;
+  line-height: @size-text-body-md * @lh-body;
   border-width: 2px;
   border-style: solid;
   cursor: pointer;
@@ -190,4 +190,22 @@
       }
     }
   }
+
+  @media (max-width: @breakpoint-tablet) {
+  
+    @rem: @rem-tablet;
+    @sc: @sc-tablet;
+    @size-text-body-md: @rem;
+    font-size: @size-text-body-md;
+    
+
+  }
+
+    @media (max-width: @breakpoint-mobile) {
+  
+      @rem: @rem-mobile;
+      @sc: @sc-mobile;
+      @size-text-body-md: @rem;
+      font-size: @size-text-body-md;
+    }
 }

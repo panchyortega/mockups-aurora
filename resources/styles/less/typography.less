@@ -1,46 +1,42 @@
 @import "variables.less";  // Importar las variables generales
+@import "breakpoints.less"; 
 
-// Definiciones de tamaños responsivos
+// REM
+@rem-desktop: 18px;
+@rem-tablet: 17px;
+@rem-mobile: 16px;
 
-// Escalas según pantalla... revisar:https://typescale.com/
+// Escalas
+@sc-desktop: 1.15;
+@sc-tablet: 1.125;
+@sc-mobile: 1.067;
 
-// @sc-desktop: 1.2; //Minor third
-// @sc-tablet: 1.125; //Mayor second
-// @sc-mobile: 1.067; //Minor second
-
-
-// Tamaños según escalas
-// @size-text-h1: @size-text-h2*@sc;
-// @size-text-h2: @size-text-h3*@sc;
-// @size-text-h3: @size-text-h4*@sc;
-// @size-text-h4: @size-text-h5*@sc;
-// @size-text-h5: @size-text-h6*@sc;
-// @size-text-h6: @size-text-body-md*@sc;
-// @size-text-body-lg: @size-text-body-md*@sc;
-// @size-text-body-md: @rem;
-// @size-text-body-sm: @size-text-body-md/@sc;
-// @size-text-body-xs: @size-text-body-sm/@sc;
-// @size-text-code: @rem;
+// Line-height
+@lh-body: 1.5;
+@lh-heading: 1.2;
+@lh-list: 1.2;
+@lh-caption: 1.5;
 
 
-// Usa las variables CSS en LESS
-@rem: 18px; // Valor predeterminado de 16px
-@sc: 1.15; // Escala predeterminada para mobile
+
+
+@rem: @rem-desktop; // Valor predeterminado de 18px
+@sc: @sc-desktop; // Escala predeterminada para desktop
 
 html{
   font-size: @rem;
 }
 
-@size-text-h1: @size-text-h2 * @sc;
-@size-text-h2: @size-text-h3 * @sc;
-@size-text-h3: @size-text-h4 * @sc;
-@size-text-h4: @size-text-h5 * @sc;
-@size-text-h5: @size-text-h6 * @sc;
-@size-text-h6: @size-text-body-md * @sc;
-@size-text-body-lg: @size-text-body-md * @sc;
+@size-text-h1: @rem * @sc * @sc * @sc * @sc * @sc * @sc * @sc;
+@size-text-h2: @rem * @sc * @sc * @sc * @sc * @sc * @sc;
+@size-text-h3: @rem * @sc * @sc * @sc * @sc * @sc;
+@size-text-h4: @rem * @sc * @sc * @sc * @sc;
+@size-text-h5: @rem * @sc * @sc * @sc;
+@size-text-h6: @rem * @sc * @sc;
+@size-text-body-lg: @rem * @sc;
 @size-text-body-md: @rem;
-@size-text-body-sm: @size-text-body-md / @sc;
-@size-text-body-xs: @size-text-body-sm / @sc;
+@size-text-body-sm: @rem * (1/@sc);
+@size-text-body-xs: @rem * (1/@sc) * (1/@sc);
 @size-text-code: @rem;
 
 
@@ -60,12 +56,16 @@ p {
   font-family: @font-body;
   font-size: @size-text-body-md;
   color: @col-surf-900;
-  line-height: @size-text-body-md * 1.6;
+  line-height: @size-text-body-md * @lh-body;
+
+  padding-top: @rem * (1/3);
+  padding-bottom: @rem * (1/2);
 }
 
 // Enlaces
 a {
   font-family: @font-body;
+  line-height: @size-text-body-md * @lh-body;
   color: @col-surf-400;
   text-decoration: none;
 
@@ -110,6 +110,7 @@ a {
 blockquote {
   font-family: @font-body;
   font-size: @size-text-body-lg;
+  line-height: @size-text-body-lg * @lh-body;
   color: @col-surf-800;
   font-style: italic;
   border-left: 4em solid @col-surf-50;
@@ -204,7 +205,7 @@ ul, ol {
   font-family: @font-body;
   font-size: @size-text-body-md;
   color: @col-surf-900;
-  line-height: @size-text-body-md * 1.2;
+  line-height: @size-text-body-md * @lh-list;
  // padding-left: @space-6; // Espaciado desde el borde izquierdo
 
   li {
@@ -273,36 +274,41 @@ h1 {
   font-size: @size-text-h1;
   font-family: @font-body;
   color: @color-font-h1;
-  line-height: @size-text-h1 * 1.2;
+  line-height: @size-text-h1 * @lh-heading;
   // padding-bottom: @size-text-h1;
 }
 h2 {
   font-size: @size-text-h2;
   font-family: @font-body;
+  line-height: @size-text-h2 * @lh-heading;
   color: @color-font-h2;
   // a padding-bottom: @size-text-h2;
 }
 h3 {
   font-size: @size-text-h3;
   font-family: @font-body;
+  line-height: @size-text-h3 * @lh-heading;
   color: @color-font-h2;
   // padding-bottom: @size-text-h3;
 }
 h4 {
   font-size: @size-text-h4;
   font-family: @font-body;
+  line-height: @size-text-h4 * @lh-heading;
   color: @color-font-h4;
   // padding-bottom: @size-text-h4;
 }
 h5 {
   font-size: @size-text-h5;
   font-family: @font-body;
+  line-height: @size-text-h5 * @lh-heading;
   color: @color-font-h5;
   // padding-bottom: @size-text-h5;
 }
 h6 {
   font-size: @size-text-h6;
   font-family: @font-body;
+  line-height: @size-text-h6 * @lh-heading;
   color: @color-font-h6;
   // padding-bottom: @size-text-h6;
 }
@@ -312,26 +318,29 @@ h6 {
   font-family: @font-body;
   font-size: @size-text-body-xs;
   color: @col-surf-500;
-  line-height: 1.3;
+  line-height: @size-text-body-xs * @lh-caption;
 }
 
 
 // Media queries para ajustar en tablet
 @media (max-width: @breakpoint-tablet) {
-  @size-text-h1: @size-text-h2 * @sc;
-  @size-text-h2: @size-text-h3 * @sc;
-  @size-text-h3: @size-text-h4 * @sc;
-  @size-text-h4: @size-text-h5 * @sc;
-  @size-text-h5: @size-text-h6 * @sc;
-  @size-text-h6: @size-text-body-md * @sc;
-  @size-text-body-lg: @size-text-body-md * @sc;
+  
+  @rem: @rem-tablet;
+  @sc: @sc-tablet;
+
+  @size-text-h1: @rem * @sc * @sc * @sc * @sc * @sc * @sc * @sc;
+  @size-text-h2: @rem * @sc * @sc * @sc * @sc * @sc * @sc;
+  @size-text-h3: @rem * @sc * @sc * @sc * @sc * @sc;
+  @size-text-h4: @rem * @sc * @sc * @sc * @sc;
+  @size-text-h5: @rem * @sc * @sc * @sc;
+  @size-text-h6: @rem * @sc * @sc;
+  @size-text-body-lg: @rem * @sc;
   @size-text-body-md: @rem;
-  @size-text-body-sm: @size-text-body-md / @sc;
-  @size-text-body-xs: @size-text-body-sm / @sc;
+  @size-text-body-sm: @rem * (1/@sc);
+  @size-text-body-xs: @rem * (1/@sc) * (1/@sc);
   @size-text-code: @rem;
 
-   @rem: 17px;
-   @sc: 1.125;
+
 
    html{
     font-size: @rem;
@@ -339,190 +348,144 @@ h6 {
 
     p {
       font-size: @size-text-body-md;
-      line-height: @size-text-body-md * 1.5;
+      line-height: @size-text-body-md * @lh-body;
+    }
+
+    .caption {
+      font-size: @size-text-body-xs;
+      line-height: @size-text-body-xs * @lh-caption;
     }
 
     h1 {
       font-size: @size-text-h1;
-      line-height: @size-text-h1 * 1.2;
+      line-height: @size-text-h1 * @lh-heading;
     }
 
     h2 {
       font-size: @size-text-h2;
-      line-height: @size-text-h2 * 1.2;
+      line-height: @size-text-h2 * @lh-heading;
     }
 
     h3 {
       font-size: @size-text-h3;
-      line-height: @size-text-h3 * 1.2;
+      line-height: @size-text-h3 * @lh-heading;
     }
 
     h4 {
       font-size: @size-text-h4;
-      line-height: @size-text-h4 * 1.2;
+      line-height: @size-text-h4 * @lh-heading;
     }
 
     h5 {
       font-size: @size-text-h5;
-      line-height: @size-text-h5 * 1.2;
+      line-height: @size-text-h5 * @lh-heading;
     }
 
     h6 {
       font-size: @size-text-h6;
-      line-height: @size-text-h6 * 1.2;
+      line-height: @size-text-h6 * @lh-heading;
     }
   
     a {
       font-size: @size-text-body-md;
-      line-height: @size-text-body-md * 1.5;
+      line-height: @size-text-body-md * @lh-body;
     }
 
-    a {
-      font-size: @size-text-body-md;
-      line-height: @size-text-body-md * 1.5;
-    }
- 
     blockquote {
       font-size: @size-text-body-lg;
-      line-height: @size-text-body-lg * 1.5;
+      line-height: @size-text-body-lg * @lh-body;
     }
  
     b, strong {
       font-size: @size-text-body-md;
-      line-height: @size-text-body-md * 1.5;
     }
  
     i, em {
       font-size: @size-text-body-md;
-      line-height: @size-text-body-md * 1.5;
     }
  
     small {
       font-size: @size-text-body-sm;
-      line-height: @size-text-body-sm * 1.5;
     }
  
     big {
       font-size: @size-text-body-lg;
-      line-height: @size-text-body-lg * 1.5;
     }
  
     mark {
       font-size: @size-text-body-md;
-      line-height: @size-text-body-md * 1.5;
     }
  
     ins {
       font-size: @size-text-body-md;
-      line-height: @size-text-body-md * 1.5;
     }
     
     del {
       font-size: @size-text-body-md;
-      line-height: @size-text-body-md * 1.5;
     }
  
     u {
       font-size: @size-text-body-sm;
-      line-height: @size-text-body-sm * 1.5;
     }
  
     code {
       font-size: @size-text-body-lg;
-      line-height: @size-text-body-lg * 1.5;
     }
  
     kbd {
       font-size: @size-text-body-md;
-      line-height: @size-text-body-md * 1.5;
     }
  
     samp {
       font-size: @size-text-body-md;
-      line-height: @size-text-body-md * 1.5;
     }
 
     pre {
-      font-size: @size-text-body-md;
-      line-height: @size-text-body-md * 1.5;
+      font-size: @size-text-body-md;;
     }
  
     var {
       font-size: @size-text-body-md;
-      line-height: @size-text-body-md * 1.5;
-    }
- 
-    u {
-      font-size: @size-text-body-sm;
-      line-height: @size-text-body-sm * 1.5;
-    }
- 
-    code {
-      font-size: @size-text-body-lg;
-      line-height: @size-text-body-lg * 1.5;
-    }
- 
-    kbd {
-      font-size: @size-text-body-md;
-      line-height: @size-text-body-md * 1.5;
-    }
- 
-    samp {
-      font-size: @size-text-body-md;
-      line-height: @size-text-body-md * 1.5;
     }
 
-    pre {
-      font-size: @size-text-body-md;
-      line-height: @size-text-body-md * 1.5;
-    }
- 
-    var {
-      font-size: @size-text-body-md;
-      line-height: @size-text-body-md * 1.5;
-    }
- 
     ul, ol, li {
-      font-size: @size-text-body-sm;
-      line-height: @size-text-body-sm * 1.5;
+      font-size: @size-text-body-md;
+      line-height: @size-text-body-md * @lh-list;
     }
  
     dl, dt, dd {
       font-size: @size-text-body-lg;
-      line-height: @size-text-body-lg * 1.5;
     }
  
     sup, sub {
-      font-size: @size-text-body-md;
-      line-height: @size-text-body-md * 1.5;
+      font-size: @size-text-body-xs;
     }
  
     .navbar a {
       font-size: @size-text-body-md;
-      line-height: @size-text-body-md * 1.5;
+      line-height: @size-text-body-md * @lh-body;
     }
-
-
- 
   }
 
 
 // Media queries para ajustar en mobile
  @media (max-width: @breakpoint-mobile) {
-  @size-text-h1: @size-text-h2 * @sc;
-  @size-text-h2: @size-text-h3 * @sc;
-  @size-text-h3: @size-text-h4 * @sc;
-  @size-text-h4: @size-text-h5 * @sc;
-  @size-text-h5: @size-text-h6 * @sc;
-  @size-text-h6: @size-text-body-md * @sc;
-  @size-text-body-lg: @size-text-body-md * @sc;
+
+  @rem: @rem-mobile;
+  @sc: @sc-mobile;
+
+  @size-text-h1: @rem * @sc * @sc * @sc * @sc * @sc * @sc * @sc;
+  @size-text-h2: @rem * @sc * @sc * @sc * @sc * @sc * @sc;
+  @size-text-h3: @rem * @sc * @sc * @sc * @sc * @sc;
+  @size-text-h4: @rem * @sc * @sc * @sc * @sc;
+  @size-text-h5: @rem * @sc * @sc * @sc;
+  @size-text-h6: @rem * @sc * @sc;
+  @size-text-body-lg: @rem * @sc;
   @size-text-body-md: @rem;
-  @size-text-body-sm: @size-text-body-md / @sc;
-  @size-text-body-xs: @size-text-body-sm / @sc;
+  @size-text-body-sm: @rem * (1/@sc);
+  @size-text-body-xs: @rem * (1/@sc) * (1/@sc);
   @size-text-code: @rem;
 
-   @rem: 16px;
-   @sc: 1.067;
 
    html{
     font-size: @rem;
@@ -530,167 +493,125 @@ h6 {
 
     p {
       font-size: @size-text-body-md;
-      line-height: @size-text-body-md * 1.5;
+      line-height: @size-text-body-md * @lh-body;
+    }
+
+    .caption {
+      font-size: @size-text-body-xs;
+      line-height: @size-text-body-xs * @lh-caption;
     }
 
     h1 {
       font-size: @size-text-h1;
-      line-height: @size-text-h1 * 1.2;
+      line-height: @size-text-h1 * @lh-heading;
     }
 
     h2 {
       font-size: @size-text-h2;
-      line-height: @size-text-h2 * 1.2;
+      line-height: @size-text-h2 * @lh-heading;
     }
 
     h3 {
       font-size: @size-text-h3;
-      line-height: @size-text-h3 * 1.2;
+      line-height: @size-text-h3 * @lh-heading;
     }
 
     h4 {
       font-size: @size-text-h4;
-      line-height: @size-text-h4 * 1.2;
+      line-height: @size-text-h4 * @lh-heading;
     }
 
     h5 {
       font-size: @size-text-h5;
-      line-height: @size-text-h5 * 1.2;
+      line-height: @size-text-h5 * @lh-heading;
     }
 
     h6 {
       font-size: @size-text-h6;
-      line-height: @size-text-h6 * 1.2;
+      line-height: @size-text-h6 * @lh-heading;
     }
   
     a {
       font-size: @size-text-body-md;
-      line-height: @size-text-body-md * 1.5;
+      line-height: @size-text-body-md * @lh-body;
     }
 
-    a {
-      font-size: @size-text-body-md;
-      line-height: @size-text-body-md * 1.5;
-    }
- 
-    blockquote {
+     blockquote {
       font-size: @size-text-body-lg;
-      line-height: @size-text-body-lg * 1.5;
+      line-height: @size-text-body-lg * @lh-body;
     }
  
     b, strong {
       font-size: @size-text-body-md;
-      line-height: @size-text-body-md * 1.5;
+      line-height: @size-text-body-md * @lh-body;
     }
  
     i, em {
       font-size: @size-text-body-md;
-      line-height: @size-text-body-md * 1.5;
+      line-height: @size-text-body-md * @lh-body;
     }
  
     small {
       font-size: @size-text-body-sm;
-      line-height: @size-text-body-sm * 1.5;
     }
  
     big {
       font-size: @size-text-body-lg;
-      line-height: @size-text-body-lg * 1.5;
     }
  
     mark {
       font-size: @size-text-body-md;
-      line-height: @size-text-body-md * 1.5;
     }
  
     ins {
       font-size: @size-text-body-md;
-      line-height: @size-text-body-md * 1.5;
     }
     
     del {
       font-size: @size-text-body-md;
-      line-height: @size-text-body-md * 1.5;
     }
  
     u {
       font-size: @size-text-body-sm;
-      line-height: @size-text-body-sm * 1.5;
     }
  
     code {
       font-size: @size-text-body-lg;
-      line-height: @size-text-body-lg * 1.5;
+      line-height: @size-text-body-lg * @lh-body;
     }
  
     kbd {
       font-size: @size-text-body-md;
-      line-height: @size-text-body-md * 1.5;
     }
  
     samp {
       font-size: @size-text-body-md;
-      line-height: @size-text-body-md * 1.5;
     }
 
     pre {
       font-size: @size-text-body-md;
-      line-height: @size-text-body-md * 1.5;
     }
  
     var {
       font-size: @size-text-body-md;
-      line-height: @size-text-body-md * 1.5;
-    }
- 
-    u {
-      font-size: @size-text-body-sm;
-      line-height: @size-text-body-sm * 1.5;
-    }
- 
-    code {
-      font-size: @size-text-body-lg;
-      line-height: @size-text-body-lg * 1.5;
-    }
- 
-    kbd {
-      font-size: @size-text-body-md;
-      line-height: @size-text-body-md * 1.5;
-    }
- 
-    samp {
-      font-size: @size-text-body-md;
-      line-height: @size-text-body-md * 1.5;
-    }
-
-    pre {
-      font-size: @size-text-body-md;
-      line-height: @size-text-body-md * 1.5;
-    }
- 
-    var {
-      font-size: @size-text-body-md;
-      line-height: @size-text-body-md * 1.5;
     }
  
     ul, ol, li {
-      font-size: @size-text-body-sm;
-      line-height: @size-text-body-sm * 1.5;
+      font-size: @size-text-body-md;
+      line-height: @size-text-body-md * @lh-list;
     }
  
     dl, dt, dd {
       font-size: @size-text-body-lg;
-      line-height: @size-text-body-lg * 1.5;
     }
  
     sup, sub {
-      font-size: @size-text-body-md;
-      line-height: @size-text-body-md * 1.5;
+      font-size: @size-text-body-xs;
     }
  
     .navbar a {
       font-size: @size-text-body-md;
-      line-height: @size-text-body-md * 1.5;
+      line-height: @size-text-body-md * @lh-body;
     }
 
 

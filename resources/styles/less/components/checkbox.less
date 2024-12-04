@@ -132,6 +132,29 @@
     &:checked:hover {
       cursor: pointer;
     }
+
+    @media (max-width: @breakpoint-tablet) {
+    
+       @rem: 17px;
+       @sc: 1.125;
+    
+       @size-text-body-md: @rem;
+
+       font-size: @size-text-body-md;
+       line-height: @size-text-body-md * 1.5;
+   }
+  
+
+  @media (max-width: @breakpoint-mobile) {
+    
+    @rem: 16px;
+    @sc: 1.067;
+
+    @size-text-body-md: @rem;
+
+    font-size: @size-text-body-md;
+    line-height: @size-text-body-md * 1.5;
+}
   }
   
 
