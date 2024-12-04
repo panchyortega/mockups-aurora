@@ -1,14 +1,17 @@
 /* Barra de navegación */
 .navbar-presentacion {
+     display: flex;
+    padding: 16px 20px;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%; /* Ocupa todo el ancho de la pantalla */
     background-color: #EDECEA;
-    display: flex;
-    justify-content: space-between; /* Alinea los links a los extremos izquierdo y derecho */
+    
+    justify-content: space-between;
+    gap: auto;
     align-items: center;
-    padding: 16px 0; /* Padding vertical */
+    flex-wrap: wrap;
     z-index: 1000; /* Asegura que esté encima del resto */
   }
   
