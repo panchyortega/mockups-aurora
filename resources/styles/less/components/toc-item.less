@@ -1,0 +1,71 @@
+// Importar estilos necesarios
+@import "../variables.less";     // Importar variables generales
+@import "../typography.less";    // Importar tipografía para tamaños de texto
+@import "../breakpoints.less";   // Importar breakpoints
+@import "../icons.less";         // Importar íconos
+
+// Estilos del componente
+
+
+
+
+
+.toc-item{
+    padding: 0px;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    align-content: flex-start;
+
+    :hover{
+        background-color: @col-surf-500;
+    }
+}
+
+.toc-label{
+    a {
+        font-family: @font-body;
+        line-height: @size-text-body-md * @lh-body;
+        text-decoration: none;
+        margin-block-start: 0;
+        margin-block-end: 0;
+
+  @media (max-width: @breakpoint-tablet) {
+
+        @rem: @rem-tablet;
+        @sc: @sc-tablet;
+
+        @size-text-body-md: @rem;
+
+        a {
+            font-size: @size-text-body-md;
+            line-height: @size-text-body-md * @lh-body;
+            }
+  }
+
+    @media (max-width: @breakpoint-mobile) {
+
+        @rem: @rem-mobile;
+        @sc: @sc-mobile;
+
+        @size-text-body-md: @rem;
+
+        a {
+            font-size: @size-text-body-md;
+            line-height: @size-text-body-md * @lh-body;
+            }
+  }
+
+  }
+
+        .actual{
+            color: @col-surf-700;
+        }
+
+        .default{
+            color: @col-surf-500;
+        }
+
+    }

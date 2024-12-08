@@ -1,0 +1,55 @@
+// Importar estilos necesarios
+@import "../variables.less";     // Importar variables generales
+@import "../typography.less";    // Importar tipografía para tamaños de texto
+@import "../breakpoints.less";   // Importar breakpoints
+@import "../icons.less";         // Importar íconos
+
+// Estilos del componente
+
+
+
+.toc-container{
+    padding: @padding-lg @padding-xl;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: @gap-sm;
+    background-color: @col-surf-50;
+    border-radius: @corner-radius-md;
+    border: 1px solid @col-surf-100;
+}
+
+.toc-title{
+
+    font-family: @font-body;
+    line-height: @size-text-body-md * @lh-body;
+    color: @col-surf-700;
+    margin-block-start: 0;
+    margin-block-end: 0;
+
+@media (max-width: @breakpoint-tablet) {
+
+    @rem: @rem-tablet;
+    @sc: @sc-tablet;
+
+    @size-text-body-md: @rem;
+
+    font-size: @size-text-body-md;
+    line-height: @size-text-body-md * @lh-body;
+
+  }
+
+@media (max-width: @breakpoint-mobile) {
+
+    @rem: @rem-mobile;
+    @sc: @sc-mobile;
+
+    @size-text-body-md: @rem;
+
+    font-size: @size-text-body-md;
+    line-height: @size-text-body-md * @lh-body;
+
+  }
+
+  }

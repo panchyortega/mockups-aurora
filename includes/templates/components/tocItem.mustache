@@ -1,0 +1,26 @@
+{{! ¿Qué es esto?
+}}
+{{! Esta es una plantilla de los botones
+}}
+
+
+{{! Enlaces a estilos para que se rendericen bien las plantillas:
+}}
+
+
+
+{{! Plantillas:
+}}
+
+<!-- tocItem.mustache -->
+<div class="toc-item {{state}}">
+  <!-- El componente tocIndent con sus líneas -->
+  {{> tocIndent}}
+
+  <!-- El label o texto que representa el título o nombre del item -->
+  <div class="toc-label {{position}}">
+    <a href=#"{{seccion}}">{{label}}</a>
+  </div>
+</div>
+
+
