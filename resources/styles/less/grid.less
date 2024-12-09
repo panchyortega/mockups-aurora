@@ -10,9 +10,10 @@ body {
 
 // Grilla principal
 .page-grid {
+  background-color: @col-surf-50;
   display: grid;
   grid-template-rows: auto 1fr auto; // Fila 1: barra de navegación, Fila 2: contenido, Fila 3: footer
-  grid-template-columns: 240px 1fr 680px 1fr 240px; // Columnas: tabla de contenidos, contenido, ficha
+  grid-template-columns: 22px 240px 1fr 680px 1fr 240px 22px; // Columnas: tabla de contenidos, contenido, ficha
   gap: auto; // Distribuir automáticamente el espacio entre las columnas
 
   @media (max-width: @breakpoint-tablet) {
@@ -32,7 +33,7 @@ body {
 
 // Contenido
 .content-area {
-  grid-column: 3; // Centrado en desktop
+  grid-column: 4; // Centrado en desktop
 
   @media (max-width: @breakpoint-tablet) {
     grid-column: 2;  // Centrar contenido en tablet
@@ -46,7 +47,7 @@ body {
 
 // Tabla de contenidos (TOC)
 .toc {
-  grid-column: 1; // Alineado a la izquierda
+  grid-column: 2; // Alineado a la izquierda
 
   @media (max-width: @breakpoint-tablet) {
     display: none; // Ocultar en tablet y móvil
@@ -55,7 +56,7 @@ body {
 
 // Ficha de la página (Info Box)
 .info-box {
-  grid-column: 5; // Alineado a la derecha
+  grid-column: 6; // Alineado a la derecha
 
   @media (max-width: @breakpoint-tablet) {
     display: none; // Ocultar en tablet y móvil

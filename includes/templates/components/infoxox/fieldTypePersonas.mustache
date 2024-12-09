@@ -1,0 +1,25 @@
+{{! ¿Qué es esto?
+}}
+{{! Esta es una plantilla de los botones
+}}
+
+
+<!-- fieldTypePersonas.mustache -->
+<div class="infobox-personas">
+  <!-- Primera fila (firstRow) con listado de imágenes y texto -->
+  <div class="ib-firstRow">
+    <div class="image-list">
+      {{#images}}
+        <img src="{{url}}" alt="{{altText}}" class="person-image-small">
+      {{/images}}
+    </div>
+    <div>
+      <p>...</p>
+    </div>
+  </div>
+
+  <!-- Segunda fila (secondRow) con el texto "a" -->
+  <div class="ib-secondRow">
+    <a>Mostrar todos ({{numero}})</a>
+  </div>
+</div>

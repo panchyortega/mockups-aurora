@@ -4,9 +4,10 @@ body {
   margin: 0;
 }
 .page-grid {
+  background-color: #F6F5F5;
   display: grid;
   grid-template-rows: auto 1fr auto;
-  grid-template-columns: 240px 1fr 680px 1fr 240px;
+  grid-template-columns: 22px 240px 1fr 680px 1fr 240px 22px;
   gap: auto;
 }
 @media (max-width: 1279px) {
@@ -24,7 +25,7 @@ body {
   padding: 4px 24px;
 }
 .content-area {
-  grid-column: 3;
+  grid-column: 4;
 }
 @media (max-width: 1279px) {
   .content-area {
@@ -38,7 +39,7 @@ body {
   }
 }
 .toc {
-  grid-column: 1;
+  grid-column: 2;
 }
 @media (max-width: 1279px) {
   .toc {
@@ -46,7 +47,7 @@ body {
   }
 }
 .info-box {
-  grid-column: 5;
+  grid-column: 6;
 }
 @media (max-width: 1279px) {
   .info-box {

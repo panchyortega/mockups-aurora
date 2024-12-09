@@ -789,6 +789,38 @@ h6 {
   padding-top: 16px;
   padding-bottom: 16px;
 }
+.infobox-personas {
+  width: fit-content;
+}
+.infobox-personas .ib-firstRow {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+.infobox-personas .image-list {
+  display: flex;
+}
+.infobox-personas .person-image-small {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+.infobox-personas .ib-secondRow {
+  text-align: center;
+}
+.infobox-personas a {
+  text-decoration: none;
+  color: #007bff;
+  font-weight: bold;
+  font-size: 14px;
+}
+.infobox-personas a:hover {
+  text-decoration: underline;
+}
+.person-image-small {
+  border-radius: 60px;
+}
 .input {
   display: flex;
   flex-direction: column;
@@ -1188,15 +1220,20 @@ table tfoot {
   padding: 0px;
 }
 .toc-line {
-  height: 20px;
-  width: 4px;
-  margin-left: 12px;
-  margin-right: 12px;
+  height: 28px;
+  width: 1px;
+  margin-left: 4px;
+  margin-right: 4px;
+  background-color: #EDECEA;
 }
 .toc-line .default {
-  background-color: #DCD9D6;
+  background-color: #EDECEA;
 }
-.toc-line .hover {
+.toc-line :hover {
+  background-color: #959089;
+}
+.toc-line .selected {
+  color: #2D2B29;
   background-color: #53504C;
 }
 .toc-item {
@@ -1205,34 +1242,41 @@ table tfoot {
   flex-direction: row;
   align-items: flex-start;
   justify-content: flex-start;
-  align-content: flex-start;
+  align-content: center;
+  width: 192px;
 }
 .toc-item :hover {
-  background-color: #959089;
+  background-color: #DCD9D6;
+}
+.toc-label {
+  width: fit-content;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .toc-label a {
   font-family: 'Work Sans', sans-serif;
-  line-height: 24px;
+  font-size: 13.91304348px;
+  line-height: 28px;
+  color: #53504C;
   text-decoration: none;
   margin-block-start: 0;
   margin-block-end: 0;
 }
 @media (max-width: 1279px) {
   .toc-label a a {
-    font-size: 16px;
-    line-height: 24px;
+    font-size: 14.22222222px;
   }
 }
 @media (max-width: 719px) {
   .toc-label a a {
-    font-size: 14px;
-    line-height: 21px;
+    font-size: 13.12089972px;
   }
 }
-.toc-label .actual {
+.toc-label a .actual {
   color: #53504C;
 }
-.toc-label .default {
+.toc-label a .default {
   color: #959089;
 }
 .toc-container {
@@ -1245,6 +1289,13 @@ table tfoot {
   background-color: #F6F5F5;
   border-radius: 8px;
   border: 1px solid #EDECEA;
+  width: 192px;
+  height: 1fr;
+}
+#toggle-button {
+  width: 16px;
+  height: 16px;
+  border: none;
 }
 .toc-title {
   font-family: 'Work Sans', sans-serif;
@@ -1252,6 +1303,7 @@ table tfoot {
   color: #53504C;
   margin-block-start: 0;
   margin-block-end: 0;
+  margin-bottom: 8px;
 }
 @media (max-width: 1279px) {
   .toc-title {

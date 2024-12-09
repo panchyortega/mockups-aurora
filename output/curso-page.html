@@ -12,8 +12,33 @@
     <link rel="stylesheet" href="../resources/styles/css/typography.css">
     <link rel="stylesheet" href="../resources/styles/css/variables.css">
     <link rel="stylesheet" href="../resources/styles/css/grid.css">
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+      const button = document.getElementById("toggle-button");
+      const icon = document.getElementById("button-icon");
+      const tocContent = document.getElementById("toc-content");
+      
+      let isCollapsed = false;
+      
+      button.addEventListener("click", () => {
+      isCollapsed = !isCollapsed;
+      
+      if (isCollapsed) {
+        tocContent.style.display = "none"; // Ocultar el contenido
+        icon.src = "menu.png";    // Cambiar icono
+        icon.alt = "Colapsar";
+      } else {
+        tocContent.style.display = "block"; // Mostrar el contenido
+        icon.src = "arrowback.png";       // Cambiar icono
+        icon.alt = "Expandir";
+      }
+      });
+      });
+      </script>
+
 </head>
-<body>
+<body class="body">
 
     <!-- Fila 1: Barra de navegación -->
     <header class="navbar">
@@ -22,13 +47,528 @@
     <!-- Fila 2: Contenido principal -->
     <main class="main-content">
         <div class="page-grid">
+            
+            
             <!-- Columna 1: Tabla de contenidos -->
             <aside class="toc">
-                <p>Tabla de Contenidos</p>
-                <p>Tabla de Contenidos</p>
-                <p>Tabla de Contenidos</p>
-                <p>Tabla de Contenidos</p>
-                <p>Tabla de Contenidos</p>
+<!-- toc.mustache -->
+<div class="toc-container">
+    <button class="button" id="toggle-button">
+    <img id="button-icon" src="arrowback.png" alt="menu.png">
+    </button>
+    
+    
+    
+    <!-- Contenedor completo que se colapsará -->
+    <div id="toc-content">
+    <!-- Texto "Tabla de contenidos" -->
+    <div class="toc-title">
+    <span class="toc-text">Tabla de Contenidos</span>
+    </div>
+    
+    <!-- Contenido tocItemGroup -->
+    
+    
+    
+    
+    
+    
+    
+      <!-- tocItem.mustache -->
+      <div class="toc-item default">
+        <!-- El componente tocIndent con sus líneas -->
+        
+        
+        <!-- tocIndent.mustache -->
+        <div class="toc-indent">
+            <div class="toc-line default">
+            </div>
+            
+        </div>
+      
+        <!-- El label o texto que representa el título o nombre del item -->
+        <div class="toc-label actual">
+          <a href=#"intro">Fundamentos del Diseño Gráfico</a>
+        </div>
+      </div>
+      
+      
+      
+      
+      
+      
+      
+      
+      <!-- tocItem.mustache -->
+      <div class="toc-item default">
+        <!-- El componente tocIndent con sus líneas -->
+        
+        
+        <!-- tocIndent.mustache -->
+        <div class="toc-indent">
+            <div class="toc-line default">
+            </div>
+            <div class="toc-line default">
+            </div>
+           
+        </div>
+      
+        <!-- El label o texto que representa el título o nombre del item -->
+        <div class="toc-label actual">
+          <a href=#"intro">Principios del Diseño de Interacción</a>
+        </div>
+      </div>
+      
+      
+      
+      
+      
+      
+      
+      
+      <!-- tocItem.mustache -->
+      <div class="toc-item default">
+        <!-- El componente tocIndent con sus líneas -->
+        
+        
+        <!-- tocIndent.mustache -->
+        <div class="toc-indent">
+            <div class="toc-line default">
+            </div>
+            <div class="toc-line default">
+            </div>
+           
+        </div>
+      
+        <!-- El label o texto que representa el título o nombre del item -->
+        <div class="toc-label actual">
+          <a href=#"intro">Tendencias Actuales en Diseño UX/UI</a>
+        </div>
+      </div>
+      
+      
+      
+      
+      
+      
+      
+      <!-- tocItem.mustache -->
+      <div class="toc-item default">
+        <!-- El componente tocIndent con sus líneas -->
+        
+        
+        <!-- tocIndent.mustache -->
+        <div class="toc-indent">
+            <div class="toc-line default">
+            </div>
+            <div class="toc-line default">
+            </div>
+            <div class="toc-line default">
+            </div>
+            
+        </div>
+      
+        <!-- El label o texto que representa el título o nombre del item -->
+        <div class="toc-label actual">
+          <a href=#"intro">Herramientas Esenciales para Diseñadores</a>
+        </div>
+      </div>
+    
+    
+    
+    
+    
+      
+      
+      <!-- tocItem.mustache -->
+      <div class="toc-item default">
+        <!-- El componente tocIndent con sus líneas -->
+        
+        
+        <!-- tocIndent.mustache -->
+        <div class="toc-indent">
+            <div class="toc-line default">
+            </div>
+            <div class="toc-line default">
+            </div>
+            
+        </div>
+      
+        <!-- El label o texto que representa el título o nombre del item -->
+        <div class="toc-label actual">
+          <a href=#"intro">Teoría del Color en el Diseño</a>
+        </div>
+      </div>
+    
+    
+    
+    
+    
+    
+        <!-- tocItem.mustache -->
+        <div class="toc-item default">
+          <!-- El componente tocIndent con sus líneas -->
+          
+          
+          <!-- tocIndent.mustache -->
+          <div class="toc-indent">
+              <div class="toc-line default">
+              </div>
+              <div class="toc-line default">
+              </div>
+              <div class="toc-line default">
+              </div>
+              
+          </div>
+        
+          <!-- El label o texto que representa el título o nombre del item -->
+          <div class="toc-label actual">
+            <a href=#"intro">Diseño Inclusivo y Accesibilidad Web</a>
+          </div>
+        </div>
+    
+    
+    
+    
+    
+          <!-- tocItem.mustache -->
+      <div class="toc-item default">
+        <!-- El componente tocIndent con sus líneas -->
+        
+        
+        <!-- tocIndent.mustache -->
+        <div class="toc-indent">
+            <div class="toc-line default">
+            </div>
+            <div class="toc-line default">
+            </div>
+            <div class="toc-line default">
+            </div>
+            <div class="toc-line default">
+            </div>
+           
+        </div>
+      
+        <!-- El label o texto que representa el título o nombre del item -->
+        <div class="toc-label actual">
+          <a href=#"intro">La Psicología del Color en el Marketing Visual</a>
+        </div>
+      </div>
+    
+    
+    
+    
+    
+    
+    
+    
+        <!-- tocItem.mustache -->
+        <div class="toc-item default">
+          <!-- El componente tocIndent con sus líneas -->
+          
+          
+          <!-- tocIndent.mustache -->
+          <div class="toc-indent">
+              <div class="toc-line default">
+              </div>
+              <div class="toc-line default">
+              </div>
+              <div class="toc-line default">
+              </div>
+              <div class="toc-line default">
+              </div>
+              <div class="toc-line default">
+              </div>
+              
+          </div>
+        
+          <!-- El label o texto que representa el título o nombre del item -->
+          <div class="toc-label actual">
+            <a href=#"intro">Diseño de Interfaces Responsivas</a>
+          </div>
+        </div>
+    
+    
+    
+    
+    
+    
+    
+    
+          <!-- tocItem.mustache -->
+      <div class="toc-item default">
+        <!-- El componente tocIndent con sus líneas -->
+        
+        
+        <!-- tocIndent.mustache -->
+        <div class="toc-indent">
+            <div class="toc-line default">
+            </div>
+            <div class="toc-line default">
+            </div>
+            <div class="toc-line default">
+            </div>
+            <div class="toc-line default">
+            </div>
+            <div class="toc-line default">
+            </div>
+            <div class="toc-line selected">
+            </div>
+        </div>
+      
+        <!-- El label o texto que representa el título o nombre del item -->
+        <div class="toc-label actual">
+          <a href=#"intro">Proceso Creativo en el Diseño Web</a>
+        </div>
+      </div>
+      
+    
+        <!-- tocItem.mustache -->
+        <div class="toc-item default">
+          <!-- El componente tocIndent con sus líneas -->
+          
+          
+          <!-- tocIndent.mustache -->
+          <div class="toc-indent">
+              <div class="toc-line default">
+              </div>
+              
+          </div>
+        
+          <!-- El label o texto que representa el título o nombre del item -->
+          <div class="toc-label actual">
+            <a href=#"intro">Fundamentos del Diseño Gráfico</a>
+          </div>
+        </div>
+        
+        
+        
+        
+        
+        
+        
+        
+        <!-- tocItem.mustache -->
+        <div class="toc-item default">
+          <!-- El componente tocIndent con sus líneas -->
+          
+          
+          <!-- tocIndent.mustache -->
+          <div class="toc-indent">
+              <div class="toc-line default">
+              </div>
+              <div class="toc-line default">
+              </div>
+             
+          </div>
+        
+          <!-- El label o texto que representa el título o nombre del item -->
+          <div class="toc-label actual">
+            <a href=#"intro">Principios del Diseño de Interacción</a>
+          </div>
+        </div>
+        
+        
+        
+        
+        
+        
+        
+        
+        <!-- tocItem.mustache -->
+        <div class="toc-item default">
+          <!-- El componente tocIndent con sus líneas -->
+          
+          
+          <!-- tocIndent.mustache -->
+          <div class="toc-indent">
+              <div class="toc-line default">
+              </div>
+              <div class="toc-line default">
+              </div>
+             
+          </div>
+        
+          <!-- El label o texto que representa el título o nombre del item -->
+          <div class="toc-label actual">
+            <a href=#"intro">Tendencias Actuales en Diseño UX/UI</a>
+          </div>
+        </div>
+        
+        
+        
+        
+        
+        
+        
+        <!-- tocItem.mustache -->
+        <div class="toc-item default">
+          <!-- El componente tocIndent con sus líneas -->
+          
+          
+          <!-- tocIndent.mustache -->
+          <div class="toc-indent">
+              <div class="toc-line default">
+              </div>
+              <div class="toc-line default">
+              </div>
+              <div class="toc-line default">
+              </div>
+              
+          </div>
+        
+          <!-- El label o texto que representa el título o nombre del item -->
+          <div class="toc-label actual">
+            <a href=#"intro">Herramientas Esenciales para Diseñadores</a>
+          </div>
+        </div>
+      
+      
+      
+      
+      
+        
+        
+        <!-- tocItem.mustache -->
+        <div class="toc-item default">
+          <!-- El componente tocIndent con sus líneas -->
+          
+          
+          <!-- tocIndent.mustache -->
+          <div class="toc-indent">
+              <div class="toc-line default">
+              </div>
+              <div class="toc-line default">
+              </div>
+              
+          </div>
+        
+          <!-- El label o texto que representa el título o nombre del item -->
+          <div class="toc-label actual">
+            <a href=#"intro">Teoría del Color en el Diseño</a>
+          </div>
+        </div>
+      
+      
+      
+      
+      
+      
+          <!-- tocItem.mustache -->
+          <div class="toc-item default">
+            <!-- El componente tocIndent con sus líneas -->
+            
+            
+            <!-- tocIndent.mustache -->
+            <div class="toc-indent">
+                <div class="toc-line default">
+                </div>
+                <div class="toc-line default">
+                </div>
+                <div class="toc-line default">
+                </div>
+                
+            </div>
+          
+            <!-- El label o texto que representa el título o nombre del item -->
+            <div class="toc-label actual">
+              <a href=#"intro">Diseño Inclusivo y Accesibilidad Web</a>
+            </div>
+          </div>
+      
+      
+      
+      
+      
+            <!-- tocItem.mustache -->
+        <div class="toc-item default">
+          <!-- El componente tocIndent con sus líneas -->
+          
+          
+          <!-- tocIndent.mustache -->
+          <div class="toc-indent">
+              <div class="toc-line default">
+              </div>
+              <div class="toc-line default">
+              </div>
+              <div class="toc-line default">
+              </div>
+              <div class="toc-line default">
+              </div>
+             
+          </div>
+        
+          <!-- El label o texto que representa el título o nombre del item -->
+          <div class="toc-label actual">
+            <a href=#"intro">La Psicología del Color en el Marketing Visual</a>
+          </div>
+        </div>
+      
+      
+      
+      
+      
+      
+      
+      
+          <!-- tocItem.mustache -->
+          <div class="toc-item default">
+            <!-- El componente tocIndent con sus líneas -->
+            
+            
+            <!-- tocIndent.mustache -->
+            <div class="toc-indent">
+                <div class="toc-line default">
+                </div>
+                <div class="toc-line default">
+                </div>
+                <div class="toc-line default">
+                </div>
+                <div class="toc-line default">
+                </div>
+                <div class="toc-line default">
+                </div>
+                
+            </div>
+          
+            <!-- El label o texto que representa el título o nombre del item -->
+            <div class="toc-label actual">
+              <a href=#"intro">Diseño de Interfaces Responsivas</a>
+            </div>
+          </div>
+      
+      
+      
+      
+      
+      
+      
+      
+            <!-- tocItem.mustache -->
+        <div class="toc-item default">
+          <!-- El componente tocIndent con sus líneas -->
+          
+          
+          <!-- tocIndent.mustache -->
+          <div class="toc-indent">
+              <div class="toc-line default">
+              </div>
+              <div class="toc-line default">
+              </div>
+              <div class="toc-line default">
+              </div>
+     
+          </div>
+        
+          <!-- El label o texto que representa el título o nombre del item -->
+          <div class="toc-label actual">
+            <a href=#"intro">Proceso Creativo en el Diseño Web</a>
+          </div>
+        </div>
+    
+    
+      
+    </div></div>
             </aside>
 
             <!-- Columna 2: Contenido editable -->

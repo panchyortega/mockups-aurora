@@ -8,17 +8,23 @@
 
 .toc-line{
 
-    height: 20px;
-    width: 4px;
-    margin-left: @padding-md;
-    margin-right: @padding-md;
+    height: 28px;
+    width: 1px;
+    margin-left: @padding-xs;
+    margin-right: @padding-xs;
+    background-color: @col-surf-100;
 
     .default{
-        background-color: @col-surf-200;
+        background-color: @col-surf-100;
 
     }
 
-    .hover {
+    :hover {
+        background-color: @col-surf-500;
+    }
+
+    .selected {
+        color: @col-surf-900;
         background-color: @col-surf-700;
     }
-} 
+}
