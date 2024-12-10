@@ -1,43 +1,154 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Página de Presentación</title>
-    <link rel="stylesheet" href="../resources/styles/css/components.css">
-    <link rel="stylesheet" href="../resources/styles/css/typography.css">
-    <link rel="stylesheet" href="../resources/styles/css/variables.css">
-    <link rel="stylesheet" href="../resources/styles/css/grid.css">
-    <link rel="stylesheet" href="../presentacion/estilos.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@100..700&family=Work+Sans:wght@100..900&display=swap" rel="stylesheet">
-</head>
-
-
-<body>
-
-    <!-- Barra de navegación -->
-    <header class="navbar-presentacion">
-        <div class="nav-links" >
-       <nav class="nav-links-left">
-          <a href="../index.html">Inicio</a>
-        </nav> 
-        <nav class="nav-links-right">
-
-            <a href="https://github.com/panchyortega/mockups-aurora" target="_blank">GitHub</a>
-          <a href="#" target="_blank">Figma</a>
-          <a href="https://wiki.ead.pucv.cl/Aura:_Skin_wiki_Casiopea" target="_blank">Casiopea</a>
-        </nav>
-    </div>
-      </header>
-
-
-
-
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Página de Presentación</title>
+        <link rel="stylesheet" href="../resources/styles/css/components.css">
+        <link rel="stylesheet" href="../resources/styles/css/typography.css">
+        <link rel="stylesheet" href="../resources/styles/css/variables.css">
+        <link rel="stylesheet" href="../resources/styles/css/grid.css">
+        <link rel="stylesheet" href="../presentacion/estilos.css">
+        <link rel="stylesheet" href="styles-paginas-componentes.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@100..700&family=Work+Sans:wght@100..900&display=swap" rel="stylesheet">
+    </head>
+    
+    
+    <body>
+    
+        <!-- Barra de navegación -->
+        <header class="navbar-presentacion">
+            <div class="nav-links" >
+           <nav class="nav-links-left">
+              <a href="../index.html">Inicio</a>
+            </nav> 
+            <nav class="nav-links-right">
+    
+                <a href="https://github.com/panchyortega/mockups-aurora" target="_blank">GitHub</a>
+              <a href="#" target="_blank">Figma</a>
+              <a href="https://wiki.ead.pucv.cl/Aura:_Skin_wiki_Casiopea" target="_blank">Casiopea</a>
+            </nav>
+        </div>
+          </header>
 
 
 
+
+
+
+      <div class="documentation">
+        <!-- Sección de introducción del componente -->
+        <section class="section section-normal">
+          <h2>Componente Checkbox</h2>
+          <p>El componente <strong>Checkbox</strong> permite a los usuarios seleccionar o deseleccionar opciones en una interfaz. Este componente es ideal para formularios y opciones donde el usuario puede elegir múltiples respuestas. Su apariencia es personalizable, y soporta estados como habilitado, deshabilitado, marcado y no marcado. Además, los checkboxes pueden agruparse en categorías para mejorar la organización y visualización de opciones.</p>
+        </section>
+      
+        <!-- Sección de explicación del código -->
+        <section class="section section-code">
+          <h3>Explicación del Código</h3>
+          <p>A continuación se muestra el código necesario para implementar el componente checkbox:</p>
+          <pre><code class="language-html">{{#checkboxGroups}}
+      <div class="checkboxGroup {{groupType}}">
+        {{#checkboxes}}
+        <div class="checkboxContainer padding-{{padding}}">
+          <input 
+            type="checkbox" 
+            id="{{label}}" 
+            class="checkbox" 
+            {{#disabled}}disabled{{/disabled}} 
+          >
+          <label for="{{label}}" class="checkboxLabel">{{label}}</label>
+        </div>
+        {{/checkboxes}}
+      </div>
+      {{/checkboxGroups}}</code></pre>
+        </section>
+      
+        <!-- Sección de explicación de los estilos -->
+        <section class="section section-code">
+          <h3>Estilos (Less)</h3>
+          <p>El estilo para el componente checkbox está dividido en tres partes principales: el contenedor del checkbox, el checkbox en sí y la etiqueta del checkbox. Aquí está el código de los estilos:</p>
+          <pre><code class="language-less">
+      .checkboxContainer {
+        display: flex;
+        align-items: flex-start;
+        gap: @gap-xs;
+      
+        &.padding-on {
+            padding: @padding-sm @padding-lg;
+            border-radius: @corner-radius-xs;
+        }
+      
+        &:hover {
+          background-color: @col-prim-50;
+          cursor: pointer;
+        }
+      }
+      
+      .checkbox {
+        appearance: none;
+        width: 16px;
+        height: 16px;
+        border: 1px solid @col-surf-700;
+        border-radius: @corner-radius-sm;
+        background-color: transparent;
+        position: relative;
+        cursor: pointer;
+        transition: background-color 0.2s ease, border-color 0.2s ease;
+      
+        &:checked {
+          background-color: @col-prim-400;
+          border-color: @col-prim-400;
+        }
+      
+        &:hover {
+          &::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 30px;
+            height: 30px;
+            background-color: @col-prim-50;
+            border-radius: 50%;
+            z-index: -1;
+          }
+        }
+      
+        &:disabled {
+          border-color: @col-surf-400;
+          cursor: not-allowed;
+          background-color: @col-surf-400;
+        }
+      }
+          </code></pre>
+        </section>
+      
+        <!-- Sección interactiva -->
+        <section class="section section-interactive">
+          <h3>Prueba del Componente</h3>
+          <p>A continuación, puedes probar el funcionamiento del componente de checkbox.</p>
+      
+          <div class="checkboxGroup vertical">
+            <div class="checkboxContainer padding-on">
+              <input type="checkbox" id="checkbox1" class="checkbox">
+              <label for="checkbox1" class="checkboxLabel">Opción 1</label>
+            </div>
+            <div class="checkboxContainer padding-on">
+              <input type="checkbox" id="checkbox2" class="checkbox" disabled>
+              <label for="checkbox2" class="checkboxLabel">Opción 2 (Deshabilitada)</label>
+            </div>
+            <div class="checkboxContainer padding-on">
+              <input type="checkbox" id="checkbox3" class="checkbox">
+              <label for="checkbox3" class="checkboxLabel">Opción 3</label>
+            </div>
+          </div>
+        </section>
+      </div>
+      
 
 
 

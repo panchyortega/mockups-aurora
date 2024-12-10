@@ -1,18 +1,19 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Página de Presentación</title>
-    <link rel="stylesheet" href="../resources/styles/css/components.css">
-    <link rel="stylesheet" href="../resources/styles/css/typography.css">
-    <link rel="stylesheet" href="../resources/styles/css/variables.css">
-    <link rel="stylesheet" href="../resources/styles/css/grid.css">
-    <link rel="stylesheet" href="../presentacion/estilos.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@100..700&family=Work+Sans:wght@100..900&display=swap" rel="stylesheet">
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Página de Presentación</title>
+        <link rel="stylesheet" href="../resources/styles/css/components.css">
+        <link rel="stylesheet" href="../resources/styles/css/typography.css">
+        <link rel="stylesheet" href="../resources/styles/css/variables.css">
+        <link rel="stylesheet" href="../resources/styles/css/grid.css">
+        <link rel="stylesheet" href="../presentacion/estilos.css">
+        <link rel="stylesheet" href="styles-paginas-componentes.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@100..700&family=Work+Sans:wght@100..900&display=swap" rel="stylesheet">
+    </head>
 
 
 <body>
@@ -39,7 +40,154 @@
 
 
 
-
+<!-- Nav Tabs Conteniendo las Tabs -->
+<section class="documentation">
+    <div class="section section-normal">
+      <h2>Componente Nav-Tabs</h2>
+      <p>El componente <strong>Nav-Tabs</strong> es una estructura que contiene varias pestañas (tabs) y permite alternar entre diferentes secciones de contenido dentro de una interfaz. Las pestañas son componentes modulares que se utilizan para organizar la información en la interfaz de usuario, mejorando la usabilidad y la experiencia del usuario.</p>
+      <p>El componente Nav-Tabs puede ser configurado para estar flotante (como un menú de navegación vertical) o fijo (para mostrar pestañas de contenido horizontal). Se puede adaptar según el tipo de interacción deseada.</p>
+    </div>
+  
+    <section class="section section-code">
+      <h3>Explicación del Código</h3>
+      <p>El componente <strong>Nav-Tabs</strong> incluye varias instancias de <strong>Tabs</strong>, que son modulares y reutilizables. Cada tab representa una sección en el contenedor de navegación y puede incluir texto y/o íconos a la izquierda y derecha.</p>
+      <pre><code class="language-html">
+  {{#isFloating}}
+  <div class="nav-tabs floating">
+    {{#tabs}}
+      <button class="tab {{state}}">
+        {{#leftIcon}}
+          {{> components/icon }}
+        {{/leftIcon}}
+        <span class="tab-text">{{label}}</span>
+        {{#rightIcon}}
+          {{> components/icon }}
+        {{/rightIcon}}
+      </button>
+    {{/tabs}}
+  </div>
+  {{/isFloating}}
+  
+  {{#isFixed}}
+  <div class="nav-tabs fixed">
+    {{#tabs}}
+      <button class="tab {{state}}">
+        {{#leftIcon}}
+          {{> components/icon }}
+        {{/leftIcon}}
+        <span class="tab-text">{{label}}</span>
+        {{#rightIcon}}
+          {{> components/icon }}
+        {{/rightIcon}}
+      </button>
+    {{/tabs}}
+  </div>
+  {{/isFixed}}</code></pre>
+    </section>
+  
+    <section class="section section-code">
+      <h3>Estilos (Less)</h3>
+      <p>Los estilos para las pestañas (tabs) varían según el estado y el tipo de tab (flotante o fijo). A continuación, mostramos cómo se manejan los diferentes estados y tipos de tabs en el código de los estilos:</p>
+      <pre><code class="language-less">
+  .nav-tabs {
+    display: inline-flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+  
+    &.floating {
+      padding: @padding-sm;
+      gap: @gap-md;
+      border-radius: @corner-radius-md;
+      background-color: @col-surf-50;
+    }
+  
+    &.fixed {
+      padding: 0;
+      gap: 0;
+      background-color: transparent;
+    }
+  
+    .tab {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: @gap-sm;
+      padding: @padding-sm @padding-lg;
+      font-family: @font-body;
+      font-size: @size-text-body-md;
+      font-weight: 600;
+      border: none;
+      cursor: pointer;
+      transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+  
+      &.default {
+        background-color: @col-surf-50;
+        color: @col-surf-700;
+  
+        &:hover {
+          background-color: @col-surf-100;
+        }
+  
+        &:active {
+          background-color: @col-surf-200;
+        }
+      }
+  
+      &.selected {
+        background-color: @col-prim-50;
+        color: @col-prim-400;
+  
+        &:hover {
+          background-color: @col-prim-100;
+        }
+  
+        &:active {
+          background-color: @col-prim-200;
+        }
+      }
+  
+      &.disabled {
+        background-color: @col-surf-100;
+        color: @col-surf-400;
+        cursor: not-allowed;
+      }
+  
+      .icon-left {
+        margin-right: @gap-sm;
+      }
+  
+      .icon-right {
+        margin-left: @gap-sm;
+      }
+  
+      .tab-text {
+        font-size: @size-text-body-md;
+        color: inherit;
+      }
+    }
+  }
+      </code></pre>
+    </section>
+  
+    <section class="section section-interactive">
+      <h3>Prueba del Componente</h3>
+      <p>A continuación, puedes probar la funcionalidad de los <strong>Tabs</strong> dentro del contenedor <strong>Nav-Tabs</strong>. Selecciona diferentes pestañas para ver cómo cambia el estado.</p>
+  
+      <div class="nav-tabs floating">
+        <button class="tab default">
+          <span class="tab-text">Tab 1</span>
+        </button>
+        <button class="tab selected">
+          <span class="tab-text">Tab 2</span>
+        </button>
+        <button class="tab disabled">
+          <span class="tab-text">Tab 3</span>
+        </button>
+      </div>
+    </section>
+  </div>
+  
 
 
 

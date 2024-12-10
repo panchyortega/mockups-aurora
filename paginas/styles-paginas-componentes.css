@@ -1,0 +1,120 @@
+.documentation{
+    background-color: #F6F5F5;
+    display: flex;
+    flex-direction: column;
+    width: 680px;
+    justify-content: center;
+    align-content: center;
+    margin-top: 32px;
+    
+
+
+  @media (max-width: 719px) {
+    width: 80%;
+}
+}
+
+
+
+/* Estilo global para las secciones */
+.section {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    grid-column: 2; /* Asegura que todas las secciones se alineen en la columna central */
+}
+
+/* Sección normal: Texto común */
+.section-normal {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;  /* Tamaño de texto estándar */
+    line-height: 1.5;  /* Espaciado adecuado entre líneas de texto */
+    color: #333; /* Color del texto */
+}
+
+/* Sección de código: Caja de código */
+.section-code {
+    font-family: 'Roboto Mono', monospace;  /* Fuente monoespaciada para código */
+    background-color: #f4f4f4;  /* Fondo claro */
+    padding: 15px;  /* Espaciado interno */
+    border-radius: 5px;  /* Bordes redondeados */
+    border: 1px solid #ccc;  /* Borde sutil */
+    overflow-x: auto;  /* Habilitar scroll horizontal si el código es muy largo */
+    white-space: pre-wrap; /* Ajustar el texto dentro del área */
+    font-size: 14px;  /* Tamaño de fuente para el código */
+    color: #333;  /* Color del código */
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+/* Estilo para tablas */
+.section-table {
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    overflow-x: auto;  /* Permitir desplazamiento horizontal cuando la tabla sobresale */
+    -webkit-overflow-scrolling: touch; /* Para una mejor experiencia de desplazamiento en dispositivos móviles */
+}
+
+table {
+    width: 100%;
+    min-width: 600px;  /* Definir un ancho mínimo para la tabla */
+    table-layout: auto; /* Permite que las celdas ajusten su tamaño según el contenido */
+    border-collapse: collapse;  /* Quitar el espacio entre las celdas */
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* Estilos para los enlaces en las tablas */
+.table a {
+    text-decoration: none;
+    color: #007bff;
+}
+
+.table a:hover {
+    text-decoration: underline;
+}
+
+
+/* Estilo para secciones interactivas */
+.section-interactive {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.section-interactive button {
+    padding: 10px 20px;
+    border-radius: 4px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.section-interactive button:hover {
+    background-color: #0056b3;  /* Cambia el fondo al pasar el ratón */
+}
+
+.section-interactive button:active {
+    background-color: #004085;  /* Cambia el fondo cuando el botón es presionado */
+}
+
+

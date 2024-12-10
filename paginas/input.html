@@ -1,18 +1,19 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Página de Presentación</title>
-    <link rel="stylesheet" href="../resources/styles/css/components.css">
-    <link rel="stylesheet" href="../resources/styles/css/typography.css">
-    <link rel="stylesheet" href="../resources/styles/css/variables.css">
-    <link rel="stylesheet" href="../resources/styles/css/grid.css">
-    <link rel="stylesheet" href="../presentacion/estilos.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@100..700&family=Work+Sans:wght@100..900&display=swap" rel="stylesheet">
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Página de Presentación</title>
+        <link rel="stylesheet" href="../resources/styles/css/components.css">
+        <link rel="stylesheet" href="../resources/styles/css/typography.css">
+        <link rel="stylesheet" href="../resources/styles/css/variables.css">
+        <link rel="stylesheet" href="../resources/styles/css/grid.css">
+        <link rel="stylesheet" href="../presentacion/estilos.css">
+        <link rel="stylesheet" href="styles-paginas-componentes.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@100..700&family=Work+Sans:wght@100..900&display=swap" rel="stylesheet">
+    </head>
 
 
 <body>
@@ -37,7 +38,142 @@
 
 
 
-
+      <div class="documentation">
+        <!-- Sección de introducción del componente -->
+        <section class="section section-normal">
+          <h2>Componente Input</h2>
+          <p>El componente <strong>Input</strong> permite a los usuarios ingresar texto en una interfaz. Es ideal para formularios donde los usuarios proporcionan información como nombres, direcciones o cualquier otro dato textual. El componente es flexible y personalizable con opciones como íconos, validación, y la capacidad de mostrar un texto de ayuda adicional.</p>
+        </section>
+      
+        <!-- Sección de explicación del código -->
+        <section class="section section-code">
+          <h3>Explicación del Código</h3>
+          <p>A continuación se muestra el código necesario para implementar el componente de entrada de texto:</p>
+          <pre><code class="language-html">{{#checkboxGroups}}
+      <div class="checkboxGroup {{groupType}}">
+        {{#checkboxes}}
+        <div class="checkboxContainer padding-{{padding}}">
+          <input 
+            type="checkbox" 
+            id="{{label}}" 
+            class="checkbox" 
+            {{#disabled}}disabled{{/disabled}} 
+          >
+          <label for="{{label}}" class="checkboxLabel">{{label}}</label>
+        </div>
+        {{/checkboxes}}
+      </div>
+      {{/checkboxGroups}}</code></pre>
+        </section>
+      
+        <!-- Sección de explicación de los estilos -->
+        <section class="section section-code">
+          <h3>Estilos (Less)</h3>
+          <p>El estilo para el componente input está dividido en varias secciones, como el contenedor del checkbox, el checkbox mismo y la etiqueta del checkbox. Aquí está el código de los estilos:</p>
+          <pre><code class="language-less">
+      .input {
+        display: flex;
+        flex-direction: column;
+        gap: @gap-xs;
+        width: 100%;
+        max-width: 419px;
+        font-family: @font-body;
+      
+        &.fixed {
+          width: 419px;
+        }
+      
+        &.full {
+          width: 100%;
+        }
+      
+        /* Estilos del header (label, requirement, tooltip) */
+        .input-header {
+          display: flex;
+          align-items: center;
+          gap: @gap-xs;
+          max-width: 100%;
+          color: @col-surf-700;
+      
+          .input-label {
+            font-family: @font-body;
+            font-size: @size-text-body-md;
+            color: @col-surf-700;
+            line-height: @size-text-body-md * 1.6;
+          }
+      
+          .input-requirement {
+            font-family: @font-body;
+            font-size: @size-text-body-md;
+            color: @col-surf-700;
+            line-height: @size-text-body-md * 1.6;
+      
+            /* Cambiar color en estado de error */
+            .error & {
+              color: @col-danger-200;
+            }
+          }
+        }
+      
+        /* Estilos del input body (con íconos y caja de texto) */
+        .input-body {
+          display: flex;
+          align-items: flex-start;
+          gap: @gap-sm;
+          padding: @padding-md @padding-lg;
+          background-color: @col-surf-50;
+          border-radius: @corner-radius-sm;
+          border: 1px solid @col-surf-100;
+      
+          &.focus, &.writing {
+            border-color: @col-prim-200;
+          }
+      
+          .text-input {
+            flex-grow: 1;
+            color: @col-surf-500;
+            font-size: @size-text-body-md;
+          }
+      
+          .icon-left, .icon-right {
+            color: @col-surf-700;
+          }
+        }
+      
+        /* Estilo para texto de ayuda */
+        .input-helptext {
+          font-family: @font-body;
+          font-size: @size-text-body-xs;
+          color: @col-surf-700;
+      
+          .error & {
+            color: @col-danger-200;
+          }
+        }
+      }
+          </code></pre>
+        </section>
+      
+        <!-- Sección interactiva -->
+        <section class="section section-interactive">
+          <h3>Prueba del Componente</h3>
+          <p>A continuación, puedes probar el funcionamiento del componente de input con diferentes configuraciones de íconos, texto y estado (requerido, opcional).</p>
+      
+          <div class="input full">
+            <div class="input-header">
+              <span class="input-label">Nombre</span>
+              <span class="input-requirement">*</span>
+            </div>
+            <div class="input-body focus">
+              <input type="text" value="Juan Pérez" class="text-input"/>
+            </div>
+            <div class="input-helptext">
+              <span>Por favor ingresa tu nombre completo.</span>
+            </div>
+          </div>
+        </section>
+      </div>
+      
 
 
 

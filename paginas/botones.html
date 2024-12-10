@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="../resources/styles/css/variables.css">
     <link rel="stylesheet" href="../resources/styles/css/grid.css">
     <link rel="stylesheet" href="../presentacion/estilos.css">
+    <link rel="stylesheet" href="styles-paginas-componentes.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@100..700&family=Work+Sans:wght@100..900&display=swap" rel="stylesheet">
@@ -35,7 +36,111 @@
 
 
 
+   
 
+        <div class="documentation">
+
+            <!-- Sección normal: Título y Descripción -->
+            <section class="regular">
+              <h1>Componente: Botón</h1>
+              <p>El componente de **Botón** es un elemento interactivo utilizado para realizar acciones dentro de la interfaz de usuario. Permite al usuario realizar interacciones como enviar formularios, navegar a otras páginas, o ejecutar funciones específicas de la plataforma. Los botones pueden tener diferentes estilos y variantes según su uso.</p>
+            </section>
+        
+            <!-- Sección código: Explicación del código -->
+            <section class="code">
+              <h2>Explicación del Código</h2>
+              <p>A continuación se presenta el código del componente de botón:</p>
+              <pre><code class="language-less">
+        .button {
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          gap: @gap-md;                  
+          padding: @padding-sm @padding-lg;
+          border-radius: @corner-radius-xs;
+          font-family: @font-body;
+          font-size: @size-text-body-md;
+          font-weight: 600;
+          line-height: @size-text-body-md * @lh-body;
+          border-width: 2px;
+          border-style: solid;
+          cursor: pointer;
+          margin-block-start: 0em;
+          margin-block-end: 0em;
+          margin-inline-start: 0px;
+          margin-inline-end: 0px;
+        
+          // Variantes de color
+          &.primary {
+            background-color: @col-prim-400;
+            color: @col-surf-50;
+            border-color: transparent;
+            &:hover {
+              background-color: @col-prim-600;
+            }
+            &.disabled {
+              background-color: @col-surf-200;
+              color: @col-surf-500;
+            }
+          }
+        }
+              </code></pre>
+            </section>
+        
+            <!-- Sección interactivas: Sección de prueba de componentes -->
+            <section class="section section-table">
+              <h2>Prueba Interactiva</h2>
+              <p>Haz clic en los botones a continuación para ver cómo se comportan:</p>
+              <button class="button primary">Botón Primario</button>
+              <button class="button secondary">Botón Secundario</button>
+              <button class="button danger">Botón de Peligro</button>
+            </section>
+        
+            <!-- Sección tablas: Propiedades y variantes -->
+            <section class="table">
+              <h2>Propiedades y Variantes del Botón</h2>
+              <p>El componente de botón tiene varias variantes y propiedades que puedes configurar. A continuación, se muestra una tabla con las variantes de color y sus propiedades:</p>
+              <table>
+                <thead>
+                  <tr>
+                    <th>Tipo de Botón</th>
+                    <th>Descripción</th>
+                    <th>Estado de Hover</th>
+                    <th>Estado de Deshabilitado</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Primary</td>
+                    <td>Botón principal de acción</td>
+                    <td>Cambia de color a un tono más oscuro</td>
+                    <td>Fondo gris, texto deshabilitado</td>
+                  </tr>
+                  <tr>
+                    <td>Secondary</td>
+                    <td>Botón secundario con borde</td>
+                    <td>Fondo gris claro</td>
+                    <td>Fondo gris, texto deshabilitado</td>
+                  </tr>
+                  <tr>
+                    <td>Danger</td>
+                    <td>Botón para acciones peligrosas</td>
+                    <td>Fondo rojo oscuro</td>
+                    <td>Fondo gris, texto deshabilitado</td>
+                  </tr>
+                  <tr>
+                    <td>Success</td>
+                    <td>Botón para indicar éxito</td>
+                    <td>Fondo verde oscuro</td>
+                    <td>Fondo gris, texto deshabilitado</td>
+                  </tr>
+                </tbody>
+              </table>
+            </section>
+        
+          </div>
+      
+    
 
 
 
