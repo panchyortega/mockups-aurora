@@ -1,18 +1,19 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Página de Presentación</title>
-    <link rel="stylesheet" href="../resources/styles/css/components.css">
-    <link rel="stylesheet" href="../resources/styles/css/typography.css">
-    <link rel="stylesheet" href="../resources/styles/css/variables.css">
-    <link rel="stylesheet" href="../resources/styles/css/grid.css">
-    <link rel="stylesheet" href="../presentacion/estilos.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@100..700&family=Work+Sans:wght@100..900&display=swap" rel="stylesheet">
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Página de Presentación</title>
+        <link rel="stylesheet" href="../resources/styles/css/components.css">
+        <link rel="stylesheet" href="../resources/styles/css/typography.css">
+        <link rel="stylesheet" href="../resources/styles/css/variables.css">
+        <link rel="stylesheet" href="../resources/styles/css/grid.css">
+        <link rel="stylesheet" href="../presentacion/estilos.css">
+        <link rel="stylesheet" href="styles-paginas-componentes.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@100..700&family=Work+Sans:wght@100..900&display=swap" rel="stylesheet">
+    </head>
 
 
 <body>
@@ -37,7 +38,74 @@
 
 
 
+      <div class="documentation">
+        <h1>Documentación de Colores</h1>
+        
+        <!-- Sección para los colores de superficie -->
+        <section class="section section-normal">
+            <h2>1. Colores de Superficie</h2>
+            <p>Estos son los colores de la superficie que usamos para los fondos, bordes, y elementos secundarios:</p>
+            <div class="color-example" style="background-color: #F6F5F5;">@col-surf-50: #F6F5F5</div>
+            <div class="color-example" style="background-color: #EDECEA;">@col-surf-100: #EDECEA</div>
+            <div class="color-example" style="background-color: #DCD9D6;">@col-surf-200: #DCD9D6</div>
+            <div class="color-example" style="background-color: #C5BEB7;">@col-surf-300: #C5BEB7</div>
+            <div class="color-example" style="background-color: #B2ACA4;">@col-surf-400: #B2ACA4</div>
+            <div class="color-example" style="background-color: #959089;">@col-surf-500: #959089</div>
+            <div class="color-example" style="background-color: #7C7872;">@col-surf-600: #7C7872</div>
+            <div class="color-example" style="background-color: #53504C;">@col-surf-700: #53504C</div>
+            <div class="color-example" style="background-color: #373633;">@col-surf-800: #373633</div>
+            <div class="color-example" style="background-color: #2D2B29;">@col-surf-900: #2D2B29</div>
+        </section>
 
+        <!-- Sección para los colores primarios -->
+        <section class="section section-normal">
+            <h2>2. Colores Primarios</h2>
+            <p>Estos son los colores primarios que usamos en botones y elementos destacados:</p>
+            <div class="color-example" style="background-color: #F6EAE8;">@col-prim-50: #F6EAE8</div>
+            <div class="color-example" style="background-color: #EED6D1;">@col-prim-100: #EED6D1</div>
+            <div class="color-example" style="background-color: #D4998B;">@col-prim-200: #D4998B</div>
+            <div class="color-example" style="background-color: #B1472E;">@col-prim-300: #B1472E</div>
+            <div class="color-example" style="background-color: #A83217;">@col-prim-400: #A83217</div>
+            <div class="color-example" style="background-color: #972D15;">@col-prim-500: #972D15</div>
+            <div class="color-example" style="background-color: #7E2611;">@col-prim-600: #7E2611</div>
+            <div class="color-example" style="background-color: #54190C;">@col-prim-700: #54190C</div>
+            <div class="color-example" style="background-color: #2A0D06;">@col-prim-800: #2A0D06</div>
+            <div class="color-example" style="background-color: #170101;">@col-prim-900: #170101</div>
+        </section>
+
+        <!-- Sección para los colores de éxito -->
+        <section class="section section-normal">
+            <h2>3. Colores de Éxito</h2>
+            <p>Colores utilizados para indicar éxito y mensajes positivos:</p>
+            <div class="color-example" style="background-color: #F6FEFB;">@col-succes-50: #F6FEFB</div>
+            <div class="color-example" style="background-color: #1BC590;">@col-succes-100: #1BC590</div>
+            <div class="color-example" style="background-color: #12825F;">@col-succes-200: #12825F</div>
+            <div class="color-example" style="background-color: #0E674B;">@col-succes-300: #0E674B</div>
+            <div class="color-example" style="background-color: #0A4834;">@col-succes-400: #0A4834</div>
+        </section>
+
+        <!-- Sección para los colores de advertencia -->
+        <section class="section section-normal">
+            <h2>4. Colores de Advertencia</h2>
+            <p>Colores usados para mensajes de advertencia:</p>
+            <div class="color-example" style="background-color: #FFFDFA;">@col-warning-50: #FFFDFA</div>
+            <div class="color-example" style="background-color: #F9DBB5;">@col-warning-100: #F9DBB5</div>
+            <div class="color-example" style="background-color: #F2AB53;">@col-warning-200: #F2AB53</div>
+            <div class="color-example" style="background-color: #EE9322;">@col-warning-300: #EE9322</div>
+            <div class="color-example" style="background-color: #A6620D;">@col-warning-400: #A6620D</div>
+        </section>
+
+        <!-- Sección para los colores de peligro -->
+        <section class="section section-normal">
+            <h2>5. Colores de Peligro</h2>
+            <p>Colores utilizados para indicar mensajes de error o peligro:</p>
+            <div class="color-example" style="background-color: #FBEAEA;">@col-danger-50: #FBEAEA</div>
+            <div class="color-example" style="background-color: #E16B6B;">@col-danger-100: #E16B6B</div>
+            <div class="color-example" style="background-color: #C92929;">@col-danger-200: #C92929</div>
+            <div class="color-example" style="background-color: #A92323;">@col-danger-300: #A92323</div>
+            <div class="color-example" style="background-color: #6E1717;">@col-danger-400: #6E1717</div>
+        </section>
+    </div>
 
 
 

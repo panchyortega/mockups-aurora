@@ -192,7 +192,95 @@
 
 
 
-
+  <!DOCTYPE html>
+  <html lang="es">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Documentación de Tipografías</title>
+      <link rel="stylesheet" href="styles.css"> <!-- Agregar tu archivo de estilos aquí -->
+  </head>
+  <body>
+      <div class="documentation">
+          <h1>Documentación de Tipografías</h1>
+          <section class="section section-normal">
+              <h2>1. Tipos de Texto</h2>
+              <p>En esta sección, exploramos los diferentes tipos de texto que usamos en nuestro proyecto, incluyendo encabezados, párrafos, y texto de código. Cada tipo tiene un tamaño y estilo específico, diseñado para mejorar la legibilidad y accesibilidad.</p>
+          </section>
+  
+          <section class="section section-code">
+              <h2>2. Código de Estilos</h2>
+              <pre>
+  <code>
+  /* Estilo de encabezado */
+  h1 {
+      font-size: @size-text-h1;
+      color: @color-font-h1;
+  }
+  
+  /* Estilo de párrafo */
+  p {
+      font-family: @font-body;
+      font-size: @size-text-body-md;
+  }
+  </code>
+              </pre>
+          </section>
+  
+          <section class="section section-table">
+              <h2>3. Muestrario de Tipografías</h2>
+              <p>A continuación, se muestra una tabla con todos los estilos de texto utilizados en el proyecto. Puedes ver el tamaño, el color y otros detalles relevantes.</p>
+              <table class="typography-table">
+                  <thead>
+                      <tr>
+                          <th>Estilo</th>
+                          <th>Tamaño de fuente</th>
+                          <th>Color</th>
+                          <th>Ejemplo</th>
+                      </tr>
+                  </thead>
+                  <tbody>
+                      <tr>
+                          <td><strong>h1</strong></td>
+                          <td>@size-text-h1</td>
+                          <td>@color-font-h1</td>
+                          <td><h1>Encabezado de Nivel 1</h1></td>
+                      </tr>
+                      <tr>
+                          <td><strong>h2</strong></td>
+                          <td>@size-text-h2</td>
+                          <td>@color-font-h2</td>
+                          <td><h2>Encabezado de Nivel 2</h2></td>
+                      </tr>
+                      <tr>
+                          <td><strong>p</strong></td>
+                          <td>@size-text-body-md</td>
+                          <td>@col-surf-900</td>
+                          <td><p>Este es un párrafo de texto normal.</p></td>
+                      </tr>
+                      <tr>
+                          <td><strong>code</strong></td>
+                          <td>@size-text-code</td>
+                          <td>@col-code</td>
+                          <td><code>var x = 10;</code></td>
+                      </tr>
+                  </tbody>
+              </table>
+          </section>
+  
+          <section class="section section-interactive">
+              <h2>4. Componentes Interactivos</h2>
+              <button class="button">Botón de ejemplo</button>
+              <div class="nav-tabs">
+                  <button class="tab default">Tab 1</button>
+                  <button class="tab selected">Tab 2</button>
+                  <button class="tab disabled">Tab 3</button>
+              </div>
+          </section>
+      </div>
+  </body>
+  </html>
+  
 
 
 

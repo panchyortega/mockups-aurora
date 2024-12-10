@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Página de Presentación</title>
@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="../resources/styles/css/variables.css">
     <link rel="stylesheet" href="../resources/styles/css/grid.css">
     <link rel="stylesheet" href="../presentacion/estilos.css">
+    <link rel="stylesheet" href="styles-paginas-componentes.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@100..700&family=Work+Sans:wght@100..900&display=swap" rel="stylesheet">
@@ -39,9 +40,319 @@
 
 
 
+    <div class="documentation">
+      <h1>Documentación de Tamaños</h1>
+
+      <section>
+          <h2>Breakpoints</h2>
+          <p>Los breakpoints definen los puntos de quiebre en el diseño responsivo. Se utilizan para ajustar el diseño de la página según el tamaño de la pantalla.</p>
+
+          <table border="1">
+              <thead>
+                  <tr>
+                      <th>Nombre</th>
+                      <th>Variable</th>
+                      <th>Valor</th>
+                  </tr>
+              </thead>
+              <tbody>
+                  <tr>
+                      <td>Breakpoint Móvil</td>
+                      <td>@breakpoint-mobile</td>
+                      <td>719px</td>
+                  </tr>
+                  <tr>
+                      <td>Breakpoint Tablet</td>
+                      <td>@breakpoint-tablet</td>
+                      <td>1279px</td>
+                  </tr>
+              </tbody>
+          </table>
+      </section>
+
+      <section>
+          <h2>REM</h2>
+          <p>Las unidades REM se utilizan para definir tamaños relativos a la raíz del documento, asegurando una mejor accesibilidad y consistencia en el diseño.</p>
+
+          <table border="1">
+              <thead>
+                  <tr>
+                      <th>Nombre</th>
+                      <th>Variable</th>
+                      <th>Valor</th>
+                  </tr>
+              </thead>
+              <tbody>
+                  <tr>
+                      <td>REM Desktop</td>
+                      <td>@rem-desktop</td>
+                      <td>16px</td>
+                  </tr>
+                  <tr>
+                      <td>REM Tablet</td>
+                      <td>@rem-tablet</td>
+                      <td>16px</td>
+                  </tr>
+                  <tr>
+                      <td>REM Móvil</td>
+                      <td>@rem-mobile</td>
+                      <td>14px</td>
+                  </tr>
+              </tbody>
+          </table>
+      </section>
+
+      <section>
+          <h2>Escalas</h2>
+          <p>Las escalas definen el factor de escala para los tamaños de texto y otros elementos visuales.</p>
+
+          <table border="1">
+              <thead>
+                  <tr>
+                      <th>Nombre</th>
+                      <th>Variable</th>
+                      <th>Valor</th>
+                  </tr>
+              </thead>
+              <tbody>
+                  <tr>
+                      <td>Escala Desktop</td>
+                      <td>@sc-desktop</td>
+                      <td>1.15</td>
+                  </tr>
+                  <tr>
+                      <td>Escala Tablet</td>
+                      <td>@sc-tablet</td>
+                      <td>1.125</td>
+                  </tr>
+                  <tr>
+                      <td>Escala Móvil</td>
+                      <td>@sc-mobile</td>
+                      <td>1.067</td>
+                  </tr>
+              </tbody>
+          </table>
+      </section>
+
+      <section>
+          <h2>Line-height</h2>
+          <p>El line-height define la altura de la línea entre las líneas de texto. Es importante para asegurar una buena legibilidad.</p>
+
+          <table border="1">
+              <thead>
+                  <tr>
+                      <th>Nombre</th>
+                      <th>Variable</th>
+                      <th>Valor</th>
+                  </tr>
+              </thead>
+              <tbody>
+                  <tr>
+                      <td>Line-height Body</td>
+                      <td>@lh-body</td>
+                      <td>1.5</td>
+                  </tr>
+                  <tr>
+                      <td>Line-height Heading</td>
+                      <td>@lh-heading</td>
+                      <td>1.2</td>
+                  </tr>
+                  <tr>
+                      <td>Line-height List</td>
+                      <td>@lh-list</td>
+                      <td>1.2</td>
+                  </tr>
+                  <tr>
+                      <td>Line-height Caption</td>
+                      <td>@lh-caption</td>
+                      <td>1.5</td>
+                  </tr>
+              </tbody>
+          </table>
+      </section>
+
+      <section>
+          <h2>Espaciados</h2>
+          <p>Los espaciados se utilizan para definir márgenes y rellenos dentro de los componentes, asegurando un diseño limpio y equilibrado.</p>
+
+          <table border="1">
+              <thead>
+                  <tr>
+                      <th>Nombre</th>
+                      <th>Variable</th>
+                      <th>Valor</th>
+                  </tr>
+              </thead>
+              <tbody>
+                  <tr>
+                      <td>Espacio 0</td>
+                      <td>@space-0</td>
+                      <td>0</td>
+                  </tr>
+                  <tr>
+                      <td>Espacio 1</td>
+                      <td>@space-1</td>
+                      <td>2px</td>
+                  </tr>
+                  <tr>
+                      <td>Espacio 2</td>
+                      <td>@space-2</td>
+                      <td>4px</td>
+                  </tr>
+                  <tr>
+                      <td>Espacio 3</td>
+                      <td>@space-3</td>
+                      <td>8px</td>
+                  </tr>
+                  <tr>
+                      <td>Espacio 4</td>
+                      <td>@space-4</td>
+                      <td>12px</td>
+                  </tr>
+                  <tr>
+                      <td>Espacio 5</td>
+                      <td>@space-5</td>
+                      <td>16px</td>
+                  </tr>
+                  <tr>
+                      <td>Espacio 6</td>
+                      <td>@space-6</td>
+                      <td>20px</td>
+                  </tr>
+                  <tr>
+                      <td>Espacio 7</td>
+                      <td>@space-7</td>
+                      <td>24px</td>
+                  </tr>
+                  <tr>
+                      <td>Espacio 8</td>
+                      <td>@space-8</td>
+                      <td>28px</td>
+                  </tr>
+                  <tr>
+                      <td>Espacio 9</td>
+                      <td>@space-9</td>
+                      <td>32px</td>
+                  </tr>
+                  <tr>
+                      <td>Espacio 10</td>
+                      <td>@space-10</td>
+                      <td>36px</td>
+                  </tr>
+              </tbody>
+          </table>
+      </section>
+
+      <section>
+          <h2>Padding y Gap</h2>
+          <p>Padding y Gap definen el espacio interno de los componentes, así como el espacio entre ellos.</p>
+
+          <table border="1">
+              <thead>
+                  <tr>
+                      <th>Nombre</th>
+                      <th>Variable</th>
+                      <th>Valor</th>
+                  </tr>
+              </thead>
+              <tbody>
+                  <tr>
+                      <td>Padding XS</td>
+                      <td>@padding-xs</td>
+                      <td>@space-2</td>
+                  </tr>
+                  <tr>
+                      <td>Padding SM</td>
+                      <td>@padding-sm</td>
+                      <td>@space-3</td>
+                  </tr>
+                  <tr>
+                      <td>Padding MD</td>
+                      <td>@padding-md</td>
+                      <td>@space-4</td>
+                  </tr>
+                  <tr>
+                      <td>Padding LG</td>
+                      <td>@padding-lg</td>
+                      <td>@space-5</td>
+                  </tr>
+                  <tr>
+                      <td>Padding XL</td>
+                      <td>@padding-xl</td>
+                      <td>@space-6</td>
+                  </tr>
+                  <tr>
+                      <td>Padding XXL</td>
+                      <td>@padding-xxl</td>
+                      <td>@space-7</td>
+                  </tr>
+                  <tr>
+                      <td>Gap XS</td>
+                      <td>@gap-xs</td>
+                      <td>@space-2</td>
+                  </tr>
+                  <tr>
+                      <td>Gap SM</td>
+                      <td>@gap-sm</td>
+                      <td>@space-3</td>
+                  </tr>
+                  <tr>
+                      <td>Gap MD</td>
+                      <td>@gap-md</td>
+                      <td>@space-4</td>
+                  </tr>
+                  <tr>
+                      <td>Gap LG</td>
+                      <td>@gap-lg</td>
+                      <td>@space-5</td>
+                  </tr>
+                  <tr>
+                      <td>Gap XL</td>
+                      <td>@gap-xl</td>
+                      <td>@space-6</td>
+                  </tr>
+              </tbody>
+          </table>
+      </section>
 
 
+      <section>
+        <h2>Bordes y Esquinas Redondeadas</h2>
+        <p>Las medidas de bordes y esquinas redondeadas se utilizan para definir el radio de curvatura de los bordes de los elementos, lo que ayuda a dar un aspecto más suave y moderno.</p>
 
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Variable</th>
+                    <th>Valor</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Borde XS</td>
+                    <td>@corner-radius-xs</td>
+                    <td>@space-1</td>
+                </tr>
+                <tr>
+                    <td>Borde SM</td>
+                    <td>@corner-radius-sm</td>
+                    <td>@space-2</td>
+                </tr>
+                <tr>
+                    <td>Borde MD</td>
+                    <td>@corner-radius-md</td>
+                    <td>@space-3</td>
+                </tr>
+                <tr>
+                    <td>Borde LG</td>
+                    <td>@corner-radius-lg</td>
+                    <td>@space-4</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+</div>
 
 
 
