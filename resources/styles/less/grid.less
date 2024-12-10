@@ -18,6 +18,7 @@ body {
 
   @media (max-width: @breakpoint-tablet) {
     grid-template-columns: 1fr 680px 1fr; // Ajustar columnas en tablet
+    grid-template-rows: auto auto auto 1fr auto;
   }
 
   @media (max-width: @breakpoint-mobile) {
@@ -31,16 +32,35 @@ body {
   padding: @padding-xs @padding-xl;
 }
 
-// Contenido
-.content-area {
-  grid-column: 4; // Centrado en desktop
-
+.title-area{
+  grid-column: 4;
+  height: fit-content;
+  // grid-row: 2;
   @media (max-width: @breakpoint-tablet) {
-    grid-column: 2;  // Centrar contenido en tablet
+    grid-column: 2;  // Centrar contenido en tablet 
+    grid-row:2;
   }
 
   @media (max-width: @breakpoint-mobile) {
     grid-column: 2;  // Centrar contenido en móvil
+    grid-row:2;
+    max-width: 100%;  // En móvil, ocupa el ancho completo
+  }
+}
+
+// Contenido
+.content-area {
+  grid-column: 4; // Centrado en desktop
+
+
+  @media (max-width: @breakpoint-tablet) {
+    grid-column: 2;  // Centrar contenido en tablet 
+    grid-row: 4;
+  }
+
+  @media (max-width: @breakpoint-mobile) {
+    grid-column: 2;  // Centrar contenido en móvil
+    grid-row: 4;
     max-width: 100%;  // En móvil, ocupa el ancho completo
   }
 }
@@ -52,6 +72,8 @@ body {
   @media (max-width: @breakpoint-tablet) {
     display: none; // Ocultar en tablet y móvil
   }
+
+  
 }
 
 // Ficha de la página (Info Box)
@@ -59,7 +81,14 @@ body {
   grid-column: 6; // Alineado a la derecha
 
   @media (max-width: @breakpoint-tablet) {
-    display: none; // Ocultar en tablet y móvil
+    grid-column: 2; /* Mover a la columna 4 */
+    grid-row: 3;    /* Mover a la fila 4 */
+  }
+
+  @media (max-width: @breakpoint-mobile) {
+    grid-column: 2; /* Mover a la columna 4 */
+    grid-row: 3;    /* Mover a la fila 4 */
+    max-width: 100%;
   }
 }
 

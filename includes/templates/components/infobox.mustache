@@ -1,0 +1,25 @@
+{{! ¿Qué es esto?
+}}
+{{! Esta es una plantilla de los botones
+}}
+
+{{! Enlaces a estilos para que se rendericen bien las plantillas:
+}}
+
+    <link rel="stylesheet" href="../resources/styles/css/breakpoints.css">
+    <link rel="stylesheet" href="../resources/styles/css/components.css">
+    <link rel="stylesheet" href="../resources/styles/css/icons.css">
+    <link rel="stylesheet" href="../resources/styles/css/typography.css">
+    <link rel="stylesheet" href="../resources/styles/css/variables.css">
+    <link rel="stylesheet" href="../resources/styles/css/grid.css">
+
+
+<!-- infobox.mustache -->
+<div class="infobox">
+  {{> components/button}}
+  <div class="infobox-field-group">
+    {{#fields}}
+      {{> components/infobox/infoboxField}}
+    {{/fields}}
+  </div>
+</div>

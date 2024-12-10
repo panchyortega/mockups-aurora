@@ -1,0 +1,21 @@
+{{! ¿Qué es esto?
+}}
+{{! Esta es una plantilla de los botones
+}}
+
+
+<!-- fieldTypePersonasPopup.mustache -->
+<div class="field-type-personas-popup">
+  <div class="firstRow">
+    <h3 class="titulo-estudiantes">Estudiantes</h3>
+    <div class="personas-lista">
+      {{#personas}}
+        {{> infobox/fieldTypePersonasPopupPersona}}
+      {{/personas}}
+    </div>
+  </div>
+  
+  <div class="secondRow">
+    {{> button}}
+  </div>
+</div>

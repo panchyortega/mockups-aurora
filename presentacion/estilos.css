@@ -18,8 +18,11 @@
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
+ 
     @media (max-width: 719px) {
       width: 80%;
+      justify-content: center;
+      gap: 24px;
     }
   }
 
@@ -88,6 +91,8 @@
   width: 60%;
   margin-left: auto;
   margin-right: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
   @media (max-width: 719px) {
     width: 80%;
   }
@@ -109,4 +114,9 @@
     @media (max-width: 719px) {
         gap: 20px;
     }
+  }
+
+  h1{
+
+    padding-top: 48px;
   }

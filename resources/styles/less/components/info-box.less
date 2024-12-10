@@ -5,12 +5,184 @@
 @import "../breakpoints.less";   // Importar breakpoints
 @import "../icons.less";         // Importar íconos
 
-// Estilos del componente
+// Estilos de los componentes
+
+
+// fieldTypePersonasPopupPersonas.mustache
+
+.field-type-personas-popup-persona{
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: flex-start;
+    align-content: center;
+    width: 112px;
+}
 
 
 
-.info-box{
+// fieldTypePersonasPopup.mustache
+
+.field-type-personas-popup{
+    width: 780px;
+    background-color: @col-surf-50;
+    border: 1px;
+    border-radius: @corner-radius-md;
+    border-color: @col-surf-200;
+    gap: @gap-lg;
+    padding: @padding-xl @padding-xxl;
+   
+    .firstRow{
+        gap:@gap-lg;
+        .titulo-estudiantes{
+            color: @col-surf-700;
+            font-weight: semibold;
+        }
+        .personas-lista{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            align-items: flex-start;
+            align-content: flex-start;
+            row-gap: @gap-md;
+            gap: @gap-xs;
+        }
+    }
+    .secondRow{
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: flex-start;
+        align-content: flex-start;
+    }
+}
+
+
+
+
+
+// fieldTypePersonas.mustache
+
+.infobox-field-type-personas{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    align-content: flex-start;
+    gap: @gap-md;
+    .firstRow{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        align-items: flex-start;
+        align-content: flex-start;
+        gap: @gap-md;
+        .imagen-lista{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            gap: -10px;
+        }
+    }
+    .secondRow{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        align-items: flex-start;
+        align-content: flex-start;
+        gap: @gap-md;      
+    }
+
     
- 
+}
 
+
+
+// fieldTypePersona.mustache
+
+.field-type-persona{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    align-content: flex-start;
+    gap: @gap-md;
+}
+
+
+
+// fieldTypeTexto.mustache
+
+.field-type-texto{
+    width: 100%,
+}
+
+
+
+// <!-- infoboxField.mustache -->
+// <div class="infobox-field">
+//   <div class="infobox-field-label">{{infoboxFieldLabel}}</div>
+//   <div class="fieldType{{type}}">
+//     {{> infobox/fieldType{{type}}}}
+//   </div>
+// </div>
+
+
+// infoboxField.mustache
+
+.infobox-field{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: @gap-md;
+    width: 192px;
+    @media (max-width: @breakpoint-tablet) {
+        max-width: 100%;
+      }
+    
+      @media (max-width: @breakpoint-mobile) {
+        max-width: 100%;  // En móvil, ocupa el ancho completo
+      }
+
+}
+
+
+// infobox.mustache
+
+.infobox{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: start;
+    align-items: start;
+    align-content: start;
+    gap: @gap-xl;
+    padding: @padding-lg @padding-xl;
+    background-color: @col-surf-50;
+    border-radius: @corner-radius-md;
+    border: 1px solid @col-surf-100;
+    width: 192px;
+    height: 1fr;
+    .infobox-field-group{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        gap: @gap-sm;
+        width: 192px;
+    }
+
+    @media (max-width: @breakpoint-tablet) {
+        max-width: 100%;
+      }
+    
+      @media (max-width: @breakpoint-mobile) {
+        max-width: 100%;  // En móvil, ocupa el ancho completo
+      }
 }

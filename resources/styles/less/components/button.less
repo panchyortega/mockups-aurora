@@ -66,6 +66,37 @@
     }
   }
 
+  &.nofill {
+    background-color: transparent;
+    stroke:none;
+    a{
+      color: @col-surf-700;
+    }
+
+    &:hover {
+      background-color: @col-surf-200;
+      a {
+        text-decoration: none; 
+      }
+    }
+
+    &:active {
+      background-color: transparent;  // Mantiene el fondo original
+      color: @col-surf-900;
+      border-color: @col-surf-900;
+      transition: none;  // Sin animación al hacer clic
+    }
+
+    &.disabled {
+      background-color: @col-surf-200;
+      color: @col-surf-500;
+      border-color: transparent;
+      a{
+        color: @col-surf-500;
+      }
+    }
+  }
+
   &.secondary {
     background-color: transparent;
     color: @col-surf-700;

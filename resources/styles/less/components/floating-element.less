@@ -1,0 +1,49 @@
+// Importar estilos necesarios
+
+@import "../variables.less";     // Importar variables generales
+@import "../typography.less";    // Importar tipografía para tamaños de texto
+@import "../breakpoints.less";   // Importar breakpoints
+@import "../icons.less";         // Importar íconos
+
+// Estilos del componente
+
+// Definir variables de puntos de ruptura
+@right-distance: 16px;
+@bottom-distance: 16px;
+@z-index-floating: 999;
+@breakpoint-tablet: 768px; // Asegúrate de que el punto de ruptura para tabletas sea correcto
+@breakpoint-desktop: 1024px; // Asignando un punto de ruptura para escritorio (esto es solo un ejemplo)
+
+// Estilo para el elemento flotante
+.floating-element {
+  position: fixed; /* Fijarlo en la pantalla */
+  right: @right-distance;  /* 16px desde el borde derecho */
+  bottom: @bottom-distance; /* 16px desde el borde inferior */
+  z-index: @z-index-floating; /* Asegúrate de que esté encima de otros elementos */
+  background-color: @col-surf-50;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra (opcional) */
+
+  // Ocultar en pantallas de escritorio
+  @media (min-width: @breakpoint-desktop) {
+    display: none; // Ocultar en dispositivos de escritorio
+  }
+
+  // Estilos para tabletas y móviles (sin ocultar, solo mostrando)
+  @media (max-width: @breakpoint-tablet) {
+    display: block; // Asegúrate de que el elemento se muestre en dispositivos pequeños
+  }
+}
+
+
+.tochidden {
+    position: fixed;
+    right: 16px;
+    bottom: 70px; /* Asegúrate de que no se superponga al botón flotante */
+    width: 300px;
+    background-color: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border-radius: 8px;
+    display: none; /* Inicialmente oculto */
+    z-index: 998; /* Asegúrate de que la TOC esté por debajo del botón flotante */
+  }

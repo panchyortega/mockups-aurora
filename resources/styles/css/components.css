@@ -1,5 +1,6 @@
 html {
   font-size: 16px;
+  font-family: 'Work Sans', sans-serif;
 }
 p {
   font-family: 'Work Sans', sans-serif;
@@ -228,7 +229,7 @@ h6 {
   color: #959089;
   line-height: 18.14744802px;
 }
-@media (max-width: 1279px) {
+@media (max-width: 768px) {
   html {
     font-size: 16px;
   }
@@ -444,7 +445,7 @@ h6 {
 .icon {
   width: 16px;
   height: 16px;
-  fill: currentColor;
+  color: red;
 }
 .button {
   display: inline-flex;
@@ -497,6 +498,33 @@ h6 {
   border-color: transparent;
 }
 .button.primary.disabled a {
+  color: #959089;
+}
+.button.nofill {
+  background-color: transparent;
+  stroke: none;
+}
+.button.nofill a {
+  color: #53504C;
+}
+.button.nofill:hover {
+  background-color: #DCD9D6;
+}
+.button.nofill:hover a {
+  text-decoration: none;
+}
+.button.nofill:active {
+  background-color: transparent;
+  color: #2D2B29;
+  border-color: #2D2B29;
+  transition: none;
+}
+.button.nofill.disabled {
+  background-color: #DCD9D6;
+  color: #959089;
+  border-color: transparent;
+}
+.button.nofill.disabled a {
   color: #959089;
 }
 .button.secondary {
@@ -608,7 +636,7 @@ h6 {
 .button.warning.disabled a {
   color: #959089;
 }
-@media (max-width: 1279px) {
+@media (max-width: 768px) {
   .button {
     font-size: 16px;
   }
@@ -670,11 +698,8 @@ h6 {
   /* Alineación del texto a */
   width: 100%;
 }
-.card .secondRow h4 {
-  margin-block-start: 0em;
-  margin-block-end: 0em;
-  margin-inline-start: 0px;
-  margin-inline-end: 0px;
+.card .secondRow a {
+  font-size: 27.9841px;
 }
 .card .card-link {
   position: relative;
@@ -760,7 +785,7 @@ h6 {
 .checkboxLabel:checked:hover {
   cursor: pointer;
 }
-@media (max-width: 1279px) {
+@media (max-width: 768px) {
   .checkboxLabel {
     font-size: 17px;
     line-height: 25.5px;
@@ -789,37 +814,185 @@ h6 {
   padding-top: 16px;
   padding-bottom: 16px;
 }
-.infobox-personas {
-  width: fit-content;
+.floating-element {
+  position: fixed;
+  /* Fijarlo en la pantalla */
+  right: 16px;
+  /* 16px desde el borde derecho */
+  bottom: 16px;
+  /* 16px desde el borde inferior */
+  z-index: 999;
+  /* Asegúrate de que esté encima de otros elementos */
+  background-color: #F6F5F5;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  /* Sombra (opcional) */
 }
-.infobox-personas .ib-firstRow {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 10px;
+@media (min-width: 1024px) {
+  .floating-element {
+    display: none;
+  }
 }
-.infobox-personas .image-list {
-  display: flex;
+@media (max-width: 768px) {
+  .floating-element {
+    display: block;
+  }
 }
-.infobox-personas .person-image-small {
+.tochidden {
+  position: fixed;
+  right: 16px;
+  bottom: 70px;
+  /* Asegúrate de que no se superponga al botón flotante */
+  width: 300px;
+  background-color: #fff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  border-radius: 8px;
+  display: none;
+  /* Inicialmente oculto */
+  z-index: 998;
+  /* Asegúrate de que la TOC esté por debajo del botón flotante */
+}
+.img-persona {
   width: 32px;
   height: 32px;
   border-radius: 50%;
-  margin-right: 10px;
+  object-fit: cover;
 }
-.infobox-personas .ib-secondRow {
-  text-align: center;
+.field-type-personas-popup-persona {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: flex-start;
+  align-content: center;
+  width: 112px;
 }
-.infobox-personas a {
-  text-decoration: none;
-  color: #007bff;
-  font-weight: bold;
-  font-size: 14px;
+.field-type-personas-popup {
+  width: 780px;
+  background-color: #F6F5F5;
+  border: 1px;
+  border-radius: 8px;
+  border-color: #DCD9D6;
+  gap: 16px;
+  padding: 24px 24px;
 }
-.infobox-personas a:hover {
-  text-decoration: underline;
+.field-type-personas-popup .firstRow {
+  gap: 16px;
 }
-.person-image-small {
-  border-radius: 60px;
+.field-type-personas-popup .firstRow .titulo-estudiantes {
+  color: #53504C;
+  font-weight: semibold;
+}
+.field-type-personas-popup .firstRow .personas-lista {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  align-content: flex-start;
+  row-gap: 12px;
+  gap: 4px;
+}
+.field-type-personas-popup .secondRow {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: flex-start;
+  align-content: flex-start;
+}
+.infobox-field-type-personas {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  align-content: flex-start;
+  gap: 12px;
+}
+.infobox-field-type-personas .firstRow {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  align-content: flex-start;
+  gap: 12px;
+}
+.infobox-field-type-personas .firstRow .imagen-lista {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: -10px;
+}
+.infobox-field-type-personas .secondRow {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  align-content: flex-start;
+  gap: 12px;
+}
+.field-type-persona {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  align-content: flex-start;
+  gap: 12px;
+}
+.field-type-texto {
+  width: 100%;
+}
+.infobox-field {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  gap: 12px;
+  width: 192px;
+}
+@media (max-width: 768px) {
+  .infobox-field {
+    max-width: 100%;
+  }
+}
+@media (max-width: 719px) {
+  .infobox-field {
+    max-width: 100%;
+  }
+}
+.infobox {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: start;
+  align-items: start;
+  align-content: start;
+  gap: 20px;
+  padding: 16px 24px;
+  background-color: #F6F5F5;
+  border-radius: 8px;
+  border: 1px solid #EDECEA;
+  width: 192px;
+  height: 1fr;
+}
+.infobox .infobox-field-group {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  gap: 8px;
+  width: 192px;
+}
+@media (max-width: 768px) {
+  .infobox {
+    max-width: 100%;
+  }
+}
+@media (max-width: 719px) {
+  .infobox {
+    max-width: 100%;
+  }
 }
 .input {
   display: flex;
@@ -857,7 +1030,7 @@ h6 {
   color: #53504C;
   line-height: 25.6px;
 }
-@media (max-width: 1279px) {
+@media (max-width: 768px) {
   .input .input-header .input-label {
     font-size: 17px;
     line-height: 25.5px;
@@ -879,7 +1052,7 @@ h6 {
 .error .input .input-header .input-requirement {
   color: #C92929;
 }
-@media (max-width: 1279px) {
+@media (max-width: 768px) {
   .input .input-header .input-requirement {
     font-size: 17px;
     line-height: 25.5px;
@@ -924,7 +1097,7 @@ h6 {
   color: #959089;
   font-size: 16px;
 }
-@media (max-width: 1279px) {
+@media (max-width: 768px) {
   .input .input-body .text-input {
     font-size: 17px;
     line-height: 25.5px;
@@ -953,7 +1126,7 @@ h6 {
 .input .input-helptext.error.disabled {
   color: #53504C;
 }
-@media (max-width: 1279px) {
+@media (max-width: 768px) {
   .input .input-helptext {
     font-size: 13.43209877px;
     line-height: 20.14814815px;
@@ -1197,7 +1370,7 @@ table tfoot {
   font-size: 16px;
   color: inherit;
 }
-@media (max-width: 1279px) {
+@media (max-width: 768px) {
   .tab .tab-text {
     font-size: 16px;
   }
@@ -1263,7 +1436,7 @@ table tfoot {
   margin-block-start: 0;
   margin-block-end: 0;
 }
-@media (max-width: 1279px) {
+@media (max-width: 768px) {
   .toc-label a a {
     font-size: 14.22222222px;
   }
@@ -1305,7 +1478,7 @@ table tfoot {
   margin-block-end: 0;
   margin-bottom: 8px;
 }
-@media (max-width: 1279px) {
+@media (max-width: 768px) {
   .toc-title {
     font-size: 16px;
     line-height: 24px;
