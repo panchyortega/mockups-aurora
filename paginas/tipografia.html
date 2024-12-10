@@ -67,45 +67,179 @@ p {
       </section>
 
       <section class="section section-table">
-          <h2>3. Muestrario de Tipografías</h2>
-          <p>A continuación, se muestra una tabla con todos los estilos de texto utilizados en el proyecto. Puedes ver el tamaño, el color y otros detalles relevantes.</p>
-          <table class="typography-table">
-              <thead>
-                  <tr>
-                      <th>Estilo</th>
-                      <th>Tamaño de fuente</th>
-                      <th>Color</th>
-                      <th>Ejemplo</th>
-                  </tr>
-              </thead>
-              <tbody>
-                  <tr>
-                      <td><strong>h1</strong></td>
-                      <td>@size-text-h1</td>
-                      <td>@color-font-h1</td>
-                      <td><h1>Encabezado de Nivel 1</h1></td>
-                  </tr>
-                  <tr>
-                      <td><strong>h2</strong></td>
-                      <td>@size-text-h2</td>
-                      <td>@color-font-h2</td>
-                      <td><h2>Encabezado de Nivel 2</h2></td>
-                  </tr>
-                  <tr>
-                      <td><strong>p</strong></td>
-                      <td>@size-text-body-md</td>
-                      <td>@col-surf-900</td>
-                      <td><p>Este es un párrafo de texto normal.</p></td>
-                  </tr>
-                  <tr>
-                      <td><strong>code</strong></td>
-                      <td>@size-text-code</td>
-                      <td>@col-code</td>
-                      <td><code>var x = 10;</code></td>
-                  </tr>
-              </tbody>
-          </table>
+        <h2>3. Muestrario de Tipografías</h2>
+        <p>A continuación, se muestra una tabla con todos los estilos de texto utilizados en el proyecto. Puedes ver el tamaño, el color y otros detalles relevantes.</p>
+        <table class="typography-table">
+            <thead>
+                <tr>
+                    <th>Estilo</th>
+                    <th>Tamaño de fuente</th>
+                    <th>Color</th>
+                    <th>Ejemplo</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Encabezados -->
+                <tr>
+                    <td><strong>h1</strong></td>
+                    <td>@size-text-h1</td>
+                    <td>@color-font-h1</td>
+                    <td><h1>Encabezado de Nivel 1</h1></td>
+                </tr>
+                <tr>
+                    <td><strong>h2</strong></td>
+                    <td>@size-text-h2</td>
+                    <td>@color-font-h2</td>
+                    <td><h2>Encabezado de Nivel 2</h2></td>
+                </tr>
+                <tr>
+                    <td><strong>h3</strong></td>
+                    <td>@size-text-h3</td>
+                    <td>@color-font-h3</td>
+                    <td><h3>Encabezado de Nivel 3</h3></td>
+                </tr>
+                <tr>
+                    <td><strong>h4</strong></td>
+                    <td>@size-text-h4</td>
+                    <td>@color-font-h4</td>
+                    <td><h4>Encabezado de Nivel 4</h4></td>
+                </tr>
+                <tr>
+                    <td><strong>h5</strong></td>
+                    <td>@size-text-h5</td>
+                    <td>@color-font-h5</td>
+                    <td><h5>Encabezado de Nivel 5</h5></td>
+                </tr>
+                <tr>
+                    <td><strong>h6</strong></td>
+                    <td>@size-text-h6</td>
+                    <td>@color-font-h6</td>
+                    <td><h6>Encabezado de Nivel 6</h6></td>
+                </tr>
+      
+                <!-- Párrafo -->
+                <tr>
+                    <td><strong>p</strong></td>
+                    <td>@size-text-body-md</td>
+                    <td>@col-surf-900</td>
+                    <td><p>Este es un párrafo de texto normal.</p></td>
+                </tr>
+      
+                <!-- Enlaces -->
+                <tr>
+                    <td><strong>a</strong></td>
+                    <td>@size-text-body-md</td>
+                    <td>@col-prim-400</td>
+                    <td><a href="#">Este es un enlace de ejemplo</a></td>
+                </tr>
+      
+                <!-- Texto Especial -->
+                <tr>
+                    <td><strong>big</strong></td>
+                    <td>@size-text-body-lg</td>
+                    <td>@col-surf-900</td>
+                    <td><big>Texto grande</big></td>
+                </tr>
+                <tr>
+                    <td><strong>small</strong></td>
+                    <td>@size-text-body-sm</td>
+                    <td>@col-surf-900</td>
+                    <td><small>Texto pequeño</small></td>
+                </tr>
+                <tr>
+                    <td><strong>mark</strong></td>
+                    <td>@size-text-body-md</td>
+                    <td>@col-surf-900</td>
+                    <td><mark>Texto resaltado</mark></td>
+                </tr>
+      
+                <!-- Citas -->
+                <tr>
+                    <td><strong>blockquote</strong></td>
+                    <td>@size-text-body-lg</td>
+                    <td>@col-surf-800</td>
+                    <td><blockquote>Este es un bloque de cita.</blockquote></td>
+                </tr>
+      
+                <!-- Código -->
+                <tr>
+                    <td><strong>code</strong></td>
+                    <td>@size-text-code</td>
+                    <td>@col-code</td>
+                    <td><code>var x = 10;</code></td>
+                </tr>
+                <tr>
+                    <td><strong>pre</strong></td>
+                    <td>@size-text-code</td>
+                    <td>@col-code</td>
+                    <td><pre><code>function greet() { console.log("Hello, world!"); }</code></pre></td>
+                </tr>
+      
+                <!-- Listas -->
+                <tr>
+                    <td><strong>ul</strong></td>
+                    <td>@size-text-body-md</td>
+                    <td>@col-surf-900</td>
+                    <td>
+                        <ul>
+                            <li>Elemento 1</li>
+                            <li>Elemento 2</li>
+                            <li>Elemento 3</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td><strong>ol</strong></td>
+                    <td>@size-text-body-md</td>
+                    <td>@col-surf-900</td>
+                    <td>
+                        <ol>
+                            <li>Primero</li>
+                            <li>Segundo</li>
+                            <li>Tercero</li>
+                        </ol>
+                    </td>
+                </tr>
+      
+                <!-- Superíndices y Subíndices -->
+                <tr>
+                    <td><strong>sup</strong></td>
+                    <td>@size-text-body-xs</td>
+                    <td>@col-surf-900</td>
+                    <td>Este es un superíndice: H<sup>2</sup>O</td>
+                </tr>
+                <tr>
+                    <td><strong>sub</strong></td>
+                    <td>@size-text-body-xs</td>
+                    <td>@col-surf-900</td>
+                    <td>Este es un subíndice: x<sub>2</sub></td>
+                </tr>
+      
+                <!-- Otras Etiquetas -->
+                <tr>
+                    <td><strong>del</strong></td>
+                    <td>@size-text-body-md</td>
+                    <td>@col-surf-500</td>
+                    <td><del>Texto tachado</del></td>
+                </tr>
+                <tr>
+                    <td><strong>u</strong></td>
+                    <td>@size-text-body-sm</td>
+                    <td>@col-surf-700</td>
+                    <td><u>Texto subrayado</u></td>
+                </tr>
+      
+                <!-- Etiquetas de Navegación -->
+                <tr>
+                    <td><strong>navbar a</strong></td>
+                    <td>@size-text-body-sm</td>
+                    <td>@col-surf-900</td>
+                    <td><a href="#">Enlace de navegación</a></td>
+                </tr>
+            </tbody>
+        </table>
       </section>
+      
 
       <section class="section section-interactive">
           <h2>4. Componentes Interactivos</h2>
